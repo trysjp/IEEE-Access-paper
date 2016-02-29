@@ -1,0 +1,34 @@
+$D$ & Number of disks per node used by YARN\\
+$M$ & Total amount of memory per node used by YARN\\
+\hline
+$i_{total}$ & Size of input data\\
+$i_{split}$ & size of HDFS-blocks (default 64MB)\\
+$n_{split}$ & Number of records in each input split\\
+$n_{size}$ & Size of each record\\
+$s_m$ & Number of Map slots per node\\
+$s_r$ & Number of Reduce slots per node\\
+$r_{map}$ & Ratio of number of input-map-records to output-map-records\\
+$r_{red}$ & Ratio of number of input-reduce-records to output-reduce-records\\
+$r_{map_{size}}$ & Size of each map-output-record\\
+$r_{red_{size}}$ & Size of each reducer-output-record\\
+\hline
+$b$ & Number of records in a block that is read/written from/to a disk\\
+$t_{rd_{rand}}$ & Time for each random read operation\\
+$t_{rd_{seq}}$ & Time for each sequential read operation\\
+$t_{wr_{rand}}$ & Time for each random read operation\\
+$t_{wr_{seq}}$ & Time for each random read operation\\
+
+To facilitate our modeling, we first divided each Map task into three different sub-tasks as follows:
+\begin{itemize}
+\item \textit{Read:} Read the input split from HDFS.
+\item \textit{Map:} Execute the user defined map function on each input split and produce the map output in the form of intermediate key-value pair.
+\item \textit{Spill:} Sort (in-memory or external based upon the data size) a subset of intermediate key-value pair and spill the sorted subset onto the local disk. Finally merge the all the sorted subsets to one file using multiple merge passes. 
+\end{itemize}
+ 
+The Reduce task is divided into four different sub-tasks as follows:
+\begin{itemize}
+\item \textit{Shuffle:} Transfer the output of the map tasks to the reduce task.
+\item \textit{Merge:} Merge the sorted sets of intermediate key-value pair from different map tasks to form the input to the reduce function.
+\item \textit{Reduce:} Execute the user defined reduce function to generate the final output. 
+\item \textit{Write:} Write the final output to the HDFS.
+\end{itemize}

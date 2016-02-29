@@ -1,0 +1,254 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fmodern\fcharset0 Courier-Bold;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue192;\red0\green0\blue0;\red107\green0\blue1;
+\red77\green77\blue77;\red15\green112\blue1;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\b\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \\subsection\{Data-Flow Parallelism Overview\}
+\f1\b0 \cf3 \strokec3 \
+Figure-\cf4 \strokec4 \\ref\cf3 \strokec3 \{fig:HadoopOperator\} shows the data flow pipeline of a Hadoop MapReduce application. As mentioned earlier, Hadoop partitioned the entire input dataset in small chunks in the order of a few 100MB and apply a sequence of operators in a pipeline. That is the output of each operator works as the input to the next operator. On the other hand, Hadoop processes several chunks at the same time using a shared nothing approach. It means, any two operators appeared in different rows of Figure-\cf4 \strokec4 \\ref\cf3 \strokec3 \{fig:HadoopOperator\} is independent and self-sufficient without any single point of contention across the system. Thus, Hadoop makes use of two different types of parallelism, such as, pipelined-parallelism () and  partitioned-parallelism to maximize the processor utilization.\
+\
+
+\f0\b \cf2 \strokec2 \\subsection\{I/O Overview\}
+\f1\b0 \cf3 \strokec3 \
+Since the objective of our model is to  quantify the architectural balance of different hardware components (such as, CPU, storage, memory and network), it is required to understand the I/O characteristics of each phase of a Hadoop application. In particular, it is critical to understand the disk and network I/O characteristics for each operators shown in Figure-\cf4 \strokec4 \\ref\cf3 \strokec3 \{fig:HadoopOperator\} which often causes under provisioning the CPU resources, thus creating a bottleneck in terms of performance. In the first phase of the a Hadoop application, read operator performs relatively long sequential IO typically ranging between 64MB (default) and a few 100MBs. Then, at the end of a map task, Hadoop partitions each map task's output across all the reduce tasks. This intermediate partitions are spilled to the disk using multiple threads. This leads to significantly lower I/O size with almost random pattern. Again, all the partitions are read using multiple threads. when in multiple threads. For example, suppose a job has map tasks that each produces 1GB of output. When divided among, say, 1000 reduce tasks, each spill-file contains only 1MB. Furthermore, Hadoop  merges all these small sized files into one sorted file which involves more random I/O. This sorted mapper output is shuffled to the reducer. At this point, the data network bandwidth is critical for the performance. Shuffle is followed by another merge operation similar to that described at the end of the map. This merge operation performs a global sort over all the presorted map-output. This process again incurs several random I/O. Finally, at the end of the Hadoop job the reduce task writes the final output to HDFS which involves long sequential I/O.\
+\
+A standard method of avoiding this I/O bottleneck is to reduce the overall I/O requirement by increasing the size of its local memory. However, the higher cost of DRAM modules trends creates a bottleneck in terms of economy.\
+\
+\
+\
+\
+
+\f0\b \cf2 \strokec2 \\section\{I/O Model of Hadoop\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{table\}[!t]\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 \strokec5 %% increase table row spacing, adjust to taste\cf3 \strokec3 \
+\cf5 \strokec5 %\\renewcommand\{\\arraystretch\}\{1.3\}\cf3 \strokec3 \
+\cf5 \strokec5 % if using array.sty, it might be a good idea to tweak the value of\cf3 \strokec3 \
+\cf5 \strokec5 % \\extrarowheight as needed to properly center the text within the cells\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\caption\cf3 \strokec3 \{Parameters\}\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\b \cf2 \strokec2 \\label\{table_parameters\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\centering\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf5 \strokec5 %% Some packages, such as MDW tools, offer better commands for making tables\cf3 \strokec3 \
+\cf5 \strokec5 %% than the plain LaTeX2e tabular which is used here.\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{tabular\}\{|c|p\{7cm\}|\}\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $N$\cf3 \strokec3  & Total number of nodes in the Hadoop cluster\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $N_m$\cf3 \strokec3  & Total number of map tasks required for an application\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $N_r$\cf3 \strokec3  & Total number of reduce tasks required for an application\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $n_m$\cf3 \strokec3  & Average number of map tasks assigned per node (\cf6 \strokec6 $=N_m/N$\cf3 \strokec3 )\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $n_r$\cf3 \strokec3  & Average number of reduce tasks assigned per node (\cf6 \strokec6 $=N_r/N$\cf3 \strokec3 )\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $s_m$\cf3 \strokec3  & Number of concurrent map tasks per node (Number of map slots)\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $s_r$\cf3 \strokec3  & Number of concurrent reduce tasks per node (Number of reduce slots)\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $i_m$\cf3 \strokec3  & Number of input records handled by each map task (Number of records in each HDFS block)\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $r_m$\cf3 \strokec3  & ratio between input and output of each map task in terms of number of records \cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $o_m$\cf3 \strokec3  & Number of output records generated by each map task (\cf6 \strokec6 $=i_m \\times r_m$\cf3 \strokec3 )\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $i_r$\cf3 \strokec3  & Average number of input records handled by each reduce task (\cf6 \strokec6 $=o_m \\times N_m / N_r$\cf3 \strokec3 )\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $r_m$\cf3 \strokec3  & ratio between input and output of each reduce task in terms of number of records \cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $o_r$\cf3 \strokec3  & Number of output records generated by each reduce task (\cf6 \strokec6 $=i_r \\times r_r$\cf3 \strokec3 )\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $B_\{im\}$\cf3 \strokec3  & Number of map-input-records per I/O block\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $B_\{om\}$\cf3 \strokec3  & Number of map-output-records per I/O block\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $B_\{ir\}$\cf3 \strokec3  & Number of reduce-input-records per I/O block\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 $B_\{or\}$\cf3 \strokec3  & Number of reduce-output-records per I/O block\cf4 \strokec4 \\\\\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf4 \strokec4 \\hline\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{tabular\}\
+\cf2 \strokec2 \\end\cf3 \strokec3 \{table\}\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\b \cf2 \strokec2 \\subsection\{I/O operations for each Hadoop operator\}
+\f1\b0 \cf3 \strokec3 \
+In this section we describe the number of I/O operations that are required for each Hadoop operator. We assume each I/O operation is performed in a block of size \cf6 \strokec6 $B$\cf3 \strokec3  bytes as in the case of current Hard Disk Drive (HDD) or Solid State Drive (SSD). All the operators has a linear I/O complexity except the merge operator (both map and reduce side) has a logarithmic term in it. Using the parameters described in Table-\cf4 \strokec4 \\ref\cf3 \strokec3 \{table_parameters\} we can calculate the number of I/O operation performed by each operator of each map or reduce task as follows:\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioMapRead\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 DIO_\{MapRead\} = \\frac\{i_m\}\{B_\{im\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioMapSpill\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 DIO_\{MapSpill\} = \\frac\{o_m\}\{B_\{om\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioMapMerge\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 DIO_\{MapMerge\} = 2 \\times \\frac\{o_m\}\{B_\{om\}\} \\ceil\{log_\{\\frac\{m\}\{B_\{om\}-1\}\}\\frac\{o_m\}\{B_\{om\}\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioRedMerge\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 DIO_\{RedMerge\} = 2 \\times \\frac\{i_r\}\{B_\{ir\}\} \\ceil\{log_\{\\frac\{m\}\{B_\{ir\}-1\}\}\\frac\{i_r\}\{B_\{ir\}\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioRedWrite\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 DIO_\{RedWrite\} = \\frac\{o_r\}\{B_\{or\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 NIO_\{Shuffle\} = \\frac\{N_m \\times o_r\}\{B_\{nom\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\b \cf2 \strokec2 \\subsection\{Total Time of I/O in a Mapp\}
+\f1\b0 \cf3 \strokec3 \
+When multiple map and reduce tasks are scheduled on the same machine, they can access the disks on the machine in parallel, with each task accessing its own input split or output partition without interfering each others resources. Hence, the number of parallel I/O operations on a machine at a certain point can be calculated by multiplying the I/O operations of a Hadoop operator with the number of map (or, reduce) task based upon the operator. \
+\
+However, the I/O subsystem can deliver \cf6 \strokec6 $P$\cf3 \strokec3  blocks in parallel in the same time unit, where, \cf6 \strokec6 $P$\cf3 \strokec3  depends on the 3 different factors: 1) type of the disk used (HDD or SSD), 2) The I/O pattern (sequential or random) of the Hadoop operator, and 3) capacity of the disk controller. Based upon these three factors \cf6 \strokec6 $P$\cf3 \strokec3  can be derived using Equation-\cf4 \strokec4 \\ref\cf3 \strokec3 \{eqn:Pdisk\} and \cf4 \strokec4 \\ref\cf3 \strokec3 \{eqn:P\}. \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:Pdisk\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 P_\{disk\} = P_\{seqHDD\} | P_\{seqSSD\} | P_\{randHDD\} | P_\{randSSD\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:P\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 P = Min(P_\{disk\}, P_\{diskController\})\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+Where \cf6 \strokec6 $P_\{seqHDD\}$\cf3 \strokec3  and \cf6 \strokec6 $P_\{seqSSD\}$\cf3 \strokec3  indicates the sequential access for HDD and SSD respectively. Similarly, \cf6 \strokec6 $P_\{randHDD\}$\cf3 \strokec3 , \cf6 \strokec6 $P_\{randSSD\}$\cf3 \strokec3  indicates the random access to both type of disks.  On the other hand, \cf6 \strokec6 $P_\{diskController\}$\cf3 \strokec3  depicts the capacity of a disk controller, i.e., how many I/O blocks can be transferred through it in a single time unit. The disk controller is often ignored in most of the performance model as its capacity is much higher than a single HDD. However, multiple HDD often surpass the capacity of  a single disk controller. Furthermore, with the introduction of SSD which started delivering data in the rage of multiple gigabytes per second the effect of disk controller cannot be ignored in a high performance computing cluster.\
+\
+This will decrease the I/O time for \cf6 \strokec6 $Read$\cf3 \strokec3 , \cf6 \strokec6 $Spill$\cf3 \strokec3 , and \cf6 \strokec6 $Write$\cf3 \strokec3  operators linearly by a factor of \cf6 \strokec6 $P$\cf3 \strokec3 . The logarithmic part in the merge operator in Equation-\cf4 \strokec4 \\ref\cf3 \strokec3 \{eqn:dioMapMerge\} and \cf4 \strokec4 \\ref\cf3 \strokec3 \{eqn:dioRedMerge\} will decrease accordingly. Hence the total time spent for the I/O operation for each Hadoop operators in a single map or reduce wave can be written as follows:\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioMapReadTime\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 T_\{Dio\\_MapRead\} = \\frac\{s_m \\times i_m\}\{P \\times B_\{im\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioMapSpillTime\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 T_\{DIO\\_MapSpill\} = \\frac\{s_m \\times o_m\}\{P \\times B_\{om\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioMapMergeTime\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 T_\{DIO\\_MapMerge\} = 2 \\times \\frac\{s_m \\times o_m\}\{B_\{om\}\} \\ceil\{log_\{\\frac\{m\}\{B_\{om\}-1\}\}\\frac\{o_m\}\{P \\times B_\{om\}\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioRedMergeTime\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 T_\{DIO\\_RedMerge\} = 2 \\times \\frac\{s_r \\times i_r\}\{B_\{ir\}\} \\ceil\{log_\{\\frac\{m\}\{B_\{ir\}-1\}\}\\frac\{i_r\}\{P \\times B_\{ir\}\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\cf6 \strokec6  \\
+\f0\b \cf2 \strokec2 label\{eqn:dioRedWriteTime\}
+\f1\b0 \cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 T_\{DIO\\_RedWrite\} = \\frac\{s_r \\times o_r\}\{P \\times B_\{or\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 T_\{NIO\\_Shuffle\} = \\frac\{N_m \\times o_r\}\{B_\{nom\}\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\
+Hence, the time for each map and reduce wave can be expressed as follows:\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 T^\{IO\}_\{MapWave\} = T_\{Dio\\_MapRead\} + T_\{DIO\\_MapSpill\} + T_\{DIO\\_MapMerge\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\cf2 \strokec2 \\begin\cf3 \strokec3 \{equation\}\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf6 \strokec6 T^\{IO\}_\{RedWave\} = T_\{DIO\\_RedMerge\} + T_\{DIO\\_RedWrite\} + T_\{NIO\\_Shuffle\}\cf3 \strokec3 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \strokec2 \\end\cf3 \strokec3 \{equation\}\
+\
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\b \cf2 \strokec2 \\section\{Balanced System\}
+\f1\b0 \cf3 \strokec3 \
+Although the pipeline parallelism adopted in Hadoop allows non-I/O operations to execute entirely in parallel with I/O operations,  \
+}
