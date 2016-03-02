@@ -152,6 +152,12 @@ A.~S. Szalay, G.~C. Bell, H.~H. Huang, A.~Terzis, and A.~White, ``Low-power
 D.~Zheng, A.~Szalay, and A.~Terzis, ``Hadoop in low-power processors,''
   \emph{arXiv preprint arXiv:1408.2284}, 2014.
 
+\bibitem{bio:gage}
+S.~L. Salzberg, A.~M. Phillippy, A.~Zimin, D.~Puiu, T.~Magoc, S.~Koren, T.~J.
+  Treangen, M.~C. Schatz, A.~L. Delcher, M.~Roberts \emph{et~al.}, ``Gage: A
+  critical evaluation of genome assemblies and assembly algorithms,''
+  \emph{Genome research}, vol.~22, no.~3, pp. 557--567, 2012.
+
 \bibitem{bio:debruijngraph}
 P.~A. Pevzner, H.~Tang, and M.~S. Waterman, ``An eulerian path approach to dna
   fragment assembly,'' \emph{Proceedings of the National Academy of Sciences},

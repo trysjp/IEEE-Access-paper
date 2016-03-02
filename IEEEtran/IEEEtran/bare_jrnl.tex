@@ -448,7 +448,7 @@ of Computer Science and Electrical Engineering, Center for Computation and Techn
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-The I/O- and memory-bound nature of data-driven scientific applications are posing several challenges to next generation HPC system designers as they strive for system balance with respect to processor speed, I/O bandwidth and memory while also maintaining a balance between performance and economy.  Augmenting Amdahl's design principles for balanced system, collectively known as \textit{Amdahl's second law} in the context of current big data analytic software (e.g., Hadoop, Giraph, etc.) and recent advances in hardware is relevant to design cost efficient HPC infrastructure for data-intensive scientific applications. This paper proposes a simple, easy to use, general purpose, additive model for cost/performance to quantify and optimize the system balance (among CPU, I/O  bandwidth and size of DRAM) in terms of both software characteristics as well as the current hardware cost. Our performance model reveals that a balanced HPC system needs almost 0.25-GBPS I/O bandwidth, and almost 4 GB of DRAM per GHz of CPU speed considering Intel Xeon micro architecture which is widely used by the HPC system designers. However, our model can be used for any given architecture. To the best of our knowledge, this is the first attempt to theoretically extend Amdahl's second law considering more degrees of freedom, such as, workload characteristics and hardware cost.
+The I/O- and memory-bound nature of data-driven scientific applications are posing several challenges to next generation HPC system designers as they strive for system balance with respect to processor speed, I/O bandwidth and memory while also maintaining a balance between performance and economy.  Augmenting Amdahl's design principles for balanced system, collectively known as \textit{Amdahl's second law} in the context of current big data analytic software (e.g., Hadoop, Giraph, etc.) and recent advances in hardware is relevant to design cost efficient HPC infrastructure for data-intensive scientific applications. This paper proposes a simple, easy to use, general purpose, additive model for cost/performance to quantify and optimize the system balance (among CPU, I/O  bandwidth and size of DRAM) in terms of both software characteristics as well as the current hardware cost. Our performance model reveals that a balanced HPC system needs almost 0.19GBPS I/O bandwidth, and almost 3GB of DRAM per GHz of CPU speed considering Intel Xeon processing architecture which is widely used by the HPC system designers. However, our model can be used for any given architecture. To the best of our knowledge, this is the first attempt to theoretically extend Amdahl's second law considering more degrees of freedom, such as, workload characteristics and hardware cost.
 
 We validated our result by evaluating three fundamentally different cluster architecture, 1) a traditional HPC cluster called SupermikeII, 2) a regular datacenter called SwatIII, and 3) a novel micro brick based hyperscale system called CeresII. CeresII has 6-Xeon cores each running at 2GHz, 1-NVMe SSD with 2-GBPS I/O bandwidth and 64GB DRAM, thus closely resembles to the optimum produced by our model. We evaluated these three clusters with respect to two widely used Hadoop-benchmark (e.g., terasort and wordcount) as well as our own genome assembler based on Hadoop and Giraph which serves as a very good real world example of I/O-, compute- and memory-intensive workload. CeresII outperformed all other architecture for all the benchmark in terms of both execution time and cost/performance while using same processing power as the other two and significantly less memory than SwatIII.
 \end{abstract}
@@ -506,7 +506,7 @@ As a consequence, most of the existing HPC systems focusing only on tera to peta
 
 At this inflection point of HPC landscape, the next generation system designers must consider more degrees of freedom for cluster architecture than for existing HPC clusters which focus only on doing calculation at blazing speed. They must address such questions as: how much I/O bandwidth is required per processing core? How much memory is required to optimize the performance and cost? These complex performance and economic factors together motivates new design of HPC infrastructure. However, these factors together impose several challenges to the system designers who are striving for system balance in terms of processing speed, I/O bandwidth, memory, and the cost of the infrastructure. There is limited studies which address the challenges in developing a cost effective, balanced distributed cyber infrastructure to analyze large scale scientific big data. 
  
-With this motivation, this paper takes an initial attempt to theoretically augment Amdahl's design principles for balanced system (collectively known as Amdahl's second law)  considering the workload characteristics as well as the price of hardware components. It proposes a simple additive model for cost/performance to quantify the system balance between CPU speed, I/O bandwidth, and size of DRAM in terms of software application characteristics and cost of hardware. Our model does not assume any specific software framework or hardware technologies, rather, it provides an easy to use, general guideline for designing a balanced system. However, the outcome of the model (i.e., configuration of an optimal balanced system) indicates the use of solid state drives (SSD) instead of hard disk drive (HDD) in a multicore machine. Assuming an equal distribution of I/O-  and compute work in a data-intensive application, our model suggests, that a balanced HPC system needs almost 0.2-GBPS I/O bandwidth (x\% variation from original Amdahl's law), and almost 4-GB of DRAM (y\% variation from original Amdahl's law) per GHz of CPU speed in the crrent scenario using Intel Xeon micro architecture which is widely used by the HPC system designers. The variation is coming because of the cost component which was ignored in Amdahl's second law in its pristine form. 
+With this motivation, this paper takes an initial attempt to theoretically augment Amdahl's design principles for balanced system (collectively known as Amdahl's second law)  considering the workload characteristics as well as the price of hardware components. It proposes a simple additive model for cost/performance to quantify the system balance between CPU speed, I/O bandwidth, and size of DRAM in terms of software application characteristics and cost of hardware. Our model does not assume any specific software framework or hardware technologies, rather, it provides an easy to use, general guideline for designing a balanced system. However, the outcome of the model (i.e., configuration of an optimal balanced system) indicates the use of solid state drives (SSD) instead of hard disk drive (HDD) in a multicore machine. Assuming an equal distribution of I/O-  and compute work in a data-intensive application, our model suggests, that a balanced HPC system needs almost 0.2-GBPS I/O bandwidth (x\% variation from original Amdahl's law), and almost 4-GB of DRAM (y\% variation from original Amdahl's law) per GHz of CPU speed in the crrent scenario using Intel Xeon processor architecture which is widely used by the HPC system designers. The variation is coming because of the cost component which was ignored in Amdahl's second law in its pristine form. 
 
 %We observed a convergence between our cost model and Amdahl's design principle. It is to be noted, we did not confine ourselves in proposing a performance model for any specific big data analytic software (e.g., Hadoop). Rather, we proposed a theoretical performance model for the underlying hardware only which is required by these big data analytic software for optimal performance. Thus, we are motivated to answer a more general question \textit{How does a next generation balanced HPC cluster should look like}
 
@@ -523,9 +523,11 @@ Michael \cite{scaleupscaleout:michael} investigated the performance characterist
 However, an older study by Kung \cite{Balance:kung1986memory} can shed light on feasibility of the scaling up approach. Kung analyzed several HPC problems and theoretically showed that the memory needs to be increased exponentially to restore the balance of the system when the number of processors is increased by a certain factor. For example, best known external sorting algorithm needs the local memory to be increased by an exponent of $\alpha$ when number of processors are increased by a factor of  $\alpha$ (i.e., $M_{new} = M_{old}^{\alpha}$) to restore the balance of the system. Although this study is not directly related to this paper, some of the problems considered in \cite{Balance:kung1986memory} constitutes the core part of today's big data analytic framework. For example, Hadoop uses the similar external sorting in its shuffle phase. Hence, from the perspective of balanced system design arbitrary scaling up the size of DRAM is possibly not a feasible option. Rather, the amount of RAM should be decided based upon cost.
 
 \subsection{Simulation and analytical performance modeling of big data software}
-Simulation is widely used for predicting performance of different big data software (mainly Hadoop) and analyzing design trade-offs in a large number of hardware domains. At the border level, all these simulators generate fake Hadoop MapReduce jobs and tune different hardware and software parameters in a simulated environment mostly using prior experiences or trial-and-error to obtain optimize the performance of some parts of the Hadoop framework or a given Hadoop job. For example, HSim \cite{Simulator:liu2013hsim} mainly focused on the Hadoop job parameters to optimize the performance of the entire job. SimMR \cite{Simulator:verma2011play} on the other hand focus on simulating the Hadoop task scheduling algorithms. MRSim\cite{Simulator:hammoud2010mrsim} and MRPerf \cite{Simulator:wang2009simulation} unified all these aspects in a single simulator. They simulate the hardware environment using discrete event simulator packages such as,  SimJava, GridSim, NS2, etc. Then  they execute the fake Hadoop job on a small subset of data to predict the performance. Given prior experience, simulators can predict hardware alternative, thus capable to save huge cost comparing to experimental evaluation on real hardware discussed before. However, most of these simulators comes with lots of overhead. They are time and resource consuming and often fail to assess the real system characteristics in the presence of huge volumes of big data. Furthermore, the trial-and-error method of performance optimization considering broad range of available hardware infrastructure with more $200$ Hadoop parameters is challenging and most of the time unreliable.
+Simulation and analytical model are widely used for predicting performance of different big data software (mainly Hadoop) and analyzing design trade-offs in a large number of hardware domains. 
 
-Analytical (or, theoretical) models are faster than simulation as they abstract away several performance tuning parameters both at software and hardware level. Thus, analytical model can work as early performance indicator of a given big data analytic application and can be used to evaluate alternative hardware configurations. Most of these anlaytical model use single or multi layer queuing network to predict the performance of a given Hadoop job. For example, Viana \cite{Model:vianna2013analytical} model the pipeline parallelism of a Hadoop job using queuing network to predict the performance of the job.  Wu \cite{Model:wu2015exploring} proposed a layered queue network model to predict the performance of a Hadoop job in a cloud environment. In a recent work Ahn \cite{Model:ahn2015analytical} proposed a queuing theory model to predict the performance of Hadoop job atop different storage technologies, i.e, HDD and SSD. Krevart \cite{Model:krevat2010applying} computed the I/O complexity of the Hadoop job for data-intensive applications and proposed a model to quantify the hardware resource wasted by Hadoop.  They (Krevart) shouted for improving the big data analytic software.
+At the border level, all simulators generate fake Hadoop MapReduce jobs and tune different hardware and software parameters in a simulated environment mostly using prior experiences or trial-and-error to obtain optimize the performance of some parts of the Hadoop framework or a given Hadoop job. For example, HSim \cite{Simulator:liu2013hsim} mainly focused on the Hadoop job parameters to optimize the performance of the entire job. SimMR \cite{Simulator:verma2011play} on the other hand focus on simulating the Hadoop task scheduling algorithms. MRSim\cite{Simulator:hammoud2010mrsim} and MRPerf \cite{Simulator:wang2009simulation} unified all these aspects in a single simulator. They simulate the hardware environment using discrete event simulator packages such as,  SimJava, GridSim, NS2, etc. Then  they execute the fake Hadoop job on a small subset of data to predict the performance. Given prior experience, simulators can predict hardware alternative, thus capable to save huge cost comparing to experimental evaluation on real hardware discussed before. However, most of these simulators comes with lots of overhead. They are time and resource consuming and often fail to assess the real system characteristics in the presence of huge volumes of big data. Furthermore, the trial-and-error method of performance optimization considering broad range of available hardware infrastructure with more $200$ Hadoop parameters is challenging and most of the time unreliable.
+
+On the other hand, analytical models for abstract away several performance parameters and predict the performance of a Hadoop job mainly using single or multi layer queuing network. For example, Viana \cite{Model:vianna2013analytical} model the pipeline parallelism of a Hadoop job using queuing network to predict the performance of the job.  Wu \cite{Model:wu2015exploring} proposed a layered queue network model to predict the performance of a Hadoop job in a cloud environment. In a recent work Ahn \cite{Model:ahn2015analytical} proposed a queuing theory model to predict the performance of Hadoop job atop different storage technologies, i.e, HDD and SSD. Krevart \cite{Model:krevat2010applying} computed the I/O complexity of the Hadoop job for data-intensive applications and proposed a model to quantify the hardware resource wasted by Hadoop.  They (Krevart) shouted for improving the big data analytic software.
 
 \subsection{System characterization using Amdahl's second law }
 Computer scientist Gene Amdahl postulated several design principles for a balanced system design collectively known as Amdahl's Second Law. He stated a balanced system needs 1-bit of sequential I/O per second (Amdahl's I/O number), and 1-byte of memory (Amdahl's memory number) per CPU instruction per second. Jim Gray \cite{Amdahl:RuleofThumbgray2000rules} in 2000 revised Amdahl's second law by suggesting to measure the instruction rate and I/O rate on the relevant workload. We will discuss it in more details later in Section-\ref{Sec:AmdahlGray}.
@@ -587,7 +589,7 @@ and datacenters) in terms of memory architecture or processormemory communicatio
 
 However, for improved performance, suffcient memory should be provided to the cluster that can hold the required computation in conjunction with the big data. Furthermore, more memory improves the caching effect which again improves the applications’ performance. However, the main memory is costly which makes the job of building the balanced system complicated. Again, the SSD is nowadays increasingly considered as a new layer between memory (Since they use similar flash arrays as RAM) and storage due to its increased I/O throughput which may change the designer’s approcah towards a balanced system in near future. There are several important reasons to model the performance for a cloud application on a given processor architecture using analytical approach. The most common one is evaluating alternative hardware configurations parameters to estimate performance for a given cloud application without simulation. The performance estimation model aids processor architects in the designing and fine-tuning of future processors.
 
-\section{Amdahl's Second law, Gray's Ammendment, and Limitations} \label{Sec:AmdahlGray}
+\section{Amdahl's Second law, Gray's Ammendment, and Their Limitations} \label{Sec:AmdahlGray}
 \subsection{Original Form of Amdahl's Second Law}
 Computer scientist Gene Amdahl postulated several design pronciple in late 1960 to make a balanced system. As mentioned earlier, these design principals are collectively known as Amdahl’s second law  which are as follows:
 \begin{enumerate}
@@ -645,9 +647,9 @@ Using the notations in Table-\ref{tab:Notation} Gray's ammendments to original A
 \subsection{Limitations of Existing Laws and Current Problem Definition}
 Amdahl's second law for balanced system does not consider the impact of application balance (or, applications' resource requirement) on cluster architecture. Because of the diverse resource requirements, one-size-fit-all design as suggested in the original law (expressed as the constants in the right hand side of Equation-\ref{eqn:AmdahlIONotation} and \ref{eqn:AmdahlMemNotation}) cannot satisfy the different resource balance ratios for a collection of analytic applications. 
 
-Gray's ammendment to Amdahl's second law is more realistic in the sense that it consider the impact of application balance (or, applications' resource requirement) on the cluster architecture.  However, it is limiting to reflect the interplay between application balance and technology-cost balance. The cost of hardware components has already changed the performance point and will keep on changing as the technology advances. Hence, we need a theoretical model for balanced cluster architecture considering both the application characteristics for optimal performance as well as the economy. 
+Gray's ammendment to Amdahl's second law is more realistic in the sense that it consider the impact of application balance (or, applications' resource requirement) on the cluster architecture.  However, it is limiting to reflect the interplay between application balance and technology-cost balance. The cost of hardware components has already changed the performance point and will keep on changing as the technology advances. For example, in the last two years the cost of Intel Xeon E5 series processor has fallen from \$400 to \$26 (www.cpubenchmark.net). The cost of DDR3 RAM has fallen from  \$200 to \$100. The cost of disk storage media remains almost same. 
 
-Using the notations described in Table-\ref{tab:Notation} the optimal system balance (i.e., $\beta_{io}^{opt}$ and $\beta_{mem}^{opt}$) needs to be expressed as a function of application balance (i.e., $\gamma_{io}$ and $\gamma_{mem}$) and technology-cost balance (i.e., $\delta_{io}$ and $\delta_{mem}$ in Table-\ref{tab:Notation}). Mathematically it can be written as:
+Hence, we need a theoretical model for balanced cluster architecture considering both the application characteristics for optimal performance as well as the economy. Using the notations described in Table-\ref{tab:Notation} the optimal system balance (i.e., $\beta_{io}^{opt}$ and $\beta_{mem}^{opt}$) needs to be expressed as a function of application balance (i.e., $\gamma_{io}$ and $\gamma_{mem}$) and technology-cost balance (i.e., $\delta_{io}$ and $\delta_{mem}$ in Table-\ref{tab:Notation}). Mathematically it can be written as:
 
 \begin{equation} \label{eqn:BalancedIONotation}
 \begin{split}
@@ -704,7 +706,7 @@ $\delta_{mem}$ & Technology-Cost balance between CPU and DRAM for system $S$ ($=
 %\end{equation}
 
 \subsection{Model Assumptions}
-The model first assumes the same CPU micro architecture. The practical implication of this assumption is that, the optimum system balance (i.e., $\beta_{io}$ and $\beta_{mem}$) may vary with different CPU microarchitectures such as, Intel Atom and Xeon, etc. However, the system designers can use this model repeatatively for different micro architectures without any loss of generality. On the other hand, the processor micro architecture does not change as frequently as their speed (refer to Intel's \textit{Tick} and \textit{Tock} model for release of new processor technology). Thus, the proposed model significantly reduces the search space for the designers of balanced system.
+The model first ignores the same CPU micro architecture. The practical implication of this assumption is that, the optimum system balance (i.e., $\beta_{io}$ and $\beta_{mem}$) may vary with different CPU microarchitectures such as, Intel Atom and Xeon, etc. However, the system designers can use this model repeatatively for different micro architectures without any loss of generality. On the other hand, the processor micro architecture does not change as frequently as their speed (refer to Intel's \textit{Tick} and \textit{Tock} model for release of new processor technology). Thus, the proposed model significantly reduces the search space for the designers of balanced system.
   
 Second, for simplicity, we assume that the model is additive. That is, we ignore the overlap between work done by CPU, memory and I/O subsystem. This way, the total execution time ($T_{total}$) of an application can be written as:
 \begin{equation} %\label{eqn:TotalTime}
@@ -783,21 +785,21 @@ In this section we demonstrate an example of how to apply our model to build a c
 \end{equation}
 Table-\ref{tab:Cost} shows the price of different hardware components for different hardware vendors. Column \textit{Unit Price} shows the current price trend  for mostly used processor, storage and memory technologies in their corresponding unit. For this example, we consider Intel Xeon micro architecture. As it can can be seen in  Table-\ref{tab:Cost}, the cost per MBPS sequential I/O for both SSD and HDD is almost similar irrespective of change in storage technology provided the same storage space per disk. Whereas, the cost per GB of DRAM is increased almost double from DDR2 to DDR3. We calculated the average cost per GBPS of I/O bandwidth, and average cost per GB of DRAM respectively and divided it with cost per GHz of CPU Speed to get the technology-cost balance. Using the notation in Table-\ref{tab:Notation} technology-cost balance can be written as: 
 \begin{equation} \label{eqn:PractCostBalIo}
-\delta_{io} = 13.57 
+\delta_{io} = 27.44 
 \end{equation}
 \begin{equation} \label{eqn:PractCostBalMem}
-\delta_{mem} = 0.08
+\delta_{mem} = 0.10
 \end{equation}
 Using Equation-\ref{eqn:BalancedOptIo} and replacing the value of $\gamma_{io}$ and $\delta_{io}$ from Equation-\ref{eqn:PractAppBal} and \ref{eqn:PractCostBalIo} respectively, we can get the system's I/O balance in terms of GBPS/GHz as:
 \begin{equation} \label{eqn:PractSysBalIo}
-\beta_{io}^{opt} = 0.24 
+\beta_{io}^{opt} = 0.18
 \end{equation}
 Similarly, using Equation-\ref{eqn:BalancedOptMem}, \ref{eqn:PractAppBal}, and \ref{eqn:PractCostBalMem}, we can get the system's DRAM balance in terms of GBPS/GHz as:
 \begin{equation} \label{eqn:PractSysBalMem}
-\beta_{mem}^{opt} = 3.75
+\beta_{mem}^{opt} = 3.04
 \end{equation} 
 
-\section{Experimental Evaluation}
+\section{Evaluation Methodology}
 \begin{table}[!t]
 \caption{Cost of different hardware components}
 \label{tab:Cost}
@@ -806,9 +808,9 @@ Similarly, using Equation-\ref{eqn:BalancedOptMem}, \ref{eqn:PractAppBal}, and \
 \hline
 Hardware components & Cost(\$) & Unit Price\\
 \hline
-Intel SandyBridge Xeon 64bit Ep series (8-cores) processor & 1766 & \$82/GHz\\
+Intel Xeon 64bit 2.6 GHz E5 series (8-cores) processor & 1566 & \$40/GHz\\
 \hline
-Western Digital RE4 HDD (120MBps) & 132 & \$1.1/MBPS\\
+Western Digital RE4 HDD (120MBps), 500GB & 132 & \$1.1/MBPS\\
 \hline
 Western Digital VelociRaptor HDD (150MBPS), 500GB & 157 & \$1.04/MBPS\\
 \hline
@@ -820,102 +822,120 @@ Samsung DDR3 16GB memory module & 159 & \$10/GB\\
 \hline
 \end{tabular}
 \end{table}
+
+\subsection{Experimental Testbeds}
 \begin{table*}[!t]
 \caption{Experimental Testbeds}
 \label{tab:Testbeds}
 \centering
-\begin{tabular}{|p{2cm}|p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+\begin{tabular}{|p{1.8cm}|p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{0.6cm}|p{0.6cm}|}
 \hline
-Cluster & Processor & CPU Core Speed (GHz) & \#Cores /DN & CPU Speed (GHz) & Seq I/O Bandwidth /Disk (GBPS) & \#Disks /DN & Total Seq I/O Bandwidth (GBPS) & DRAM /DN (GB) & $\beta_{io}$ & $\beta_{mem}$\\
+Cluster name & Processor & CPU Core Speed (GHz) & \#Cores /node & CPU Speed (GHz) /node & \#Disks /node and type & Seq I/O Bandwidth /Disk (GBPS) & Total Seq I/O Bandwidth (GBPS) /node & DRAM /node (GB) & Maximum \#Nodes available & $\beta_{io}$ & $\beta_{mem}$\\
 \hline
-SuperMikeII (Traditional Supercomputer) & Two 8-core SandyBridge Xeon & 2.6 & 16 & 41.6 & 0.15 & 1 & 0.15 & 32GB & 0.003 & 0.77\\
+SuperMikeII (Traditional Supercomputer) & Two 8-core SandyBridge Xeon & 2.6 & 16 & 41.6 & 1-HDD (SATA) & 0.15 & 0.15 & 32GB & 128 & 0.003 & 0.77\\
 \hline
-SwatIII (Regular Datacenter) & Two 8-core SandyBridge Xeon & 2.6 &  16 & 41.6 & 0.15 & 4 & 0.60 & 256 & 0.015 & 6.15\\
+SwatIII (Regular Datacenter) & Two 8-core SandyBridge Xeon & 2.6 &  16 & 41.6 & 4-HDD (SATA) & 0.15 & 0.60 & 256 & 16 & 0.015 & 6.15\\
 \hline
-CeresII (MicroBrick-based Hyperscale System) & One 6-core Xeon & 2 & 6 & 12 & 2 & 1 & 2 & 64 & 0.16 & 5.33\\
-\hline
-\end{tabular}
-\end{table*}
-
-\begin{table*}[!t]
-\caption{Experimental Testbeds}
-\label{tab:ScalingCost}
-\centering
-\begin{tabular}{|p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{2cm}|p{2cm}|p{2cm}|p{1cm}|p{1cm}|p{1cm}|}
-\hline
-Cluster & Total Cost (\$) & Cost /DN (\$) & \#DN & Total Processing Speed (GHz) & Total Storage Space & Total DRAM (TB) & Execution Time\\
-\hline
-SuperMikeII& 57060 & 3804 & 15 & 624.00 & 7.50 & 0.48 & 0 \\
-\hline
-SwatIII& 57060 & 6911 & 8 & 330.83 & 16.00 & 2.00 & 0 \\
-\hline
-CeresII & 57060 & 2282 & 25 & 300.00 & 25.00 & 1.60 & 0\\
+CeresII (MicroBrick-based Hyperscale System) & One 6-core Xeon & 2 & 6 & 12 & 1-SSD (NVMe) & 2 & 2 & 64 & 40 & 0.33 & 5.33\\
 \hline
 \end{tabular}
 \end{table*}
-\subsection{Experimental Testbeds}
 As mentioned earlier, in our study we evaluate three different cluster architectures. Table-\ref{tab:Testbeds} shows the overview of our experimental testbeds. The first one, SuperMikeII represents a traditional HPC cluster. This LSU HPC cluster oﬀers a total of 440 computing nodes. However, a maximum 128 can be allocated at a time to a single user. SwatIII represents a regular datacenter. This Samsung datacenter has 128 nodes. However, we used maximum 16 nodes for our experiments. The last one, CeresII is a novel hyperscale system based on Samsung MicroBrick. We use SuperMikeII as the baseline conﬁguration and compare the performance of other clusters with respect to this. We always use homogeneous conﬁguration across any cluster. We reported the performance and the price of diﬀerent clusters in terms of the Hadoop datanodes (DN) only. For the masternode, we always use a minimal configuration based upon the resources in the cluster. In the subsequent sections we use the term node and datanode interchangeably.
 
 \subsection{Cluster Characterization using $\gamma$ and $\beta_{io}$}
-\begin{figure}[htb]
-	\begin{subfigure}[b]{0.23\textwidth}
-                \includegraphics[width=\textwidth]{Figures/beta_io.pdf}
+\begin{figure*}[htb]
+	\begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]{Figures/ModelFigures/beta_io.pdf}
                 \caption{$\beta_{io}$ vs  $\gamma_{io}$}
                 \label{fig:beta_io}
     \end{subfigure}
- 	\begin{subfigure}[b]{0.23\textwidth}
-                \includegraphics[width=\textwidth]{Figures/beta_mem.pdf}
+ 	\begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]{Figures/ModelFigures/beta_mem.pdf}
                 \caption{$\beta_{mem}$ vs  $\gamma_{mem}$}
                 \label{fig:beta_mem}
    \end{subfigure}
    \caption{Change in system's optimum I/O and memory balance ($\beta_{io}$ and $\beta_{mem}$) with respect to Intel Xeon processor ($\delta_{io} = 13.57$ and $\delta_{mem} = 0.08$) for different types of applications (varying values of $\gamma_{io}$ and $\gamma_{mem}$)}
   \label{fig:BetaVsGamma}
-\end{figure}
+\end{figure*}
 Figure-\ref{fig:beta_io} and \ref{fig:beta_mem} shows the change in system's optimum I/O and memory balance respectively with respect to Intel Xeon processor architecture for varying application balance (i.e., application's resource requirement). Based upon this figure characterize each of our experimental testbeds on the basis of $\beta_{io}$ and $\beta_{mem}$ and discuss the major pros and cons of each different architecture.  
 
 %In this section we characterize each cluster on the basis of system balance parameters that we derived earlier and discuss the major pros and cons of each different cluster architecture. Since all the clusters in our evaluation use the same processor family (i.e., Intel Xeon) we use Equation-?? and ?? to calculate the Amdahl’s I/O and memory numbers of different clusters.
 \subsubsection{SuperMikeII (Traditional HPC cluster)}
-SuperMikeII has two 8-core Intel Sandybridge Xeon processor per node thus oﬀering huge processing power. However, each SuperMikeII node is equipped with only one HDD, thus, limited in terms of I/O bandwidth. Also, each SuperMikeII node has only 32GB DRAM. Thus, SuperMikeII has both, $\beta_{io}$ ($=0.003$) and $\beta_{mem}$ ($=0.77$) a magnitude smalller than the optimum produced by our model (as shown in Equation-\ref{eqn:BalancedOptIo} and Equation-\ref{eqn:BalancedOptMem}) for a data-, compute- and memory-intensive application. According to Figure-\ref{fig:BetaVsGamma} SuperMikeII can provide optimal performance only for compute-intensive applications (precisely for those application with $\gamma_{io}=x$ and $\gamma_{mem}=y$).  
+SuperMikeII has two 8-core Intel Sandybridge Xeon processor per node thus oﬀering huge processing power. However, each SuperMikeII node is equipped with only one HDD, thus, limited in terms of I/O bandwidth. Also, each SuperMikeII node has only 32GB DRAM. Thus, SuperMikeII has both, $\beta_{io}=0.003$ and $\beta_{mem}=0.77$ a magnitude smalller than the optimum produced by our model for a data-, compute- and memory-intensive application as shown in Equation-\ref{eqn:BalancedOptIo} and Equation-\ref{eqn:BalancedOptMem}. According to Figure-\ref{fig:BetaVsGamma} SuperMikeII can provide optimal performance only for compute-intensive applications, precisely for those application with $\gamma_{io}=x$ and $\gamma_{mem}=y$.  
 \subsubsection{SwatIII (Existing Datacenter)}
-Unlike SuperMikeII which use only one HDD per node, SwatIII uses 4-HDDs per node using JBOD (Just a Bunch of Disk) conﬁguration while using the same processor (i.e. two 8-core Intel SandyBridge Xeon) as SuperMikeII. Since the I/O throughput increases linearly with number of disks, SwatIII's $\beta_{io}$ ($=0.015$) is higher than SuperMikeII but lower than the optimum produced by our model for an I/O- and compute-intensive application (Equation-\ref{eqn:BalancedOptIo}). On the other hand, each SwatIII node has 256GB DRAM, thus achieve very high value for $\beta_{mem}$ ($=6.15$). It is to be noticed that $\beta_{mem}$ of SwatIII is even higher than the optimum produced by the model (Equation-\ref{eqn:BalancedOptMem}). Thus, according to Figure-\ref{fig:BetaVsGamma} SwatIII can produce optimal performance for moderately I/O-intensive applications and for memory-intensive applications (precisely when $\gamma_{io} = x$ and $\gamma_{mem}=y$)
+Unlike SuperMikeII which use only one HDD per node, SwatIII uses 4-HDDs per node using JBOD (Just a Bunch of Disk) conﬁguration while using the same processor (i.e. two 8-core Intel SandyBridge Xeon) as SuperMikeII. Since the I/O throughput increases linearly with number of disks, SwatIII's $\beta_{io}=0.015$ is higher than SuperMikeII but lower than the optimum produced by our model for an I/O- and compute-intensive application (Equation-\ref{eqn:BalancedOptIo}). On the other hand, each SwatIII node has 256GB DRAM, thus achieve very high value for $\beta_{mem}=6.15$. It is to be noticed that $\beta_{mem}$ of SwatIII is even higher than the optimum produced by the model (Equation-\ref{eqn:BalancedOptMem}). Thus, according to Figure-\ref{fig:BetaVsGamma} SwatIII can produce optimal performance for moderately I/O-intensive applications and for memory-intensive applications, precisely when $\gamma_{io} = x$ and $\gamma_{mem}=y$.
 \subsubsection{CeresII (MicroBrick-based Hyperscale System)}
 The last one, CeresII is a novel hyperscale system based on Samsung MicroBricks. It uses one 6-core Intel Xeon processor with a core frequency of 2-GHz. Each MicroBrick (or,simply the computation module) of CeresII consists of a 6-core Intel Xeon processor with a core frequency of 2-GHz, two NVMe-SSD (Samsung) each with an I/O bandwidth of 2GBPS, and 64-GB DRAM. $\beta
-_{io}$ of CeresII is $0.32$ which is closer to the optimum produced by our model (as shown in Equation-\ref{eqn:BalancedOptIo}).  On the other hand, $\beta_{mem}$ of each CeresII module is $5.33$. Although, it is higher than the optimal, it is significantly less than SwatIII. Thus, CeresII is the most balanced cluster among all the avalilable resources and we expect to get the best cost to performance for today's I/O-, compute- and memory-intensive applications for which  $\gamma_{io} = \gamma_{mem} = 1$. 
- 
-\subsection{Understanding the Workload}
-\subsubsection{Terasort}
-\subsubsection{Wordcount}
-\subsubsection{Genome Assembly with Hadoop and Giraph}
-De novo genome assembly refers to the construction of an entire genome sequence from a huge amount of small, overlapping and erroneous fragments called short read sequences while no reference genome is available. The problem can be mapped as a simplified de Bruijn graph traversal \cite{bio:debruijngraph}. We classified the de novo assembly in two stages as follows:
-\begin{inparaenum}[\itshape a\upshape)]
-\item Hadoop-based de Bruijn graph-construction and
-\item Giraph-based graph-simplification.  
-\end{inparaenum}
-In this section, we provide a brief overview of each stage of the assembler. 
+_{io}$ of CeresII is $0.32$ which is closer to the optimum produced by our model in Equation-\ref{eqn:BalancedOptIo}.  On the other hand, $\beta_{mem}$ of each CeresII module is $5.33$. Although, it is higher than the optimal, it is significantly less than SwatIII. Thus, CeresII is the most balanced cluster among all the avalilable resources and we expect to get the best cost to performance for today's I/O-, compute- and memory-intensive applications for which  $\gamma_{io} = \gamma_{mem} = 1$. 
 
-\textit{Hadoop-based De Bruijn graph-construction (I/O- and compute-intensive workload)}
-After filtering the actual short reads (i.e., the line containing only nucleotide characters $A$, $T$, $G$, and $C$) from a standard fastq file, an extremely shuffle-intensive Hadoop job creates the graph from these reads.  the Hadoop map task divides each read into several short fragments of length $k$ known as $k$-mers. Two subsequent $k$-mers are emitted as an intermediate key-value pair that represents  a vertex and an edge (emitted from that vertex) in the de Bruijn graph.  The reduce function aggregates the edges (i.e the value-list) of each vertex (i.e., the $k$-mer emitted as key) and, finally, writes the graph structure in the HDFS in the adjacency-list format. Based upon the value of $k$ (determined by biological characteristics of the species), the job produces huge amount of shuffled data. For example, for a read-length of 100 and $k$ of 31 the shuffled data size is found to be 20-times than the original fastq input. On the other hand, based upon the number of unique $k$-mers, the final output (i.e., the graph) can vary from 1 to 10 times of the size of the input. 
+\section{Benchmark Applications:Their Sizes and Characteristics} 
+\subsection{Choice of data processing framework}
+To evaluate the relative merits of the clusters with respect to data-intensive scientific applications, first we need a big data analytic platform. The obvious selection is Hadoop which is nowadays the de facto standard for big data analysis and rapidly gaining popularity in scientific computing as well. We also evaluate the cluster hardware with respect to Giraph which is a large scale, vertex centric, in-memory graph processing framework developed atop Hadoop using Valiant's theory for Bulk Synchronous processing. We use Clouera-Hadoop-2.3.0 and Giraph-1.1.0 for the entire study and use the Cloudera-Manager-5.0.0 for monitoring the system behavior. 
 
-\textit{Giraph-based Graph Simplification (memory- and compute-intensive workload)}
-The large scale graph data structure produced by the last MapReduce stage is analyzed here. This stage consists of a series of memory-intensive Giraph jobs. Each Giraph job consists of three different types of computation: compress linear chains of vertices followed by removing the tip-structure and then the bubble-structure (introduced due to sequencing errors) in the graph. Giraph can maintain a counter on the number of supersteps and the master-vertex class invokes each type of computation based on that.
+Since our goal is to evaluate the underlying hardware components and their, we avoid any unnecessary change in the source code of Hadoop or Giraph. To evaluate the balance between the hardware components, we set up the Hadoop parameters such that the application can make use of the maximum available processing speed, I/O bandwidth and DRAM. However, it is worthy to mention here, due to limited I/O bandwidth in SuperMikeII (traditional HPC cluster with only 1-HDD per node) we could launched only 8 concurrent YARN containers (or simply, 8 concurrent map/reduce tasks) i.e.,half of the total number of cores to get the optimal performance. Appendix-\ref{app:HadoopConfigurationsAndoptimizations} shows a brief description of our Hadoop optimization techniques.
 
-\section{Input Data}
-\begin{table}
+\subsection{Benchmark Application}
+\begin{table*}
+\caption{Data size for different benchmark applications}
+\label{tab:AppChar}
 \begin{center}
-    \begin{tabular}{ |p{1.1cm} | p{1.1cm} | p{0.8cm} | p{1.1cm} | p{0.8cm} | p{0.5cm} | p{0.8cm} | p{0.8cm}|} \hline
-    Benchmark Specification & Job name & Job Type & Input & Final output & \# jobs & Shuffled data & HDFS Data \\ \hline
-    HiBench & Terasort & Hadoop & 1TB & 1TB & 1 & 1TB & 1TB  \\ \hline
-    HiBench & Wordcount & Hadoop & 1TB & 1TB & 1 & 1TB & 1TB  \\ \hline 
-    Moderate size Genome Assembly & Graph Construction  & Hadoop & 90GB (500-million reads) & 95GB & 2 & 2TB & 136GB \\ \hline
-    Moderate size Genome Assembly & Graph Simplification & Series of Giraph jobs & 95GB (71581898 vertices) & 640MB (62158 vertices) & 15 & - & 966GB \\ \hline    
-    Large size Genome Assembly & Graph Construction & Hadoop & 452GB (2-billion reads) & 3TB & 2 & 9.9TB & 3.2TB \\ \hline
-    Large size Genome Assembly & Graph Simplification & Series of Giraph jobs & 3.2TB (1483246722 vertices) & 3.8GB (3032297 vertices) & 15 & - & 4.1TB \\ \hline 
+    \begin{tabular}{ |p{3cm} | p{1.5cm} | p{2.5cm} | p{2.5cm} | p{0.8cm} | p{0.8cm} | p{0.8cm} | p{2.5cm}|} \hline
+     Job name & Job Type & Input & Final output & \# jobs & Shuffled data & HDFS Data & Application Characteristics \\ \hline
+    Terasort & Hadoop & 1TB & 1TB & 1 & 1TB & 1TB & Map: CPU-intensive, Reduce: I/O-intensive \\ \hline
+    Wordcount & Hadoop & 1TB & 1TB & 1 & 1TB & 950GB & Map and Reduce: CPU-Intensive \\ \hline 
+   Graph Construction (moderate size bumble bee genome)  & Hadoop & 90GB (500-million reads) & 95GB & 2 & 2TB & 136GB & Map and Reduce: CPU- and I/O-intensive \\ \hline
+    Graph Simplification (moderate size bumble bee genome) & Series of Giraph jobs & 95GB (71581898 vertices) & 640MB (62158 vertices) & 15 & - & 966GB & Memory-intensive\\ \hline    
+    Graph Construction (large size human genome) & Hadoop & 452GB (2-billion reads) & 3TB & 2 & 9.9TB & 3.2TB &Map and Reduce: CPU- and I/O-intensive\\ \hline
+    Graph Simplification (large size human genome) & Series of Giraph jobs & 3.2TB (1483246722 vertices) & 3.8GB (3032297 vertices) & 15 & - & 4.1TB & Memory-Intensive \\ \hline 
     \end{tabular}
-    \caption{Data size for different benchmark applications}
-	\label{table:BumbleBeeData}
 \end{center}
-\end{table}
+\end{table*}
+Table-\ref{tab:AppChar} summarizes the details of the benchmark applications, the data size handled by each of these applications and their corresponding characteristics. We used three benchmark application for our evaluation: TeraSort, WordCount, and a real world genome assembly application. A brief description of each of these applications are as follows:
 
+\subsubsection{TeraSort}
+The first one is TeraSort, a standard benchmark for any data processing framework. The Hadoop version of TeraSort samaples and partitions the input data in its map phase based upon only first few characters. The reduce phase then uses quicksort algorithm to sort each of the partition locally. 
+
+We generated the data for this application using TeraGen program. We used 1TB of data  as input for TeraSort. TeraSort generate almost similar amount data in the intermediate shuffle phase as their input. The output data size of TeraSort is same as its input, i.e., 1TB in this work. The map phase of TeraSort is CPU-intensive as it reads only the first few characters of each row in the input dataset to generate the key (called sample-key) for each data. However, based upon the data size reduce phase can be severely I/O-intensive. The entire dataset needs to be transferred to different reducers and each reducer needs to read each row at least once to sort the data set. Again, for huge volume of data partition, that cannot fit in memory, an external sort may be applied making the reduce phase severely I/O bound.  
+
+\subsubsection{WordCount}
+The second one is WordCount, another widely used Hadoop benchmark. The map phase of WordCount parse the input data set line by line to extract each word. Each word is emmitted with a $1$ as its initial count which is then summed up in the reduce phase to output its  freauency. 
+
+We ran the TeraGen program and generated another 1TB random dataset as the input for the WordCount benchmark. Like TeraGen, WordCount also generates almost similar amount of intermediate shuffle data. However, unlike TeraGen, the output of WordCount may vary based upon the frequency of different words in the randomly generated dataset. In our case it was almost 950GB.
+Since both the map and reduce phase read the entire data set sequentially just once, both the map and reduce phase of WordCount is CPU-intensive. 
+
+\subsubsection{Genome Assembly}
+The third one is a genome assembly application that we developed based on Hadoop and Giraph to address the challenges in large scale genome assembly that recently made its way to the forefront of big data challenges. The first phase uses Hadoop to scan the genome data set to filter out the lines containing only neucleotide characters (i.e., $A$, $T$, $G$, and $C$) and then divides each of those lines into smaller fragments of length $k$ known as $k$-mer. Map phase emits each two subsequent $k$-mers as key-value pair representing a vertex and an edge from it. The reduce phase then aggregates all the edges emmitted from each vertex to write the entire graph structure to HDFS. The second phase of the assembly application uses Giraph to to compress each of the linear chains in the graph structure to one vertex and remove the tip and bubble structure in the graph (included because of sequencing error). After removing the tips and bubble structure the graph may have some new linear chains which are compresed again. Similarly, new tip and bubble structures are removed again. So, the process continues incrementally as a series of Giraph jobs until there is no tip or bubble in the graph. Appendix-\ref{app:GenomeAssemblyAlgorithms} shows the overview of our genome assembly application.
+
+In this work we use two different genome datasets: 1) a moderate size bumble bee genome dataset (90GB) and 2) a large size human genome dataset (452GB). The corresponding graph sizes are 95GB and 3.2TB based upon the number of unique $k$-mers (using $k=31$ in both the cases) in the data set. The Hadoop stage of the assembly application is severely shuffle intensive. For both the dataset the size of the temporary shuffle data isalmost 21-times more than the input size. The bumble bee genome is available in Genome Assembly Gold-standard Evaluation (GAGE \cite{bio:gage}) website\footnote{http://gage.cbcb.umd.edu/} in fastq format. The Human genome is available in NCBI website with accession number SRX016231\footnote{http://www.ncbi.nlm.nih.gov/sra/SRX016231[accn]}.
+
+\section{Result and Discussion}
+\subsection{Overall performance Evaluation Keeping Cost of the Cluster Same}
+\begin{table}[!t]
+\caption{Performance result of different cluster architecture for different applications}
+\label{fig:perf}
+\centering
+\begin{tabular}{|p{2.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|} \hline
+Cluster Configurations & SuperMikeII & SwatIII & CeresII\\ \hline
+Total cost (\$) & 57060 & 57060 & 57060\\ \hline
+Cost/DN (\$) & 3804 & 6911 & 2282\\ \hline
+\#DN & 15 & 8 & 25\\ \hline
+Total processing speed (GHz) & 624.00 & 330.83 & 300.00\\ \hline
+Total I/O bandwidth (GBPS) & 2.25 & 4.80 & 50.00\\ \hline
+Total storage space (TB) & 7.50 & 16.00 & 25.00\\ \hline
+Total DRAM Size (TB) & 0.48 & 2.00 & 1.60\\ \hline
+\end{tabular}
+\caption{Resources available for each cluster architecture keeping the total cost of the cluster same. The cost of 15 datanodes of SuperMikeII is used as baseline}
+\label{tab:ScalingCost}
+\end{table}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.5\textwidth]{Figures/PerformanceFigures/execTime.pdf}
+\end{figure}
+To show the balance between performance and economy we keep the total cost same across all the clusters. Table-\ref{tab:Cost} shows the available resources for all the three cluster architectures available to us i.e. SuperMikeII, SwatIII and CeresII while keeping the total cost same across all the clusters. We used the cost of $15$ datanodes of SuperMikeII as the baseline. Then, we divided this baseline-cost by the cost of each node in SwatIII and CeresII to count the number of nodes to be used in these two different clusters.
+
+We ran the first three applications described in Table-\ref{table:BumbleBeeData} in all the three cluster configurations and measured their execution time. All results are the means of at least 3 runs of each job on each configuration. Figure-\ref{fig:perf} shows the results normalized to the SuperMikeII baseline. That is, the  execution time of SuperMikeII is always $1$. We see that CeresII being closer to the optimal produced by our model performs surprisingly well. For both TeraSort and WordCount benchmark application, CeresII shows almost 65\% improvement over the SuperMikeII baseline. For Hadoop and Giraph stage of the bumble bee (90GB) genome assembly application, it shows almost 50\%  and 30\% improvement respectively over the baseline. Comparing to SwatIII, CeresII shows almost 40\% improvement in execution time for TeraSort and WordCount. For the our genome assembly benchmark evaluation it CeresII shows more 20\% and 26\% improvement in the Hadoop and Giraph stage respectively. 
+
+\subsection{Phase by phase analysis on Different Cluster Configuration}
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
 % For figures, \caption should occur after the \includegraphics.
@@ -1019,6 +1039,42 @@ The conclusion goes here.
 
 
 
+\appendices
+\section{Hadoop Configuration and Optimization}
+ \label{app:HadoopConfigurationsAndoptimizations}
+Since our goal is to evaluate the underlying hardware components and their, we avoid any unnecessary change in the source code of Hadoop or Giraph. To evaluate the balance between the hardware components, we set up the Hadoop parameters such that the application can make use of the maximum available processing speed, I/O bandwidth and DRAM. We use Clouera-Hadoop-2.3.0 and Giraph-1.1.0 for the entire study and use the Cloudera-Manager-5.0.0 for monitoring the system behavior. In this section we provide our evaluation methodology in details. A brief description of the Hadoop-parameters that we changed are as follows. 
+  
+\textbf{Number of concurrent YARN containers:} After performing rigorous testing,  we observed, that for SuperMikeII and SwatIII-Basic-HDD (1-HDD/DN cases), 8-conainers/DN (i.e., half of total cores/node) show the best result. For any other cluster, number of concurrent containers per datanode is kept equal to the number of cores per node. 
+
+\textbf{Amount of memory per container and Java-heap-space:} In each node in any node of any cluster, we kept 10\% of the memory for the system use. The rest of the memory is equally divided among the launched containers. The Java heap space per worker is always set to lower than memory per container as per normal recommendation.
+
+\textbf{Total number of Reducers:} Based on the observation of job profiles, we observed that 2-times of reducers than number of concurrent containers produce good performance in general. 
+
+\textbf{Giraph workers:} The number of Giraph workers is set according to the number of concurrent YARN containers.
+
+\textbf{Other Giraph parameters:} We always used enough memory to accommodate the graph structure in memory and always avoided using the out-of-core execution feature of Giraph, which writes huge data to the disk. We also avoided using the checkpoint feature for the same reason.
+
+
+\section{Genome Assembly Algorithms}
+\label{app:GenomeAssemblyAlgorithms}
+%\subsubsection{TeraSort}
+%TeraSort smaples the input data and uses MapReduce to sort the entire data. The map phase of TeraSort samples and partitions the entire dataset by reading only the first few characters of each row. Then, it assigns a key (called sample-key) to each partition of the input dataset. The sample-keys are generated such that, the sample-key of a partition (say $partition_i$) is less than the sample-key of the next partition (i.e., $partition_{i+1}$). Then,based upon these sample keys the data set is distributed over the reducers. Then each reducer uses quicksort to sort the local partitions of the data assigned to it. and the sorted data is written to the HDFS. 
+%\subsubsection{WordCount}
+%Hadoop WordCount is a workload that reads an input text file and counts how often a certain word exists in the text file. each line is fed into a mapper as an input and breaks down each line into words. It then uses a key/value pair for each word with $1$ next to each word as initial count. A reducer sums the count of each word and issues a key/value pair with the word and sum for each word and the final output is written to HDFS. 
+The motivation behind selecting genome assembly application is that, the high throughput next generation DNA sequencing machines (e.g., Illumina Genome Analyzer) has outpased Moore's law and started producing a huge amount of short read sequences typically in the scale of several Gigabytes to Terabytes. Furthermore, the size of the de Bruijn graph built from these vast amount of short reads may be a magnitude higher than the reads itself making the entire assembly pipe line severely data-intensive.
+
+De novo genome assembly refers to the construction of an entire genome sequence from a huge amount of small, overlapping and erroneous fragments called short read sequences while no reference genome is available. The problem can be mapped as a simplified de Bruijn graph traversal \cite{bio:debruijngraph}. We classified the de novo assembly in two stages as follows:
+\begin{inparaenum}[\itshape a\upshape)]
+\item Hadoop-based de Bruijn graph-construction and
+\item Giraph-based graph-simplification.  
+\end{inparaenum}
+In this section, we provide a brief overview of each stage of the assembler. 
+
+\subsection{Hadoop-based De Bruijn graph-construction (I/O- and compute-intensive workload)}
+After filtering the actual short reads (i.e., the line containing only nucleotide characters $A$, $T$, $G$, and $C$) from a standard fastq file, an extremely shuffle-intensive Hadoop job creates the graph from these reads.  the Hadoop map task divides each read into several short fragments of length $k$ known as $k$-mers. Two subsequent $k$-mers are emitted as an intermediate key-value pair that represents  a vertex and an edge (emitted from that vertex) in the de Bruijn graph.  The reduce function aggregates the edges (i.e the value-list) of each vertex (i.e., the $k$-mer emitted as key) and, finally, writes the graph structure in the HDFS in the adjacency-list format. Based upon the value of $k$ (determined by biological characteristics of the species), the job produces huge amount of shuffled data. For example, for a read-length of 100 and $k$ of 31 the shuffled data size is found to be 20-times than the original fastq input. On the other hand, based upon the number of unique $k$-mers, the final output (i.e., the graph) can vary from 1 to 10 times of the size of the input. 
+
+\subsection{Giraph-based Graph Simplification (memory- and compute-intensive workload)}
+The large scale graph data structure produced by the last MapReduce stage is analyzed here. This stage consists of a series of memory-intensive Giraph jobs. Each Giraph job consists of three different types of computation: compress linear chains of vertices followed by removing the tip-structure and then the bubble-structure (introduced due to sequencing errors) in the graph. Giraph can maintain a counter on the number of supersteps and the master-vertex class invokes each type of computation based on that.
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
@@ -1035,14 +1091,14 @@ The conclusion goes here.
 %
 
 
-\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
 
 % you can choose not to have a title for an appendix
 % if you want by leaving the argument blank
-\section{}
-Appendix two text goes here.
+%\section{}
+%Appendix two text goes here.
 
 
 % use section* for acknowledgment
@@ -1135,5 +1191,3 @@ The authors would like to thank...
 
 % that's all folks
 \end{document}
-
-
