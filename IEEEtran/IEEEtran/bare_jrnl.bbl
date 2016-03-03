@@ -152,6 +152,24 @@ A.~S. Szalay, G.~C. Bell, H.~H. Huang, A.~Terzis, and A.~White, ``Low-power
 D.~Zheng, A.~Szalay, and A.~Terzis, ``Hadoop in low-power processors,''
   \emph{arXiv preprint arXiv:1408.2284}, 2014.
 
+\bibitem{fw:mapreduce}
+J.~Dean and S.~Ghemawat, ``Mapreduce: simplified data processing on large
+  clusters,'' \emph{Communications of the ACM}, vol.~51, no.~1, pp. 107--113,
+  2008.
+
+\bibitem{fw:pregel}
+G.~Malewicz, M.~H. Austern, A.~J. Bik, J.~C. Dehnert, I.~Horn, N.~Leiser, and
+  G.~Czajkowski, ``Pregel: a system for large-scale graph processing,'' in
+  \emph{Proceedings of the 2010 ACM SIGMOD International Conference on
+  Management of data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp.
+  135--146.
+
+\bibitem{fw:bsp}
+T.~Cheatham, A.~Fahmy, D.~Stefanescu, and L.~Valiant, ``Bulk synchronous
+  parallel computing—a paradigm for transportable software,'' in \emph{Tools
+  and Environments for Parallel and Distributed Systems}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Springer, 1996, pp. 61--76.
+
 \bibitem{bio:gage}
 S.~L. Salzberg, A.~M. Phillippy, A.~Zimin, D.~Puiu, T.~Magoc, S.~Koren, T.~J.
   Treangen, M.~C. Schatz, A.~L. Delcher, M.~Roberts \emph{et~al.}, ``Gage: A

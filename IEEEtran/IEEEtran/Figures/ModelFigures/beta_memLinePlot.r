@@ -17,4 +17,4 @@ lines(x, y=y, lwd=4, col="blue", lty=2)
 y <- 1.0/x*x
 lines(x, y=y, lwd=4, col="red", lty=4)
 
-legend("topleft", c("Beta_mem", "Gray-revised memory number", "Amdahl memory number"), col=c("black","blue","red"), lwd=c(2,2), lty=c(1,2,4), cex=1.5)
+legend("topleft", c("Optimal by Proposed model", "Gray-revised memory number", "Amdahl memory number"), col=c("black","blue","red"), lwd=c(2,2), lty=c(1,2,4), cex=1.5)

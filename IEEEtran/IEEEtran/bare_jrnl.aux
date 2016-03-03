@@ -1,4 +1,6 @@
 \relax 
+\citation{}
+\citation{}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \citation{ssdhdd:kang}
 \citation{ssdhdd:wu}
@@ -32,10 +34,9 @@
 \citation{Balance:zheng2014hadoop}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}System characterization using Amdahl's second law }{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Motivation: Architectural (Im)balance in Traditional HPC Cluster and Recent trend in Hardware}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Hadoop and Giraph Programming Model}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Network Architecture}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Storage Architecture}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Memory Architecture}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Network Architecture}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Storage Architecture}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Memory Architecture}{4}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Amdahl's Second law, Gray's Ammendment, and Their Limitations}{4}}
 \newlabel{Sec:AmdahlGray}{{IV}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Original Form of Amdahl's Second Law}{4}}
@@ -44,35 +45,36 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Gray's Ammendment to Amdahl's Second law}{4}}
 \newlabel{eqn:GrayIONotation}{{3}{4}}
 \newlabel{eqn:GrayMemNotation}{{4}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Limitations of Existing Laws and Current Problem Definition}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Limitations of Existing Laws}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Proposed Model for System Balance: Augmenting Amdahl's Second Law}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Problem Definition}{4}}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Notations and their meaning\relax }}{5}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{tab:Notation}{{I}{5}}
 \newlabel{eqn:BalancedIONotation}{{5}{5}}
 \newlabel{eqn:BalancedMemNotation}{{6}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Proposed Model for System Balance: Augmenting Amdahl's Second Law}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Model Assumptions}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Model Assumptions}{5}}
 \newlabel{eqn:TotalTime}{{8}{5}}
 \newlabel{eqn:TotalCost}{{10}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Model Derivation}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Model Derivation}{5}}
 \newlabel{eqn:CostPerPerformance}{{13}{5}}
 \newlabel{eqn:CostPerPerformanceBalance}{{14}{5}}
 \newlabel{eqn:DiffWithBetaIo}{{15}{5}}
 \newlabel{eqn:BalancedOptIo}{{16}{5}}
 \newlabel{eqn:BalancedOptMem}{{17}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Some Useful Implications}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}An Illustrative Example of Applying the Model to build a Balanced Cluster}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Some Useful Implications}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Cost of different hardware components\relax }}{6}}
+\newlabel{tab:Cost}{{II}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-E}}An Illustrative Example of Applying the Model to build a Balanced Cluster}{6}}
 \newlabel{eqn:PractAppBal}{{18}{6}}
 \newlabel{eqn:PractCostBalIo}{{19}{6}}
 \newlabel{eqn:PractCostBalMem}{{20}{6}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Cost of different hardware components\relax }}{6}}
-\newlabel{tab:Cost}{{II}{6}}
 \newlabel{eqn:PractSysBalIo}{{21}{6}}
 \newlabel{eqn:PractSysBalMem}{{22}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Evaluation Methodology}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Experimental Testbeds}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Cluster Characterization using $\gamma $ and $\beta _{io}$}{6}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}1}SuperMikeII (Traditional HPC cluster)}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Experimental Testbeds: Characterization using System's I/O and Memory Balance}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Cluster Characterization using $\beta $ and $\gamma $}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}1}SuperMikeII (Traditional HPC cluster)}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}2}SwatIII (Existing Datacenter)}{6}}
 \@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Experimental Testbeds\relax }}{7}}
 \newlabel{tab:Testbeds}{{III}{7}}
 \newlabel{fig:beta_io}{{1a}{7}}
@@ -81,28 +83,45 @@
 \newlabel{sub@fig:beta_mem}{{b}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Change in system's optimum I/O and memory balance ($\beta _{io}$ and $\beta _{mem}$) with respect to Intel Xeon processor ($\delta _{io} = 13.57$ and $\delta _{mem} = 0.08$) for different types of applications (varying values of $\gamma _{io}$ and $\gamma _{mem}$)\relax }}{7}}
 \newlabel{fig:BetaVsGamma}{{1}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}2}SwatIII (Existing Datacenter)}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}3}CeresII (MicroBrick-based Hyperscale System)}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}3}CeresII (MicroBrick-based Hyperscale System)}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Cluster Evaluation Methodology}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VII-A}}Software platform}{7}}
+\citation{fw:mapreduce}
+\citation{fw:pregel}
+\citation{fw:bsp}
 \citation{bio:gage}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Benchmark Applications:Their Sizes and Characteristics}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VII-A}}Choice of data processing framework}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VII-B}}Benchmark Application}{8}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-B}1}TeraSort}{8}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-B}2}WordCount}{8}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-B}3}Genome Assembly}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VII-B}}Hadoop Configurations Overview}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VII-C}}Benchmark Application Characteristics}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-C}1}TeraSort}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-C}2}WordCount}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VII-C}3}Genome Assembly}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VII-D}}Data Size}{8}}
 \@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Data size for different benchmark applications\relax }}{9}}
 \newlabel{tab:AppChar}{{IV}{9}}
-\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Performance result of different cluster architecture for different applications\relax }}{9}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Resources available for each cluster architecture keeping the total cost of the cluster same. The cost of 15 datanodes of SuperMikeII is used as baseline\relax }}{9}}
+\newlabel{tab:ScalingCost}{{V}{9}}
 \newlabel{fig:perf}{{V}{9}}
-\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Resources available for each cluster architecture keeping the total cost of the cluster same. The cost of 15 datanodes of SuperMikeII is used as baseline\relax }}{9}}
-\newlabel{tab:ScalingCost}{{VI}{9}}
 \@writefile{toc}{\contentsline {section}{\numberline {VIII}Result and Discussion}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-A}}Overall performance Evaluation Keeping Cost of the Cluster Same}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}}Phase by phase analysis on Different Cluster Configuration}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {IX}Conclusion}{9}}
-\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  A: Hadoop Configuration and Optimization}{9}}
-\newlabel{app:HadoopConfigurationsAndoptimizations}{{A}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-A}}Evaluating the Cost/Performance of Different Cluster}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Performance of different cluster architecture for different applications keeping the total cost of each cluster same\relax }}{9}}
+\citation{}
 \citation{bio:debruijngraph}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Maximum available resources in each cluster architecture\relax }}{10}}
+\newlabel{tab:TotalCluster}{{VI}{10}}
+\newlabel{fig:perf}{{VI}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}}Evaluating Different Cluster for Large Size Human Genome Assembly}{10}}
+\newlabel{fig:HumPerf}{{3a}{10}}
+\newlabel{sub@fig:HumPerf}{{a}{10}}
+\newlabel{fig:HumCost}{{3b}{10}}
+\newlabel{sub@fig:HumCost}{{b}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Performance of different cluster for large size human genome assembly\relax }}{10}}
+\newlabel{fig:Hum}{{3}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-C}}Phase by phase analysis on Different Cluster Configuration}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Conclusion}{10}}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  A: Hadoop Configuration and Optimization}{10}}
+\newlabel{app:HadoopConfigurationsAndoptimizations}{{A}{10}}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  B: Genome Assembly Algorithms}{10}}
+\newlabel{app:GenomeAssemblyAlgorithms}{{B}{10}}
 \bibstyle{IEEEtran}
 \bibdata{bare_jrnl_bib}
 \bibcite{ssdhdd:kang}{1}
@@ -115,11 +134,6 @@
 \bibcite{scaleupscaleout:michael}{8}
 \bibcite{scaleupscaleout:appuswamy}{9}
 \bibcite{Balance:kung1986memory}{10}
-\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  B: Genome Assembly Algorithms}{10}}
-\newlabel{app:GenomeAssemblyAlgorithms}{{B}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {B-A}}Hadoop-based De Bruijn graph-construction (I/O- and compute-intensive workload)}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {B-B}}Giraph-based Graph Simplification (memory- and compute-intensive workload)}{10}}
-\@writefile{toc}{\contentsline {section}{References}{10}}
 \bibcite{Simulator:liu2013hsim}{11}
 \bibcite{Simulator:verma2011play}{12}
 \bibcite{Simulator:hammoud2010mrsim}{13}
@@ -134,5 +148,11 @@
 \bibcite{Balance:cohen2009applying}{22}
 \bibcite{cluster:AmdahlBalancedBlade}{23}
 \bibcite{Balance:zheng2014hadoop}{24}
-\bibcite{bio:gage}{25}
-\bibcite{bio:debruijngraph}{26}
+\bibcite{fw:mapreduce}{25}
+\bibcite{fw:pregel}{26}
+\bibcite{fw:bsp}{27}
+\bibcite{bio:gage}{28}
+\bibcite{bio:debruijngraph}{29}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {B-A}}Hadoop-based De Bruijn graph-construction (I/O- and compute-intensive workload)}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {B-B}}Giraph-based Graph Simplification (memory- and compute-intensive workload)}{11}}
+\@writefile{toc}{\contentsline {section}{References}{11}}

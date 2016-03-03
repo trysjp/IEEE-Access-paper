@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 MAR 2016 23:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 MAR 2016 00:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -255,7 +255,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(./bare_jrnl.aux)
+(./bare_jrnl.aux
+
+LaTeX Warning: Label `fig:perf' multiply defined.
+
+)
 \openout1 = `bare_jrnl.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 360.
@@ -346,9 +350,6 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
  [3]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -375,7 +376,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--626
+Underfull \hbox (badness 10000) in paragraph at lines 590--591
 []\OT1/ptm/m/n/10 Revised Am-dahls I/O law: A sys-tem needs 8
  []
 
@@ -383,214 +384,210 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 813--813
+Underfull \hbox (badness 10000) in paragraph at lines 762--762
 []\OT1/ptm/m/n/8 Western Dig-i-tal RE4 HDD
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 819--819
+Underfull \hbox (badness 1783) in paragraph at lines 768--768
 []\OT1/ptm/m/n/8 Samsung DDR3 16GB mem-ory
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Overfull \hbox (1.74648pt too wide) in paragraph at lines 756--773
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []\OT1/ptm/m/n/8 CPU
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 Core
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 Speed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []\OT1/ptm/m/n/8 #Cores
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []\OT1/ptm/m/n/8 CPU
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 Speed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 (GHz)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []\OT1/ptm/m/n/8 #Disks
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 /node
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 833--833
+Underfull \hbox (badness 1540) in paragraph at lines 801--801
 []\OT1/ptm/m/n/8 Seq I/O
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 Band-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 width
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 /Disk
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []\OT1/ptm/m/n/8 Total
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 833--833
+Underfull \hbox (badness 1540) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 Seq I/O
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 Band-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 width
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 (GBPS)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []\OT1/ptm/m/n/8 DRAM
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 /node
  []
 
 
-Overfull \hbox (4.8829pt too wide) in paragraph at lines 833--833
+Overfull \hbox (4.8829pt too wide) in paragraph at lines 801--801
 []\OT1/ptm/m/n/8 Maximum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 #Nodes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--833
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \OT1/ptm/m/n/8 avail-
  []
 
 
-Overfull \hbox (4.85664pt too wide) in paragraph at lines 833--834
+Overfull \hbox (4.85664pt too wide) in paragraph at lines 801--802
 []$\OML/cmm/m/it/8 ^^L[]$| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--835
+Underfull \hbox (badness 10000) in paragraph at lines 803--803
 []\OT1/ptm/m/n/8 SuperMikeII
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--835
+Underfull \hbox (badness 10000) in paragraph at lines 803--803
 []\OT1/ptm/m/n/8 Two 8-core
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--835
+Underfull \hbox (badness 10000) in paragraph at lines 803--803
 \OT1/ptm/m/n/8 Sandy-Bridge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--835
+Underfull \hbox (badness 10000) in paragraph at lines 803--803
 []\OT1/ptm/m/n/8 1-HDD
  []
 
 
-Overfull \hbox (0.92818pt too wide) in paragraph at lines 835--835
+Overfull \hbox (0.92818pt too wide) in paragraph at lines 803--803
 []\OT1/ptm/m/n/8 0.003| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--837
+Underfull \hbox (badness 10000) in paragraph at lines 805--805
 []\OT1/ptm/m/n/8 Two 8-core
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--837
+Underfull \hbox (badness 10000) in paragraph at lines 805--805
 \OT1/ptm/m/n/8 Sandy-Bridge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--837
+Underfull \hbox (badness 10000) in paragraph at lines 805--805
 []\OT1/ptm/m/n/8 4-HDD
  []
 
 
-Overfull \hbox (0.92818pt too wide) in paragraph at lines 837--837
+Overfull \hbox (0.92818pt too wide) in paragraph at lines 805--805
 []\OT1/ptm/m/n/8 0.015| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+Underfull \hbox (badness 10000) in paragraph at lines 807--807
 []\OT1/ptm/m/n/8 CeresII
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+Underfull \hbox (badness 10000) in paragraph at lines 807--807
 \OT1/ptm/m/n/8 (MicroBrick-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+Underfull \hbox (badness 10000) in paragraph at lines 807--807
 \OT1/ptm/m/n/8 based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+Underfull \hbox (badness 10000) in paragraph at lines 807--807
 \OT1/ptm/m/n/8 Hy-per-scale
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--839
+Underfull \hbox (badness 10000) in paragraph at lines 807--807
 []\OT1/ptm/m/n/8 1-SSD
  []
 
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
 Missing character: There is no Ô in font ptmr7t!
 Missing character: There is no ¨ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -598,8 +595,8 @@ Missing character: There is no Ä in font ptmr7t!
 File: Figures/ModelFigures/beta_io.pdf Graphic file (type pdf)
 
 <use Figures/ModelFigures/beta_io.pdf>
-Package pdftex.def Info: Figures/ModelFigures/beta_io.pdf used on input line 84
-8.
+Package pdftex.def Info: Figures/ModelFigures/beta_io.pdf used on input line 81
+6.
 (pdftex.def)             Requested size: 247.6778pt x 247.67984pt.
 
 <Figures/ModelFigures/beta_mem.pdf, id=32, 505.89pt x 505.89pt>
@@ -607,173 +604,208 @@ File: Figures/ModelFigures/beta_mem.pdf Graphic file (type pdf)
 
 <use Figures/ModelFigures/beta_mem.pdf>
 Package pdftex.def Info: Figures/ModelFigures/beta_mem.pdf used on input line 8
-53.
+21.
 (pdftex.def)             Requested size: 247.6778pt x 247.67984pt.
 Missing character: There is no Ô in font ptmr7t!
 Missing character: There is no ¨ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
- [6]
 Missing character: There is no Ô in font ptmr7t!
 Missing character: There is no ¨ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 
-Underfull \hbox (badness 2556) in paragraph at lines 866--867
+Underfull \hbox (badness 2556) in paragraph at lines 834--835
  \OT1/ptm/m/it/10 2) SwatIII (Ex-ist-ing Dat-a-cen-ter): [][] \OT1/ptm/m/n/10 U
 n-like Su-per-MikeII
  []
 
+[6]
+Missing character: There is no Ô in font ptmr7t!
+Missing character: There is no ¨ in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
 
-Underfull \vbox (badness 4832) has occurred while \output is active []
-
-
-Underfull \vbox (badness 4832) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./Figures/ModelFigures/beta_io.pdf> <./Figures/ModelFigures/beta_mem.pdf>]
 
-Overfull \hbox (4.14954pt too wide) in paragraph at lines 883--883
+Overfull \hbox (4.14954pt too wide) in paragraph at lines 856--856
 []\OT1/ptm/m/n/8 Shuffled
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--883
+Underfull \hbox (badness 10000) in paragraph at lines 856--856
 []\OT1/ptm/m/n/8 HDFS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--883
+Underfull \hbox (badness 10000) in paragraph at lines 856--856
 []\OT1/ptm/m/n/8 Application
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--885
+Underfull \hbox (badness 10000) in paragraph at lines 858--858
 []\OT1/ptm/m/n/8 Map and Re-duce:
  []
 
 
-Underfull \hbox (badness 5908) in paragraph at lines 886--886
+Underfull \hbox (badness 5908) in paragraph at lines 859--859
 \OT1/ptm/m/n/8 er-ate size bum-ble bee
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
 []\OT1/ptm/m/n/8 90GB (500-million
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
 []\OT1/ptm/m/n/8 Map and Re-duce:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
 \OT1/ptm/m/n/8 CPU- and I/O-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--887
+Underfull \hbox (badness 10000) in paragraph at lines 860--860
 []\OT1/ptm/m/n/8 Graph Sim-pli-fi-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 887--887
+Underfull \hbox (badness 10000) in paragraph at lines 860--860
 \OT1/ptm/m/n/8 (mod-er-ate size bum-ble
  []
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 887--887
+Underfull \hbox (badness 1424) in paragraph at lines 860--860
 []\OT1/ptm/m/n/8 640MB (62158 ver-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--888
+Underfull \hbox (badness 10000) in paragraph at lines 861--861
 []\OT1/ptm/m/n/8 452GB (2-billion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--888
+Underfull \hbox (badness 10000) in paragraph at lines 861--861
 []\OT1/ptm/m/n/8 Map and Re-duce:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--888
+Underfull \hbox (badness 10000) in paragraph at lines 861--861
 \OT1/ptm/m/n/8 CPU- and I/O-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 889--889
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
 []\OT1/ptm/m/n/8 Graph Sim-pli-fi-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 889--889
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
 \OT1/ptm/m/n/8 (large size hu-man
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 889--889
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
 []\OT1/ptm/m/n/8 3.2TB (1483246722
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 918--918
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 []\OT1/ptm/m/n/8 Cluster Con-fig-u-ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--922
+Underfull \hbox (badness 10000) in paragraph at lines 896--896
 []\OT1/ptm/m/n/8 Total pro-cess-ing
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 924--924
+Underfull \hbox (badness 4303) in paragraph at lines 898--898
 []\OT1/ptm/m/n/8 Total stor-age space
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 925--925
+Underfull \hbox (badness 10000) in paragraph at lines 899--899
 []\OT1/ptm/m/n/8 Total DRAM Size
  []
 
-
-Underfull \vbox (badness 4048) has occurred while \output is active []
-
- [8]
 <Figures/PerformanceFigures/execTime.pdf, id=54, 505.89pt x 505.89pt>
 File: Figures/PerformanceFigures/execTime.pdf Graphic file (type pdf)
 
 <use Figures/PerformanceFigures/execTime.pdf>
 Package pdftex.def Info: Figures/PerformanceFigures/execTime.pdf used on input 
-line 932.
+line 904.
 (pdftex.def)             Requested size: 258.0pt x 258.00047pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 932--933
+Overfull \hbox (6.0pt too wide) in paragraph at lines 904--905
  [][] 
  []
 
-
-LaTeX Warning: Reference `table:BumbleBeeData' on page 9 undefined on input lin
-e 936.
-
 [9 <./Figures/PerformanceFigures/execTime.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1076
+Underfull \hbox (badness 2961) in paragraph at lines 915--915
+ \OT1/ptm/m/it/10 B. Eval-u-at-ing Dif-fer-ent Clus-ter for Large Size Hu-man
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]\OT1/ptm/m/n/8 Cluster Con-fig-u-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 926--926
+[]\OT1/ptm/m/n/8 Total pro-cess-ing
+ []
+
+
+Underfull \hbox (badness 4303) in paragraph at lines 928--928
+[]\OT1/ptm/m/n/8 Total stor-age space
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 929--929
+[]\OT1/ptm/m/n/8 Total DRAM Size
+ []
+
+<Figures/PerformanceFigures/execTimeHum.pdf, id=63, 505.89pt x 505.89pt>
+File: Figures/PerformanceFigures/execTimeHum.pdf Graphic file (type pdf)
+
+<use Figures/PerformanceFigures/execTimeHum.pdf>
+Package pdftex.def Info: Figures/PerformanceFigures/execTimeHum.pdf used on inp
+ut line 934.
+(pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
+
+<Figures/PerformanceFigures/costTimeHum.pdf, id=64, 505.89pt x 505.89pt>
+File: Figures/PerformanceFigures/costTimeHum.pdf Graphic file (type pdf)
+
+<use Figures/PerformanceFigures/costTimeHum.pdf>
+Package pdftex.def Info: Figures/PerformanceFigures/costTimeHum.pdf used on inp
+ut line 939.
+(pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
+ [10 <./Figures/PerformanceFigures/execTimeHum.pdf> <./Figures/PerformanceFigur
+es/costTimeHum.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1090
  \OT1/ptm/m/it/10 B. Giraph-based Graph Sim-pli-fi-ca-tion (memory- and
  []
 
-(./bare_jrnl.bbl [10]) [11
+(./bare_jrnl.bbl
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no î in font ptmr7t!
+) [11] (./bare_jrnl.aux)
 
-] (./bare_jrnl.aux)
-
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4322 strings out of 493089
- 69705 string characters out of 6134842
- 145144 words of memory out of 5000000
- 7756 multiletter control sequences out of 15000+600000
+ 4340 strings out of 493089
+ 70208 string characters out of 6134842
+ 144254 words of memory out of 5000000
+ 7772 multiletter control sequences out of 15000+600000
  46078 words of font info for 86 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,16n,38p,1525b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,38p,1554b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -789,10 +821,10 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on bare_jrnl.pdf (11 pages, 933055 bytes).
+Output written on bare_jrnl.pdf (11 pages, 950010 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
