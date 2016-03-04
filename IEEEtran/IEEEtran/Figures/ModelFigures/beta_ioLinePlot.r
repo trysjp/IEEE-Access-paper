@@ -1,10 +1,10 @@
 pdf("//Users/arghyakusumdas/Documents/MyGitProjects/MyIeeeAccessPaper/IEEEtran/IEEEtran/Figures/ModelFigures/beta_io.pdf")
 d <- 27.44
 
-x <- seq(0, 100, by=.0001)
-y <- sqrt(x/d)
+x <- seq(0, 1, by=.0001)
 
-plot(x, y, log="x", col='black', lwd=2, lty=1, type="l", xaxt="n", xlim=c(0.01, 100),
+y <- sqrt(x/d)
+plot(x, y, col='black', lwd=2, lty=1, type="l", xaxt="n", xlim=c(0, 1), ylim=c(0,.3),
 xlab="Application's I/O balance",
 ylab="System's I/O balance")
 ticks <- seq(-2, 2, by=1)
