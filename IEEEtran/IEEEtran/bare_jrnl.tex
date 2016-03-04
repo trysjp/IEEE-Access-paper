@@ -912,6 +912,61 @@ We ran the first three applications described in Table-\ref{tab:AppChar} in all 
 \item Comparing to SwatIII, CeresII shows almost 50\% improvement in execution time for TeraSort and WordCount. For the our genome assembly benchmark evaluation it CeresII shows almost 30\% improvement in tboth he Hadoop and Giraph stage of assembly respectively. 
 \end{enumerate}
 
+\subsection{System Characteristics}
+\begin{figure*}[htb]
+	\begin{subfigure}[b]{0.24\textwidth}
+                \includegraphics[width=\textwidth]{Figures/SystemFigures/TeraSortIPS.pdf}
+                \caption{TeraSort}
+                \label{fig:TeraSortIPS}
+    \end{subfigure}
+ 	\begin{subfigure}[b]{0.24\textwidth}
+                \includegraphics[width=\textwidth]{Figures/SystemFigures/WordCountIPS.pdf}
+                \caption{WordCount}
+                \label{fig:WordCountIPS}
+   \end{subfigure}
+   \begin{subfigure}[b]{0.24\textwidth}
+                \includegraphics[width=\textwidth]{Figures/SystemFigures/BombusGrConsIPS.pdf}
+                \caption{Bumble bee Hadoop}
+                \label{fig:BombusGrConsIPS}
+    \end{subfigure}
+ 	\begin{subfigure}[b]{0.24\textwidth}
+                \includegraphics[width=\textwidth]{Figures/SystemFigures/BombusGrSimpIPS.pdf}
+                \caption{BumbleBee Giraph}
+                \label{fig:BombusGrSimpIPS}
+   \end{subfigure}
+   \caption{Instruction per second}
+  \label{fig:IPS}
+\end{figure*}
+\begin{figure*}[htb]
+	\begin{subfigure}[b]{0.24\textwidth}
+                \includegraphics[width=\textwidth]{Figures/SystemFigures/TeraSortIO.pdf}
+                \caption{TeraSort}
+                \label{fig:TeraSortIO}
+    \end{subfigure}
+ 	\begin{subfigure}[b]{0.24\textwidth}
+                \includegraphics[width=\textwidth]{Figures/SystemFigures/WordCountIO.pdf}
+                \caption{WordCount}
+                \label{fig:WordCountIO}
+   \end{subfigure}
+   \begin{subfigure}[b]{0.24\textwidth}
+                \includegraphics[width=\textwidth]{Figures/SystemFigures/BombusGrConsIO.pdf}
+                \caption{Bumble bee Hadoop}
+                \label{fig:BombusGrConsIO}
+    \end{subfigure}
+ 	\begin{subfigure}[b]{0.24\textwidth}
+                \includegraphics[width=\textwidth]{Figures/SystemFigures/BombusGrSimpIO.pdf}
+                \caption{BumbleBee Giraph}
+                \label{fig:BombusGrSimpIO}
+   \end{subfigure}
+   \caption{I/O Bandwidth}
+  \label{fig:IO}
+\end{figure*}
+Figure-\ref{fig:IPS} and \ref{fig:IO} shows the total number of CPU instructions per second (IPS) and I/O bandwith acorss different cluster architecture while keeping the total cost of the cluster same. For both TeraSort and WordCount, the peak IPS of SuperMikeII is significantly higher than both SwatIII and CeresII. However, the average I/O bandwidth of SuperMikeII is significantly less than the other two leading to significantly high I/O wait which resulting in lower average IPS. This huge difference between peak and average IPS is because of the extremely low value of $\beta_{io}$ in SuperMikeII.
+
+SwatIII cluster shows a better balance between CPU and I/O than SuperMikeII. However, because of its high size of DRAM, it gives up processing speed with respect to CeresII (128 core in SwatIII vs 150 cores in CeresII) when the total cost of the cluster is same. 
+
+CeresII cluster is the optimally balnced in terms of CPU speed and I/O bandwidth with a $\beta_{io}$ value of 0.19. Figure-\ref{fig:TeraSortIPS} and \ref{fig:WordCountIPS} shows that CeresII achieves higher Peak IPS than SwatIII but less than SuperMikeII for both TeraSort and WordCount application. On the other hand, CeresII achieves significantly higher I/O bandwidth than both the cluster keeping the peak and average IPS of the application almost similar and finally leading to the lowest execution time for any of the applications.
+
 \subsection{Evaluating Different Cluster for Large Size Human Genome Assembly}
 \begin{table}[!t]
 \caption{Maximum available resources in each cluster architecture}
@@ -949,7 +1004,6 @@ to assemble the large human genome (452GB) we used the maximum available resourc
 \item Comparing to SwatIII,  the processing power of CeresII is 72\%. However,  due to the optimal architectural balance, CeresII outperforms SwatIII by almost 50\% in the Hadoop stage. The corresponding improvement in Giraph stage is 20\%. In terms of cost/performance, CeresII shows almost 50\% and 30\% improvement over SwatIII for Hadoop and Giraph stage respectively.
 \end{enumerate}
 
-\subsection{Phase by phase analysis on Different Cluster Configuration}
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
 % For figures, \caption should occur after the \includegraphics.

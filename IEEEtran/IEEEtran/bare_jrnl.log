@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 MAR 2016 00:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAR 2016 01:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -744,65 +744,137 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 904--905
  []
 
 [9 <./Figures/PerformanceFigures/execTime.pdf>]
-Underfull \hbox (badness 2961) in paragraph at lines 915--915
- \OT1/ptm/m/it/10 B. Eval-u-at-ing Dif-fer-ent Clus-ter for Large Size Hu-man
+<Figures/SystemFigures/TeraSortIPS.pdf, id=63, 505.89pt x 505.89pt>
+File: Figures/SystemFigures/TeraSortIPS.pdf Graphic file (type pdf)
+
+<use Figures/SystemFigures/TeraSortIPS.pdf>
+Package pdftex.def Info: Figures/SystemFigures/TeraSortIPS.pdf used on input li
+ne 918.
+(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+
+<Figures/SystemFigures/WordCountIPS.pdf, id=64, 505.89pt x 505.89pt>
+File: Figures/SystemFigures/WordCountIPS.pdf Graphic file (type pdf)
+
+<use Figures/SystemFigures/WordCountIPS.pdf>
+Package pdftex.def Info: Figures/SystemFigures/WordCountIPS.pdf used on input l
+ine 923.
+(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+
+<Figures/SystemFigures/BombusGrConsIPS.pdf, id=65, 505.89pt x 505.89pt>
+File: Figures/SystemFigures/BombusGrConsIPS.pdf Graphic file (type pdf)
+
+<use Figures/SystemFigures/BombusGrConsIPS.pdf>
+Package pdftex.def Info: Figures/SystemFigures/BombusGrConsIPS.pdf used on inpu
+t line 928.
+(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+
+<Figures/SystemFigures/BombusGrSimpIPS.pdf, id=66, 505.89pt x 505.89pt>
+File: Figures/SystemFigures/BombusGrSimpIPS.pdf Graphic file (type pdf)
+
+<use Figures/SystemFigures/BombusGrSimpIPS.pdf>
+Package pdftex.def Info: Figures/SystemFigures/BombusGrSimpIPS.pdf used on inpu
+t line 933.
+(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+
+<Figures/SystemFigures/TeraSortIO.pdf, id=67, 505.89pt x 505.89pt>
+File: Figures/SystemFigures/TeraSortIO.pdf Graphic file (type pdf)
+
+<use Figures/SystemFigures/TeraSortIO.pdf>
+Package pdftex.def Info: Figures/SystemFigures/TeraSortIO.pdf used on input lin
+e 942.
+(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+
+<Figures/SystemFigures/WordCountIO.pdf, id=68, 505.89pt x 505.89pt>
+File: Figures/SystemFigures/WordCountIO.pdf Graphic file (type pdf)
+
+<use Figures/SystemFigures/WordCountIO.pdf>
+Package pdftex.def Info: Figures/SystemFigures/WordCountIO.pdf used on input li
+ne 947.
+(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+
+<Figures/SystemFigures/BombusGrConsIO.pdf, id=69, 505.89pt x 505.89pt>
+File: Figures/SystemFigures/BombusGrConsIO.pdf Graphic file (type pdf)
+
+<use Figures/SystemFigures/BombusGrConsIO.pdf>
+Package pdftex.def Info: Figures/SystemFigures/BombusGrConsIO.pdf used on input
+ line 952.
+(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+
+<Figures/SystemFigures/BombusGrSimpIO.pdf, id=70, 505.89pt x 505.89pt>
+File: Figures/SystemFigures/BombusGrSimpIO.pdf Graphic file (type pdf)
+
+<use Figures/SystemFigures/BombusGrSimpIO.pdf>
+Package pdftex.def Info: Figures/SystemFigures/BombusGrSimpIO.pdf used on input
+ line 957.
+(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+
+Underfull \hbox (badness 2781) in paragraph at lines 970--970
+ \OT1/ptm/m/it/10 C. Eval-u-at-ing Dif-fer-ent Clus-ter for Large Size Hu-man
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--922
+Underfull \hbox (badness 10000) in paragraph at lines 977--977
 []\OT1/ptm/m/n/8 Cluster Con-fig-u-ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--926
+Underfull \hbox (badness 10000) in paragraph at lines 981--981
 []\OT1/ptm/m/n/8 Total pro-cess-ing
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 928--928
+Underfull \hbox (badness 4303) in paragraph at lines 983--983
 []\OT1/ptm/m/n/8 Total stor-age space
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 929--929
+Underfull \hbox (badness 10000) in paragraph at lines 984--984
 []\OT1/ptm/m/n/8 Total DRAM Size
  []
 
-<Figures/PerformanceFigures/execTimeHum.pdf, id=63, 505.89pt x 505.89pt>
+<Figures/PerformanceFigures/execTimeHum.pdf, id=71, 505.89pt x 505.89pt>
 File: Figures/PerformanceFigures/execTimeHum.pdf Graphic file (type pdf)
 
 <use Figures/PerformanceFigures/execTimeHum.pdf>
 Package pdftex.def Info: Figures/PerformanceFigures/execTimeHum.pdf used on inp
-ut line 934.
+ut line 989.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
 
-<Figures/PerformanceFigures/costTimeHum.pdf, id=64, 505.89pt x 505.89pt>
+<Figures/PerformanceFigures/costTimeHum.pdf, id=72, 505.89pt x 505.89pt>
 File: Figures/PerformanceFigures/costTimeHum.pdf Graphic file (type pdf)
 
 <use Figures/PerformanceFigures/costTimeHum.pdf>
 Package pdftex.def Info: Figures/PerformanceFigures/costTimeHum.pdf used on inp
-ut line 939.
+ut line 994.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
- [10 <./Figures/PerformanceFigures/execTimeHum.pdf> <./Figures/PerformanceFigur
-es/costTimeHum.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1090--1090
+ [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1144
  \OT1/ptm/m/it/10 B. Giraph-based Graph Sim-pli-fi-ca-tion (memory- and
  []
 
-(./bare_jrnl.bbl
+[11 <./Figures/SystemFigures/TeraSortIPS.pdf> <./Figures/SystemFigures/WordCoun
+tIPS.pdf> <./Figures/SystemFigures/BombusGrConsIPS.pdf> <./Figures/SystemFigure
+s/BombusGrSimpIPS.pdf> <./Figures/SystemFigures/TeraSortIO.pdf> <./Figures/Syst
+emFigures/WordCountIO.pdf> <./Figures/SystemFigures/BombusGrConsIO.pdf> <./Figu
+res/SystemFigures/BombusGrSimpIO.pdf> <./Figures/PerformanceFigures/execTimeHum
+.pdf> <./Figures/PerformanceFigures/costTimeHum.pdf>] (./bare_jrnl.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-) [11] (./bare_jrnl.aux)
+)
+[12] (./bare_jrnl.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4340 strings out of 493089
- 70208 string characters out of 6134842
- 144254 words of memory out of 5000000
- 7772 multiletter control sequences out of 15000+600000
+ 4399 strings out of 493089
+ 72105 string characters out of 6134842
+ 144424 words of memory out of 5000000
+ 7822 multiletter control sequences out of 15000+600000
  46078 words of font info for 86 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,16n,38p,1554b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -821,10 +893,10 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on bare_jrnl.pdf (11 pages, 950010 bytes).
+Output written on bare_jrnl.pdf (12 pages, 992526 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 179 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
