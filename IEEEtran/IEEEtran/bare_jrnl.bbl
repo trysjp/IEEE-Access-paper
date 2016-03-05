@@ -21,6 +21,30 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Amdahl:Workloadchang}
+J.~Chang, K.~T. Lim, J.~Byrne, L.~Ramirez, and P.~Ranganathan, ``Workload
+  diversity and dynamics in big data analytics: implications to system
+  designers,'' in \emph{Proceedings of the 2nd Workshop on Architectures and
+  Systems for Big Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2012, pp.
+  21--26.
+
+\bibitem{cluster:AmdahlBalancedBlade}
+A.~S. Szalay, G.~C. Bell, H.~H. Huang, A.~Terzis, and A.~White, ``Low-power
+  amdahl-balanced blades for data intensive computing,'' \emph{ACM SIGOPS
+  Operating Systems Review}, vol.~44, no.~1, pp. 71--75, 2010.
+
+\bibitem{scaleupscaleout:appuswamy}
+R.~Appuswamy, C.~Gkantsidis, D.~Narayanan, O.~Hodson, and A.~Rowstron,
+  ``Scale-up vs scale-out for hadoop: Time to rethink?'' in \emph{Proceedings
+  of the 4th annual Symposium on Cloud Computing}.\hskip 1em plus 0.5em minus
+  0.4em\relax ACM, 2013, p.~20.
+
+\bibitem{scaleupscaleout:michael}
+M.~Michael, J.~E. Moreira, D.~Shiloach, and R.~W. Wisniewski, ``Scale-up x
+  scale-out: A case study using nutch/lucene,'' in \emph{Parallel and
+  Distributed Processing Symposium, 2007. IPDPS 2007. IEEE
+  International}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2007, pp. 1--8.
+
 \bibitem{ssdhdd:kang}
 Y.~Kang, Y.-s. Kee, E.~L. Miller, and C.~Park, ``Enabling cost-effective data
   processing with smart ssd,'' in \emph{Mass Storage Systems and Technologies
@@ -60,18 +84,6 @@ W.~Tan, L.~Fong, and Y.~Liu, ``Effectiveness assessment of solid-state drive
   used in big data services,'' in \emph{Web Services (ICWS), 2014 IEEE
   International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
   2014, pp. 393--400.
-
-\bibitem{scaleupscaleout:michael}
-M.~Michael, J.~E. Moreira, D.~Shiloach, and R.~W. Wisniewski, ``Scale-up x
-  scale-out: A case study using nutch/lucene,'' in \emph{Parallel and
-  Distributed Processing Symposium, 2007. IPDPS 2007. IEEE
-  International}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2007, pp. 1--8.
-
-\bibitem{scaleupscaleout:appuswamy}
-R.~Appuswamy, C.~Gkantsidis, D.~Narayanan, O.~Hodson, and A.~Rowstron,
-  ``Scale-up vs scale-out for hadoop: Time to rethink?'' in \emph{Proceedings
-  of the 4th annual Symposium on Cloud Computing}.\hskip 1em plus 0.5em minus
-  0.4em\relax ACM, 2013, p.~20.
 
 \bibitem{Balance:kung1986memory}
 H.~Kung, ``Memory requirements for balanced computer architectures,'' in
@@ -131,44 +143,14 @@ J.~Gray and P.~Shenoy, ``Rules of thumb in data engineering,'' in \emph{Data
 G.~Bell, J.~Gray, and A.~Szalay, ``Petascale computations systems: Balanced
   cyberinfrastructure in a data-centric world,'' 2005.
 
-\bibitem{Amdahl:Workloadchang}
-J.~Chang, K.~T. Lim, J.~Byrne, L.~Ramirez, and P.~Ranganathan, ``Workload
-  diversity and dynamics in big data analytics: implications to system
-  designers,'' in \emph{Proceedings of the 2nd Workshop on Architectures and
-  Systems for Big Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2012, pp.
-  21--26.
-
 \bibitem{Balance:cohen2009applying}
 D.~Cohen, F.~Petrini, M.~D. Day, M.~Ben-Yehuda, S.~W. Hunter, and U.~Cummings,
   ``Applying amdahl's other law to the data center,'' \emph{IBM Journal of
   Research and Development}, vol.~53, no.~5, pp. 5--1, 2009.
 
-\bibitem{cluster:AmdahlBalancedBlade}
-A.~S. Szalay, G.~C. Bell, H.~H. Huang, A.~Terzis, and A.~White, ``Low-power
-  amdahl-balanced blades for data intensive computing,'' \emph{ACM SIGOPS
-  Operating Systems Review}, vol.~44, no.~1, pp. 71--75, 2010.
-
 \bibitem{Balance:zheng2014hadoop}
 D.~Zheng, A.~Szalay, and A.~Terzis, ``Hadoop in low-power processors,''
   \emph{arXiv preprint arXiv:1408.2284}, 2014.
-
-\bibitem{fw:mapreduce}
-J.~Dean and S.~Ghemawat, ``Mapreduce: simplified data processing on large
-  clusters,'' \emph{Communications of the ACM}, vol.~51, no.~1, pp. 107--113,
-  2008.
-
-\bibitem{fw:pregel}
-G.~Malewicz, M.~H. Austern, A.~J. Bik, J.~C. Dehnert, I.~Horn, N.~Leiser, and
-  G.~Czajkowski, ``Pregel: a system for large-scale graph processing,'' in
-  \emph{Proceedings of the 2010 ACM SIGMOD International Conference on
-  Management of data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp.
-  135--146.
-
-\bibitem{fw:bsp}
-T.~Cheatham, A.~Fahmy, D.~Stefanescu, and L.~Valiant, ``Bulk synchronous
-  parallel computing—a paradigm for transportable software,'' in \emph{Tools
-  and Environments for Parallel and Distributed Systems}.\hskip 1em plus 0.5em
-  minus 0.4em\relax Springer, 1996, pp. 61--76.
 
 \bibitem{bio:gage}
 S.~L. Salzberg, A.~M. Phillippy, A.~Zimin, D.~Puiu, T.~Magoc, S.~Koren, T.~J.
