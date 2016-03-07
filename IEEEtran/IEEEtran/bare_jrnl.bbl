@@ -79,16 +79,12 @@ K.~Krish, A.~Khasymski, G.~Wang, A.~R. Butt, and G.~Makkar, ``On the use of
   International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
   2013, pp. 313--318.
 
-\bibitem{ssdhdd:tan}
-W.~Tan, L.~Fong, and Y.~Liu, ``Effectiveness assessment of solid-state drive
-  used in big data services,'' in \emph{Web Services (ICWS), 2014 IEEE
-  International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
-  2014, pp. 393--400.
-
-\bibitem{Balance:kung1986memory}
-H.~Kung, ``Memory requirements for balanced computer architectures,'' in
-  \emph{ACM SIGARCH Computer Architecture News}, vol.~14, no.~2.\hskip 1em plus
-  0.5em minus 0.4em\relax IEEE Computer Society Press, 1986, pp. 49--54.
+\bibitem{scaleupscaleout:das2015evaluating}
+A.~K. Das, S.-J. Park, J.~Hong, and W.~Chang, ``Evaluating different
+  distributed-cyber-infrastructure for data and compute intensive scientific
+  application,'' in \emph{Big Data (Big Data), 2015 IEEE International
+  Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2015, pp.
+  134--143.
 
 \bibitem{Simulator:liu2013hsim}
 Y.~Liu, M.~Li, N.~K. Alham, and S.~Hammoud, ``Hsim: a mapreduce simulator in
@@ -152,11 +148,23 @@ D.~Cohen, F.~Petrini, M.~D. Day, M.~Ben-Yehuda, S.~W. Hunter, and U.~Cummings,
 D.~Zheng, A.~Szalay, and A.~Terzis, ``Hadoop in low-power processors,''
   \emph{arXiv preprint arXiv:1408.2284}, 2014.
 
-\bibitem{bio:gage}
-S.~L. Salzberg, A.~M. Phillippy, A.~Zimin, D.~Puiu, T.~Magoc, S.~Koren, T.~J.
-  Treangen, M.~C. Schatz, A.~L. Delcher, M.~Roberts \emph{et~al.}, ``Gage: A
-  critical evaluation of genome assemblies and assembly algorithms,''
-  \emph{Genome research}, vol.~22, no.~3, pp. 557--567, 2012.
+\bibitem{fw:mapreduce}
+J.~Dean and S.~Ghemawat, ``Mapreduce: simplified data processing on large
+  clusters,'' \emph{Communications of the ACM}, vol.~51, no.~1, pp. 107--113,
+  2008.
+
+\bibitem{fw:pregel}
+G.~Malewicz, M.~H. Austern, A.~J. Bik, J.~C. Dehnert, I.~Horn, N.~Leiser, and
+  G.~Czajkowski, ``Pregel: a system for large-scale graph processing,'' in
+  \emph{Proceedings of the 2010 ACM SIGMOD International Conference on
+  Management of data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp.
+  135--146.
+
+\bibitem{fw:bsp}
+T.~Cheatham, A.~Fahmy, D.~Stefanescu, and L.~Valiant, ``Bulk synchronous
+  parallel computing—a paradigm for transportable software,'' in \emph{Tools
+  and Environments for Parallel and Distributed Systems}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Springer, 1996, pp. 61--76.
 
 \bibitem{bio:debruijngraph}
 P.~A. Pevzner, H.~Tang, and M.~S. Waterman, ``An eulerian path approach to dna
