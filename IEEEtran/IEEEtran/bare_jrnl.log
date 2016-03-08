@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 MAR 2016 00:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 MAR 2016 01:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -585,72 +585,72 @@ n-like Su-per-MikeII
  []
 
 [7]
-Overfull \hbox (4.14954pt too wide) in paragraph at lines 890--890
+Overfull \hbox (4.14954pt too wide) in paragraph at lines 889--889
 []\OT1/ptm/m/n/8 Shuffled
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 890--890
+Underfull \hbox (badness 10000) in paragraph at lines 889--889
 []\OT1/ptm/m/n/8 HDFS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 890--890
+Underfull \hbox (badness 10000) in paragraph at lines 889--889
 []\OT1/ptm/m/n/8 Application
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--892
+Underfull \hbox (badness 10000) in paragraph at lines 891--891
 []\OT1/ptm/m/n/8 Map and Re-duce:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--895
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 []\OT1/ptm/m/n/8 452GB (2-billion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--895
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 []\OT1/ptm/m/n/8 Map and Re-duce:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--895
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 \OT1/ptm/m/n/8 CPU- and I/O-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 896--896
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 []\OT1/ptm/m/n/8 Graph Sim-pli-fi-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 896--896
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 \OT1/ptm/m/n/8 (large size hu-man
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 896--896
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 []\OT1/ptm/m/n/8 3.2TB (1483246722
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 926--926
+Underfull \hbox (badness 10000) in paragraph at lines 925--925
 []\OT1/ptm/m/n/8 Cluster Con-fig-u-ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 930--930
+Underfull \hbox (badness 10000) in paragraph at lines 929--929
 []\OT1/ptm/m/n/8 Total pro-cess-ing
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 932--932
+Underfull \hbox (badness 4303) in paragraph at lines 931--931
 []\OT1/ptm/m/n/8 Total stor-age space
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--933
+Underfull \hbox (badness 10000) in paragraph at lines 932--932
 []\OT1/ptm/m/n/8 Total DRAM Size
  []
 
@@ -659,10 +659,10 @@ File: Figures/PerformanceFigures/execTimeTnW.pdf Graphic file (type pdf)
 
 <use Figures/PerformanceFigures/execTimeTnW.pdf>
 Package pdftex.def Info: Figures/PerformanceFigures/execTimeTnW.pdf used on inp
-ut line 938.
+ut line 937.
 (pdftex.def)             Requested size: 258.0pt x 258.00047pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 938--939
+Overfull \hbox (6.0pt too wide) in paragraph at lines 937--938
  [][] 
  []
 
@@ -671,7 +671,7 @@ File: Figures/SystemFigures/TeraSortIPS.pdf Graphic file (type pdf)
 
 <use Figures/SystemFigures/TeraSortIPS.pdf>
 Package pdftex.def Info: Figures/SystemFigures/TeraSortIPS.pdf used on input li
-ne 952.
+ne 951.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
 
 <Figures/SystemFigures/WordCountIPS.pdf, id=57, 505.89pt x 505.89pt>
@@ -679,7 +679,7 @@ File: Figures/SystemFigures/WordCountIPS.pdf Graphic file (type pdf)
 
 <use Figures/SystemFigures/WordCountIPS.pdf>
 Package pdftex.def Info: Figures/SystemFigures/WordCountIPS.pdf used on input l
-ine 957.
+ine 956.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
 
 <Figures/SystemFigures/TeraSortIO.pdf, id=58, 505.89pt x 505.89pt>
@@ -687,7 +687,7 @@ File: Figures/SystemFigures/TeraSortIO.pdf Graphic file (type pdf)
 
 <use Figures/SystemFigures/TeraSortIO.pdf>
 Package pdftex.def Info: Figures/SystemFigures/TeraSortIO.pdf used on input lin
-e 973.
+e 972.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
 
 <Figures/SystemFigures/WordCountIO.pdf, id=59, 505.89pt x 505.89pt>
@@ -695,30 +695,30 @@ File: Figures/SystemFigures/WordCountIO.pdf Graphic file (type pdf)
 
 <use Figures/SystemFigures/WordCountIO.pdf>
 Package pdftex.def Info: Figures/SystemFigures/WordCountIO.pdf used on input li
-ne 978.
+ne 977.
 (pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
  [9 <./Figures/PerformanceFigures/execTimeTnW.pdf>]
-Underfull \hbox (badness 2961) in paragraph at lines 1017--1017
+Underfull \hbox (badness 2961) in paragraph at lines 1016--1016
  \OT1/ptm/m/it/10 B. Eval-u-at-ing Dif-fer-ent Clus-ter for Large Size Hu-man
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1024--1024
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1023
 []\OT1/ptm/m/n/8 Cluster Con-fig-u-ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
 []\OT1/ptm/m/n/8 Total pro-cess-ing
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 1030--1030
+Underfull \hbox (badness 4303) in paragraph at lines 1029--1029
 []\OT1/ptm/m/n/8 Total stor-age space
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1031--1031
+Underfull \hbox (badness 10000) in paragraph at lines 1030--1030
 []\OT1/ptm/m/n/8 Total DRAM Size
  []
 
@@ -727,7 +727,7 @@ File: Figures/PerformanceFigures/execTimeHum.pdf Graphic file (type pdf)
 
 <use Figures/PerformanceFigures/execTimeHum.pdf>
 Package pdftex.def Info: Figures/PerformanceFigures/execTimeHum.pdf used on inp
-ut line 1036.
+ut line 1035.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
 
 <Figures/PerformanceFigures/costTimeHum.pdf, id=69, 505.89pt x 505.89pt>
@@ -735,14 +735,14 @@ File: Figures/PerformanceFigures/costTimeHum.pdf Graphic file (type pdf)
 
 <use Figures/PerformanceFigures/costTimeHum.pdf>
 Package pdftex.def Info: Figures/PerformanceFigures/costTimeHum.pdf used on inp
-ut line 1041.
+ut line 1040.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
  [10 <./Figures/SystemFigures/TeraSortIPS.pdf> <./Figures/SystemFigures/WordCou
 ntIPS.pdf> <./Figures/SystemFigures/TeraSortIO.pdf> <./Figures/SystemFigures/Wo
 rdCountIO.pdf> <./Figures/PerformanceFigures/execTimeHum.pdf> <./Figures/Perfor
 manceFigures/costTimeHum.pdf>]
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1194--1194
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1193
  \OT1/ptm/m/it/10 B. Giraph-based Graph Sim-pli-fi-ca-tion (memory- and
  []
 
@@ -759,10 +759,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4368 strings out of 493089
- 71179 string characters out of 6134842
+ 4369 strings out of 493089
+ 71197 string characters out of 6134842
  142399 words of memory out of 5000000
- 7799 multiletter control sequences out of 15000+600000
+ 7800 multiletter control sequences out of 15000+600000
  44941 words of font info for 82 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,16n,38p,1854b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -780,7 +780,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf
 s/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on bare_jrnl.pdf (12 pages, 802841 bytes).
+Output written on bare_jrnl.pdf (12 pages, 803546 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams
