@@ -6,29 +6,29 @@ x <- seq(0, 1, by=.0001)
 y <- sqrt(x/d)
 plot(x, y, col='black', lwd=2, lty=1, type="l", xaxt="n", xlim=c(0, 1.05), ylim=c(0,.5),
 xlab="Application's I/O balance",
-ylab="System's I/O balance")
+ylab="System's I/O balance (GBPS/GHz)")
 ticks <- seq(-2, 2, by=1)
 labels <- sapply(ticks, function(i) as.expression(bquote(10^ .(i))))
 axis(1, at=c(0.01, 0.1, 1, 10, 100), labels=labels)
-text(1.03, .171, "d = 30")
+text(1.03, .171, expression(delta==30))
 
 d <- 10
 y <-sqrt(x/d)
 lines(x, y=y, lwd=4, col="black", lty=1)
-text(1.03, .3, "d = 10")
+text(1.03, .3, expression(delta==10))
 d <- 20
 y <-sqrt(x/d)
 lines(x, y=y, lwd=4, col="black", lty=1)
-text(1.03, .21, "d = 20")
+text(1.03, .21, expression(delta==20))
 d <- 40
 y <-sqrt(x/d)
 lines(x, y=y, lwd=4, col="black", lty=1)
-text(1.03, .149, "d = 40")
+text(1.03, .149, expression(delta==40))
 
 d <- 50
 y <-sqrt(x/d)
 lines(x, y=y, lwd=4, col="black", lty=1)
-text(1.03, .13, "d = 50")
+text(1.03, .13, expression(delta==10))
 
 
 

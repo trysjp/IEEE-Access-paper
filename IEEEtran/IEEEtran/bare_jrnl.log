@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 MAR 2016 05:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 MAR 2016 00:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -344,39 +344,25 @@ e
 
 ]
 
-LaTeX Warning: Reference `sec:Motivation' on page 2 undefined on input line 518
-.
-
-
-LaTeX Warning: Reference `sec:Limitation' on page 2 undefined on input line 518
+LaTeX Warning: Reference `sec:Limitation' on page 2 undefined on input line 520
 .
 
 [2]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmri7t!
-Missing character: There is no Ä in font ptmri7t!
-Missing character: There is no ô in font ptmri7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
  [3]
-Missing character: There is no ‚ in font ptmri7t!
-Missing character: There is no Ä in font ptmri7t!
-Missing character: There is no ô in font ptmri7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- <Figures/ModelFigures/beta_io.pdf, id=17, 505.89pt x 505.89pt>
+Underfull \hbox (badness 3826) in paragraph at lines 604--605
+[]\OT1/ptm/m/it/10 Gray's mem-ory law: \OT1/ptm/m/n/10 The MB/MIPS (al-ter-na-t
+ively,
+ []
+
+<Figures/ModelFigures/beta_io.pdf, id=17, 505.89pt x 505.89pt>
 File: Figures/ModelFigures/beta_io.pdf Graphic file (type pdf)
 
 <use Figures/ModelFigures/beta_io.pdf>
 Package pdftex.def Info: Figures/ModelFigures/beta_io.pdf used on input line 63
-2.
+3.
 (pdftex.def)             Requested size: 247.6778pt x 247.67984pt.
 
 <Figures/ModelFigures/beta_mem.pdf, id=18, 505.89pt x 505.89pt>
@@ -384,397 +370,379 @@ File: Figures/ModelFigures/beta_mem.pdf Graphic file (type pdf)
 
 <use Figures/ModelFigures/beta_mem.pdf>
 Package pdftex.def Info: Figures/ModelFigures/beta_mem.pdf used on input line 6
-37.
+38.
 (pdftex.def)             Requested size: 247.6778pt x 247.67984pt.
  [4] [5 <./Figures/ModelFigures/beta_io.pdf> <./Figures/ModelFigures/beta_mem.p
 df>]
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
+Underfull \hbox (badness 10000) in paragraph at lines 800--800
 []\OT1/ptm/m/n/8 Western Dig-i-tal RE4 HDD
  []
 
 
-Underfull \hbox (badness 8170) in paragraph at lines 805--805
+Underfull \hbox (badness 8170) in paragraph at lines 806--806
 []\OT1/ptm/m/n/8 Samsung NVMe SSD PM953
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 808--808
+Underfull \hbox (badness 1783) in paragraph at lines 809--809
 []\OT1/ptm/m/n/8 Samsung DDR3 16GB mem-ory
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 []\OT1/ptm/m/n/8 CPU
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 Core
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 Speed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 []\OT1/ptm/m/n/8 #Cores
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 []\OT1/ptm/m/n/8 CPU
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 Speed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 (GHz)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 []\OT1/ptm/m/n/8 #Disks
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 /node
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 820--820
+Underfull \hbox (badness 1540) in paragraph at lines 821--821
 []\OT1/ptm/m/n/8 Seq I/O
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 Band-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 width
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 /Disk
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 []\OT1/ptm/m/n/8 Total
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 820--820
+Underfull \hbox (badness 1540) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 Seq I/O
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 Band-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 width
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 (GBPS)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 []\OT1/ptm/m/n/8 DRAM
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 /node
  []
 
 
-Overfull \hbox (4.8829pt too wide) in paragraph at lines 820--820
+Overfull \hbox (4.8829pt too wide) in paragraph at lines 821--821
 []\OT1/ptm/m/n/8 Maximum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 #Nodes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--821
 \OT1/ptm/m/n/8 avail-
  []
 
 
-Overfull \hbox (4.85664pt too wide) in paragraph at lines 820--821
+Overfull \hbox (4.85664pt too wide) in paragraph at lines 821--822
 []$\OML/cmm/m/it/8 ^^L[]$| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 823--823
 []\OT1/ptm/m/n/8 SuperMikeII
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 823--823
 []\OT1/ptm/m/n/8 Two 8-core
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 823--823
 \OT1/ptm/m/n/8 Sandy-Bridge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--822
+Underfull \hbox (badness 10000) in paragraph at lines 823--823
 []\OT1/ptm/m/n/8 1-HDD
  []
 
 
-Overfull \hbox (0.92818pt too wide) in paragraph at lines 822--822
+Overfull \hbox (0.92818pt too wide) in paragraph at lines 823--823
 []\OT1/ptm/m/n/8 0.003| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--824
+Underfull \hbox (badness 10000) in paragraph at lines 825--825
 []\OT1/ptm/m/n/8 Two 8-core
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--824
+Underfull \hbox (badness 10000) in paragraph at lines 825--825
 \OT1/ptm/m/n/8 Sandy-Bridge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--824
+Underfull \hbox (badness 10000) in paragraph at lines 825--825
 []\OT1/ptm/m/n/8 4-HDD
  []
 
 
-Overfull \hbox (0.92818pt too wide) in paragraph at lines 824--824
+Overfull \hbox (0.92818pt too wide) in paragraph at lines 825--825
 []\OT1/ptm/m/n/8 0.015| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 826--826
+Underfull \hbox (badness 10000) in paragraph at lines 827--827
 []\OT1/ptm/m/n/8 CeresII
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 826--826
+Underfull \hbox (badness 10000) in paragraph at lines 827--827
 \OT1/ptm/m/n/8 (MicroBrick-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 826--826
+Underfull \hbox (badness 10000) in paragraph at lines 827--827
 \OT1/ptm/m/n/8 based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 826--826
+Underfull \hbox (badness 10000) in paragraph at lines 827--827
 \OT1/ptm/m/n/8 Hy-per-scale
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 826--826
+Underfull \hbox (badness 10000) in paragraph at lines 827--827
 []\OT1/ptm/m/n/8 1-SSD
  []
 
 [6]
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
-
-Underfull \hbox (badness 2556) in paragraph at lines 866--867
+Underfull \hbox (badness 2556) in paragraph at lines 870--871
  \OT1/ptm/m/it/10 2) SwatIII (Ex-ist-ing Dat-a-cen-ter): [][] \OT1/ptm/m/n/10 U
 n-like Su-per-MikeII
  []
 
 [7]
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ¨ in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
-
-Overfull \hbox (4.14954pt too wide) in paragraph at lines 886--886
+Overfull \hbox (4.14954pt too wide) in paragraph at lines 890--890
 []\OT1/ptm/m/n/8 Shuffled
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 890--890
 []\OT1/ptm/m/n/8 HDFS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 890--890
 []\OT1/ptm/m/n/8 Application
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--888
+Underfull \hbox (badness 10000) in paragraph at lines 892--892
 []\OT1/ptm/m/n/8 Map and Re-duce:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--891
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 []\OT1/ptm/m/n/8 452GB (2-billion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--891
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 []\OT1/ptm/m/n/8 Map and Re-duce:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--891
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 \OT1/ptm/m/n/8 CPU- and I/O-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--892
+Underfull \hbox (badness 10000) in paragraph at lines 896--896
 []\OT1/ptm/m/n/8 Graph Sim-pli-fi-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--892
+Underfull \hbox (badness 10000) in paragraph at lines 896--896
 \OT1/ptm/m/n/8 (large size hu-man
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--892
+Underfull \hbox (badness 10000) in paragraph at lines 896--896
 []\OT1/ptm/m/n/8 3.2TB (1483246722
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 922--922
+Underfull \hbox (badness 10000) in paragraph at lines 926--926
 []\OT1/ptm/m/n/8 Cluster Con-fig-u-ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--926
+Underfull \hbox (badness 10000) in paragraph at lines 930--930
 []\OT1/ptm/m/n/8 Total pro-cess-ing
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 928--928
+Underfull \hbox (badness 4303) in paragraph at lines 932--932
 []\OT1/ptm/m/n/8 Total stor-age space
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 929--929
+Underfull \hbox (badness 10000) in paragraph at lines 933--933
 []\OT1/ptm/m/n/8 Total DRAM Size
  []
 
-<Figures/PerformanceFigures/execTimeTnW.pdf, id=54, 505.89pt x 505.89pt>
+<Figures/PerformanceFigures/execTimeTnW.pdf, id=55, 505.89pt x 505.89pt>
 File: Figures/PerformanceFigures/execTimeTnW.pdf Graphic file (type pdf)
 
 <use Figures/PerformanceFigures/execTimeTnW.pdf>
 Package pdftex.def Info: Figures/PerformanceFigures/execTimeTnW.pdf used on inp
-ut line 934.
+ut line 938.
 (pdftex.def)             Requested size: 258.0pt x 258.00047pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 934--935
+Overfull \hbox (6.0pt too wide) in paragraph at lines 938--939
  [][] 
  []
 
-<Figures/SystemFigures/TeraSortIPS.pdf, id=55, 505.89pt x 505.89pt>
+<Figures/SystemFigures/TeraSortIPS.pdf, id=56, 505.89pt x 505.89pt>
 File: Figures/SystemFigures/TeraSortIPS.pdf Graphic file (type pdf)
 
 <use Figures/SystemFigures/TeraSortIPS.pdf>
 Package pdftex.def Info: Figures/SystemFigures/TeraSortIPS.pdf used on input li
-ne 948.
+ne 952.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
 
-<Figures/SystemFigures/WordCountIPS.pdf, id=56, 505.89pt x 505.89pt>
+<Figures/SystemFigures/WordCountIPS.pdf, id=57, 505.89pt x 505.89pt>
 File: Figures/SystemFigures/WordCountIPS.pdf Graphic file (type pdf)
 
 <use Figures/SystemFigures/WordCountIPS.pdf>
 Package pdftex.def Info: Figures/SystemFigures/WordCountIPS.pdf used on input l
-ine 953.
+ine 957.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
 
-<Figures/SystemFigures/TeraSortIO.pdf, id=57, 505.89pt x 505.89pt>
+<Figures/SystemFigures/TeraSortIO.pdf, id=58, 505.89pt x 505.89pt>
 File: Figures/SystemFigures/TeraSortIO.pdf Graphic file (type pdf)
 
 <use Figures/SystemFigures/TeraSortIO.pdf>
 Package pdftex.def Info: Figures/SystemFigures/TeraSortIO.pdf used on input lin
-e 969.
+e 973.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
 
-<Figures/SystemFigures/WordCountIO.pdf, id=58, 505.89pt x 505.89pt>
+<Figures/SystemFigures/WordCountIO.pdf, id=59, 505.89pt x 505.89pt>
 File: Figures/SystemFigures/WordCountIO.pdf Graphic file (type pdf)
 
 <use Figures/SystemFigures/WordCountIO.pdf>
 Package pdftex.def Info: Figures/SystemFigures/WordCountIO.pdf used on input li
-ne 974.
+ne 978.
 (pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
-
-
-LaTeX Warning: Reference `fig:IO' on page 9 undefined on input line 1005.
-
-[9 <./Figures/PerformanceFigures/execTimeTnW.pdf>]
-Underfull \hbox (badness 2961) in paragraph at lines 1011--1011
+ [9 <./Figures/PerformanceFigures/execTimeTnW.pdf>]
+Underfull \hbox (badness 2961) in paragraph at lines 1017--1017
  \OT1/ptm/m/it/10 B. Eval-u-at-ing Dif-fer-ent Clus-ter for Large Size Hu-man
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1024
 []\OT1/ptm/m/n/8 Cluster Con-fig-u-ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1022--1022
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
 []\OT1/ptm/m/n/8 Total pro-cess-ing
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 1024--1024
+Underfull \hbox (badness 4303) in paragraph at lines 1030--1030
 []\OT1/ptm/m/n/8 Total stor-age space
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1025
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1031
 []\OT1/ptm/m/n/8 Total DRAM Size
  []
 
-<Figures/PerformanceFigures/execTimeHum.pdf, id=67, 505.89pt x 505.89pt>
+<Figures/PerformanceFigures/execTimeHum.pdf, id=68, 505.89pt x 505.89pt>
 File: Figures/PerformanceFigures/execTimeHum.pdf Graphic file (type pdf)
 
 <use Figures/PerformanceFigures/execTimeHum.pdf>
 Package pdftex.def Info: Figures/PerformanceFigures/execTimeHum.pdf used on inp
-ut line 1030.
+ut line 1036.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
 
-<Figures/PerformanceFigures/costTimeHum.pdf, id=68, 505.89pt x 505.89pt>
+<Figures/PerformanceFigures/costTimeHum.pdf, id=69, 505.89pt x 505.89pt>
 File: Figures/PerformanceFigures/costTimeHum.pdf Graphic file (type pdf)
 
 <use Figures/PerformanceFigures/costTimeHum.pdf>
 Package pdftex.def Info: Figures/PerformanceFigures/costTimeHum.pdf used on inp
-ut line 1035.
+ut line 1041.
 (pdftex.def)             Requested size: 118.6778pt x 118.67574pt.
  [10 <./Figures/SystemFigures/TeraSortIPS.pdf> <./Figures/SystemFigures/WordCou
 ntIPS.pdf> <./Figures/SystemFigures/TeraSortIO.pdf> <./Figures/SystemFigures/Wo
 rdCountIO.pdf> <./Figures/PerformanceFigures/execTimeHum.pdf> <./Figures/Perfor
 manceFigures/costTimeHum.pdf>]
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1188
+Underfull \hbox (badness 10000) in paragraph at lines 1194--1194
  \OT1/ptm/m/it/10 B. Giraph-based Graph Sim-pli-fi-ca-tion (memory- and
  []
 
@@ -791,32 +759,31 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4377 strings out of 493089
- 71260 string characters out of 6134842
- 141387 words of memory out of 5000000
- 7804 multiletter control sequences out of 15000+600000
- 46078 words of font info for 86 fonts, out of 8000000 for 9000
+ 4368 strings out of 493089
+ 71179 string characters out of 6134842
+ 142399 words of memory out of 5000000
+ 7799 multiletter control sequences out of 15000+600000
+ 44941 words of font info for 82 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,16n,38p,1845b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,38p,1854b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utm
-ri8a.pfb>
-Output written on bare_jrnl.pdf (12 pages, 811283 bytes).
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on bare_jrnl.pdf (12 pages, 802841 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 153 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
