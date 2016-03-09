@@ -5,8 +5,8 @@ x <- seq(0, 1, by=.0001)
 
 y <- sqrt(x/d)
 plot(x, y, col='black', lwd=2, lty=1, type="l", xaxt="n", xlim=c(0, 1.05), ylim=c(0,6),
-xlab="Application's memory balance",
-ylab="System's memory balance (GB/GHz)")
+xlab=expression(paste("Application's memory balance (",gamma[mem],")")),
+ylab=expression(paste("System's optimal memory balance (",beta[mem]^opt," in GB/GHz)")))
 ticks <- seq(-2, 2, by=1)
 labels <- sapply(ticks, function(i) as.expression(bquote(10^ .(i))))
 axis(1, at=c(0.01, 0.1, 1, 10, 100), labels=labels)
@@ -41,4 +41,4 @@ lines(x, y=y, lwd=4, col="blue", lty=2)
 y <- 1/x*x
 lines(x, y=y, lwd=4, col="red", lty=4)
 
-legend("topleft", c("Optimal size of DRAM by proposed model", "Gray memory law", "Amdahl memory law"), col=c("black","blue","red"), lwd=c(2,2), lty=c(1,2,4), cex=1.5)
+legend("topleft", c("Optimal size of DRAM by proposed model", "Gray's memory law", "Amdahl's memory law"), col=c("black","blue","red"), lwd=c(2,2), lty=c(1,2,4), cex=1.5)
