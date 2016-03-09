@@ -459,7 +459,7 @@ To substantiate our claim, we evaluate three fundamentally different cluster arc
 
 % Note that keywords are not normally used for peerreviewl
 \begin{IEEEkeywords}
-Cost to Performance, Balanced System, Hadoop, Giraph.
+Big data HPC, Amdah's second law, Cost/performance, Theory for a balanced system, Hadoop and Giraph.
 \end{IEEEkeywords}
 
 % For peer review papers, you can put extra information on the cover
@@ -551,7 +551,7 @@ To date, the most practical approach to design a balanced system is to follow Am
 
 Amdahl's second law (with Gray's ammendment) can be used for system characterization and proposing a balanced system. For example, Bell and Gray \cite{Amdahl:PetascaleBell2005petascale} classified the existing supercomputers based upon Amdahl's second law to clarify the future road map of the HPC architecture. Cohen \cite{Balance:cohen2009applying} applied Amdahl's second law to the datacenter cluster to study the interplay between processor architecture and network interconnect in a datacenter. Chang  \cite{Amdahl:Workloadchang} used Amdahl's second law to better understand the design implications of data analytic systems by quantifying workload requirements. Szalay \cite{cluster:AmdahlBalancedBlade}, using Amdahl's second law, proposed a new cluster architecture  based on SSD and low power processors (such as, Intel Atom, Zotac etc) to achieve a balance between performance and energy efficiency. In this study, the authors ignored the CPU micro architecture and simplified the Amdahl's I/O and Memory number by dividing the I/O bandwidth (bit/s) and size of DRAM (GB) by CPU-speed (GHz) instead of using instructions per second (IPS). The cluster architecture was balanced as the simplified Amdahl's I/O number was close to 1bit/s/IPS. In a recent study \cite{Balance:zheng2014hadoop} Zheng evaluated a similar architecture as Amdahl's balanced blade for Hadoop applications and showed Atom processor is the system's bottleneck.  %In a recent work, Liang [25] applied Amdahl’s second law for performance characterization of two different state of the art big data analytic software (e.g., Hadoop and DataMPI).  
 
-Unlike Szalay, we consider a balanced system as one that optimizes both cost and performance. Hence, we did not consider the optimal balance of the system (i.e., the system's I/O and memory ratio to the processor speed) as constants as in Amdahl's I/O and memory number. Instead, we propose an additive model express the optimal system balance  as a function of both application characteristics and hardware price.
+Unlike Szalay, we consider a balanced system as one that optimizes both cost and performance \cite{SystemBalance:AMD}. Hence, we did not consider the optimal balance of the system (i.e., the system's I/O and memory ratio to the processor speed) as constants as in Amdahl's I/O and memory number. Instead, we propose an additive model express the optimal system balance  as a function of both application characteristics and hardware price.
 %\section{Motivation} \label{sec:Motivation}
 %There are several important reasons to balance the The best practical approach till date was originally proposed by Jim Gray in 2000 (known as Gray’s Laws ) where he stated, 1) Bring computations to the data, rather than data to the computations, and 2) The solution is in a scale-out architecture. With the increasing data size, the first law, which basically defines the model of computation utilizing lower network bandwidth, seems to govern the field of big data HPC for next several years in future. For example, scientists are increasingly using Hadoop and other state of the art big data analytic software which carefully consider data locality. However, the second law, which defines the underlying distributed cyber infrastructure needs to be quantified.  
 
@@ -1172,7 +1172,7 @@ Big data needs big resources. As the nature of scientific computing is changing 
 
 We propose a simple additive model to express the optimal system balance in terms of application characteristics and hardware price to minimize the cost/performance.   We also verified our claim experimentally that the cluster that resembles the optimal produced by our model, (i.e., CeresII) outperforms an existing HPC cluster and a regular data center architecture by several magnitudes for different types and sizes of applications.
 
-The proposed model also has implications for the way current big data HPC clusters or data center clusters are provisioned. Instead of evaluating the clusters with respect to scale-up and scale-out architecture, we argued for a system balance. We theoretically showed that if proper balance is maintained between different hardware components, both scale-out and scale-up clusters can provide optimize the cost/performance.  However, because of resource limitations, we could not validate this claim and, thus, this is obviously one of the future directions of our research.
+The proposed model also has implications for the way current big data analytic clusters or data center clusters are provisioned. We theoretically showed that if proper balance is maintained between different hardware components, both scale-out and scale-up clusters can provide optimal the cost/performance.  However, because of resource limitations, we could not validate this claim and, thus, this is obviously one of the future directions of our research.
 
 \appendices
 \section{Hadoop and Giraph: Programming model and Configuration}
@@ -1199,7 +1199,7 @@ Hadoop and Giraph were originated as the open-source counterpart of Google's Map
 %TeraSort smaples the input data and uses MapReduce to sort the entire data. The map phase of TeraSort samples and partitions the entire dataset by reading only the first few characters of each row. Then, it assigns a key (called sample-key) to each partition of the input dataset. The sample-keys are generated such that, the sample-key of a partition (say $partition_i$) is less than the sample-key of the next partition (i.e., $partition_{i+1}$). Then,based upon these sample keys the data set is distributed over the reducers. Then each reducer uses quicksort to sort the local partitions of the data assigned to it. and the sorted data is written to the HDFS. 
 %\subsubsection{WordCount}
 %Hadoop WordCount is a workload that reads an input text file and counts how often a certain word exists in the text file. each line is fed into a mapper as an input and breaks down each line into words. It then uses a key/value pair for each word with $1$ next to each word as initial count. A reducer sums the count of each word and issues a key/value pair with the word and sum for each word and the final output is written to HDFS. 
-A similar description of the assembly application can be found in our previous work \cite{scaleupscaleout:das2015evaluating}. Also, the paper describing the genome assembly algorithms in detail is already accepted in 8th international proceedings of BICoB 2016. However yet to be published.
+A similar description of the assembly application can be found in our previous work \cite{scaleupscaleout:das2015evaluating}. Also, the paper describing the genome assembly algorithms in detail is already accepted in 8th international proceedings of BICoB 2016. However yet to be published \cite{GiGA:toBePublished}.
 
 The motivation behind selecting genome assembly application is that, the high throughput next generation DNA sequencing machines (e.g., Illumina Genome Analyzer) has outpaced Moore's law and started producing a huge amount of short read sequences typically in the scale of several Gigabytes to Terabytes. Furthermore, the size of the de Bruijn graph built from these vast amount of short reads may be a magnitude higher than the reads itself making the entire assembly pipe line severely data-intensive.
 
@@ -1273,7 +1273,7 @@ This work has been supported in part by the NSF CC-NIE grant (NSF award \#134100
 \bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
 %\bibliography{IEEEabrv,../bib/paper}
-\bibliography{bare_jrnl_bib2}
+\bibliography{bare_jrnl_bib1}
 %
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references

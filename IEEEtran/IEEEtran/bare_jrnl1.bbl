@@ -148,11 +148,11 @@ D.~Cohen, F.~Petrini, M.~D. Day, M.~Ben-Yehuda, S.~W. Hunter, and U.~Cummings,
 D.~Zheng, A.~Szalay, and A.~Terzis, ``Hadoop in low-power processors,''
   \emph{arXiv preprint arXiv:1408.2284}, 2014.
 
-\bibitem{systemBalance}
-``System performance balance system cost balance application balance & the spec
-  cpu2000/2006 benchmarks,''
-  \url{http://www.cs.virginia.edu/~mccalpin/SPEC_Balance_2007-06-20.pdf},
-  accessed: 2010-09-30.
+\bibitem{SystemBalance:AMD}
+J.~D. McCalpin, ``System performance balance, system cost balance, application
+  balance and spec cpu2000/cpu2006 benchmarks,''
+  \url{http://www.cs.virginia.edu/\~mccalpin/SPEC\_Balance\_2007-06-20.pdf},
+  2007.
 
 \bibitem{fw:mapreduce}
 J.~Dean and S.~Ghemawat, ``Mapreduce: simplified data processing on large
@@ -171,6 +171,13 @@ T.~Cheatham, A.~Fahmy, D.~Stefanescu, and L.~Valiant, ``Bulk synchronous
   parallel computing—a paradigm for transportable software,'' in \emph{Tools
   and Environments for Parallel and Distributed Systems}.\hskip 1em plus 0.5em
   minus 0.4em\relax Springer, 1996, pp. 61--76.
+
+\bibitem{GiGA:toBePublished}
+P.~K. Kondikoppa, A.~K. Das, S.~Goswami, R.~Platania, and S.-J. Park,
+  ``Giga:giraph-based genome assembler for gigabase scale genomes,'' in
+  \emph{Paper accepted in proceedings of the 8th International BICob
+  Conference}.\hskip 1em plus 0.5em minus 0.4em\relax ISCA, 2016, p. To be
+  published.
 
 \bibitem{bio:debruijngraph}
 P.~A. Pevzner, H.~Tang, and M.~S. Waterman, ``An eulerian path approach to dna
