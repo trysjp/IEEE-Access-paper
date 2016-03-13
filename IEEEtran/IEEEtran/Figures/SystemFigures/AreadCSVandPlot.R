@@ -8,7 +8,7 @@ x <- 1:length(data$V1)
 
 lt <- c(4,2,1)
 
-plot(x, data$V1, type='l', col='red', lwd=4, lty=lt[1], ann=F, xaxt='n', yaxt='n',ylim=c(0,10000000000))
+plot(x, data$V1, type='l', col='red', lwd=4, lty=lt[1], ann=F, xaxt='n', yaxt='n', ylim=c(0,10000000000))
 lines(x, data$V2, col='blue', lwd=4, lty=lt[2])
 lines(x, data$V3, col='black', lwd=4, lty=lt[3])
 axis(1, cex.axis=1.5, padj=.35)
@@ -16,7 +16,7 @@ axis(2,cex.axis=1.5, padj=.35)
 title(xlab="Time (minutes)", cex.lab=1.5)
 title(ylab="I/O throughput (bytes/second)", cex.lab=1.5, mgp=c(2.7,1,1))
 
-legend("topright", c("SuperMikeII(15nodes)", "SwatIII(8nodes)", "CeresII(25nodes)"), col=c("red","blue","black"), lwd=c(4,4), lty=lt, cex = 1.4)
+legend("topright", c("SuperMikeII", "SwatIII", "CeresII"), col=c("red","blue","black"), lwd=c(4,4), lty=lt, cex = 1.4)
 
 dev.off()
 

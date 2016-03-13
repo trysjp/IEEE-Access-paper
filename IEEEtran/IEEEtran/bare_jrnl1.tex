@@ -389,9 +389,8 @@ Seung-Jong Park \\
 Division of Computer Science and Electrical Engineering, Center for Computation and Technology, Louisiana State University, Baton Rouge, LA, USA, 70803\\
 Samsung Electronics Co., Ltd., 95, Samsung 2-ro, Giheung-gu, Yongin-si, Gyeonggi-do, S. Korea, 446711
 % <-this % stops a space
-\thanks{A. K. Das, K. Lee, and S.J. Park are with the Department
-of Computer Science and Electrical Engineering, Center for Computation and Technology Louisiana State University, Baton Rouge, USA}
-\thanks{J. Hong and W. Chang are with Samsung Electronics, S. Korea}
+\thanks{A. K. Das, S. Goswami, R. Platania, K. Lee, and S.J. Park are with the Division of Computer Science and Electrical Engineering, Center for Computation and Technology Louisiana State University, Baton Rouge, USA. Email: [adas7, sgoswa1, rplata1, klee76, sjpark] @lsu.edu}
+\thanks{J. Hong and W. Chang are with Samsung Electronics, Gyeonggi-do, S. Korea. Email: [jaeki.hong, wooseok\_chang] @samsung.com}
 %GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
 %\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
 %\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}
@@ -642,7 +641,7 @@ Gray's law is more realistic in the sense that it consider the impact of applica
                 \caption{Memory balance}
                 \label{fig:beta_mem}
    \end{subfigure}
-   \caption{Change in system's optimum I/O ($\beta_{io}^{opt}$) and memory ($\beta_{mem}^{opt}$) balance as a function of application balance ($\gamma_{io}^{opt}$ and $\gamma_{mem}^{opt}$) for different cost balance ($\delta_{io}^{opt}$ and $\delta_{mem}^{opt}$)}
+   \caption{Change in system's optimum I/O balance ($\beta_{io}^{opt}$) and memory balance ($\beta_{mem}^{opt}$) as a function of application balance ($\gamma_{io}$ and $\gamma_{mem}$) for different cost balance ($\delta_{io}$ and $\delta_{mem}$). For calculation of $\delta_{io}$ and $\delta_{mem}$ refer to Section-\ref{subsec:Example}}
   \label{fig:BetaVsGamma}
 \end{figure*}
 \subsection{Problem Definition}
@@ -682,8 +681,8 @@ $P_{mem}$ & Price per GB of DRAM\\
 $\beta_{io}$ & System balance between I/O bandwidth and CPU speed for system $S$ ($= R_{io}/R{cpu}$)\\
 $\beta_{mem}$ & System balance between DRAM size and CPU speed for system $S$ ($= R_{mem}/R{cpu}$)\\
 \hline
-$\gamma_{io}$ & Application balance between CPU and I/O bandwidth for application $W$ ($= W_{io}/W{cpu}$). This term quantifies to what extent the application is I/O-intensive or CPU-intensive. Lower value means more CPU-intensive, higher value means I/O-intensive \\
-$\gamma_{mem}$ & Application balance between CPU and DRAM size for application $W$ ($= W_{mem}/W{cpu}$). This term quantifies to what extent the application is memory-intensive or CPU-intensive. Lower value means more CPU-intensive, higher value means memory-intensive \\
+$\gamma_{io}$ & Application balance between CPU and I/O bandwidth for application $W$ ($= W_{io}/W{cpu}$). This term quantifies to what extent the application is I/O-intensive or CPU-intensive. Lower value means more CPU-intensive, higher value means I/O-intensive. $1$ represents both I/O- and CPU-intensive \\
+$\gamma_{mem}$ & Application balance between CPU and DRAM size for application $W$ ($= W_{mem}/W{cpu}$). This term quantifies to what extent the application is memory-intensive or CPU-intensive. Lower value means more CPU-intensive, higher value means memory-intensive. $1$ represents both memory- and CPU-intensive \\
 \hline
 $\delta_{io}$ & Cost balance between CPU and I/O bandwidth for system $S$ ($= P_{io}/P{cpu}$)\\
 $\delta_{mem}$ & Cost balance between CPU and DRAM for system $S$ ($= P_{mem}/P{cpu}$)\\
@@ -804,7 +803,7 @@ An underlying assumption of the model is that the aggregate I/O bandwidth of all
 \subsubsection{Network I/O}
 The model does not consider the impact of network interconnect. Hence, we find it important to provide some qualitative information regarding current state of the network architecture in the HPC cluster, source of architectural imbalance, and possible solution. Traditional HPC clusters use a hierarchy of InfiniBand switches with a fat tree model of connectivity. This approach typically uses a layered architecture. The hosts or servers are connected to the bottom layer, called access layer, which is then aggregated to an intermediate layer of switches, called edge layer or leaf. The edge layer switches are then connected to the top layer switches, called core layer or spine, where the actual bandwidth of the network is scaled. To prevent over subscription, the link speeds get progressively higher from access layer to leaves to spine starting from only few Mbps to several Gbps. This architecture may suffer from bottleneck issues, introducing architectural imbalance as the bandwidth of the host adapter is increasing at an outstanding pace (an observation by Cohen \cite{Balance:cohen2009applying}). Furthermore, to accomodate many servers with fewer switches (thus, reducing the cost of the network), a blocking is used, which again limits the performance of big data genomic applications which demand more bandwidth. As an alternative, the simple Clos-based architecture is gaining popularity, where all the lower layer switches (i.e., leaf) are connected to all the top layer switches (i.e., spine) using a full mesh topology, thus achieving a non-blocking model using inexpensive devices. The data-intensive applications based on Hadoop or Giraph, which transmit huge amounts of data over network in different phases of computation, can use more bandwidth from this all-to-all connection model. 
 
-\subsection{An Illustrative Example of Applying the Model to Build a Balanced Cluster}
+\subsection{An Illustrative Example of Applying the Model to Build a Balanced Cluster} \label{subsec:Example}
 \begin{table}[!t]
 \caption{Cost of different hardware components}
 \label{tab:Cost}
@@ -818,13 +817,13 @@ Intel Xeon 64bit 2.6 GHz E5 series (8-cores) processor & 1760 & \$42/GHz\\
 Intel Xeon D-1541 & 650 & \$54/GHz\\
 \hline
 \hline
-Western Digital RE4 HDD (120MBPS), 500GB & 132 & \$2.25/GBPS/GB\\
+Western Digital RE4 HDD (120MBPS), 500GB & 132 & \$2252.80/GBPS/TB\\
 \hline
-Western Digital VelociRaptor HDD (150MBPS), 600GB & 167 & \$1.90/GBPS/GB\\
+Western Digital VelociRaptor HDD (150MBPS), 600GB & 167 & \$1900.09/GBPS/TB\\
 \hline
-Samsung 840Pro Series SATAIII SSD (400MBPS), 512GB & 450 & \$2.25/GBPS/GB\\
+Samsung 840Pro Series SATAIII SSD (400MBPS), 512GB & 450 & \$2250.00/GBPS/TB\\
 \hline
-Samsung NVMe SSD PM953 (2GBPS), 950GB & 450 & \$0.22/GBPS/GB\\
+Samsung NVMe SSD PM953 (2GBPS), 950GB & 450 & \$242.52/GBPS/TB\\
 \hline
 \hline
 Samsung DDR3 16GB memory module & 159 & \$10/GB\\
@@ -845,7 +844,7 @@ SuperMikeII (Traditional Supercomputer) & Two 8-core SandyBridge Xeon & 2.6 & 16
 \hline
 SwatIII (Regular Datacenter) & Two 8-core SandyBridge Xeon & 2.6 &  16 & 41.6 & 4-HDD (SATA) & 0.15 & 0.60 & 256 & 16 & 0.015 & 6.15\\
 \hline
-CeresII (MicroBrick-based Hyperscale System) & One 6-core Xeon & 2 & 6 & 12 & 1-SSD (NVMe) & 2 & 2 & 64 & 40 & 0.17 & 5.33\\
+CeresII (MicroBrick-based Hyperscale System) & One 6-core Xeon & 2 & 6 & 12 & 1-SSD (NVMe) & 2 & 2 & 64 & 40 & 0.166 & 5.33\\
 \hline
 \end{tabular}
 \end{table*}
@@ -858,13 +857,11 @@ Table-\ref{tab:Cost} shows a sample list of different hardware components and th
 
 The \textit{Unit Price} shows the current price trend  for different processor, storage and memory alternatives in their corresponding unit. We consider Intel Xeon processor. As it can can be seen in  Table-\ref{tab:Cost}, the cost per MBPS of sequential I/O for both HDD and SATA-SSD is almost similar irrespective of change in storage technology provided the same storage space per disk. Whereas, the I/O bandwidth cost started reducing significantly with NVMe SSD. The cost per GB of DRAM is increased almost double from DDR2 to DDR3. 
 
-We first calculated the average cost of each hardware component from the available list (Table-\ref{tab:Cost}) in terms of their corresponding unit price. For example, we have two different Xeon processors, E5-series and D-series as shown in Table-\ref{tab:Cost}. Their rspective unit prices are \$42/GHz and \$54/GHz. Hence, in this example we selected average unit cost of the processor as \$48/GHz. Similarly the cost of DRAM is calculated as \$7.2/GB. 
-
-However, calculating the average I/O bandwidth cost is not as simple as with processor or memory. This is because, the price of the storage devices is often directed by the capacity (i.e., GB), whereas, the model needs the cost per bandwidth (i.e., GBPS) which again depends on the number of disks. Hence, we need a general methodology to calculate cost per GBPS. To resolve this issue, we first calculated the unit price of a disk in terms of cost per GBPS per GB. Then, we selected a common capacity, 1TB for this example that we can use in a server.  Then, we multiplied the unit price with capacity (i.e., 1TB) to calculate the cost per GBPS for each of the disks. For example, the cost per GBPS of Western Digital RE4 HDD is \$2304/GBPS ($2.25 \times 1024$). Finally, we calculated the average cost of I/O bandwidth for all the disks listed. For the disk drives shown in Table-\ref{tab:Cost}, the average I/O bandwidth cost is \$1694/GBPS. 
+We first calculated the average cost of each hardware component from the available list (Table-\ref{tab:Cost}) in terms of their corresponding unit price. For example, we have two different Xeon processors, E5-series and D-series as shown in Table-\ref{tab:Cost}. Their rspective unit prices are \$42/GHz and \$54/GHz. Hence, in this example we selected average unit cost of the processor as \$48/GHz. Similarly the cost of DRAM is calculated as \$7.20/GB. However, calculating the average I/O bandwidth cost is not as simple as with processor or memory. This is because, the price of the storage devices is often directed by the capacity (i.e., GB), whereas, the model needs the cost per bandwidth (i.e., GBPS) which again depends on the number of disks. For simplicity, we calculated the unit price of a disk in terms of cost per GBPS per TB. That is, we calculated the cost per GBPS using the same storage capacity (1TB) for each disk. Finally, we calculated the average cost of I/O bandwidth (again assuming 1TB storage) for all the disks listed. For the disk drives shown in Table-\ref{tab:Cost}, the average I/O bandwidth cost is \$1661.35/GBPS. 
 
 Next, we divided the I/O cost per GBPS  and DRAM cost per GB by the CPU cost per GHz to get the cost balance for I/O and memory respectively. Using the notation in Table-\ref{tab:Notation}, cost balance for this example can be written as: 
 \begin{equation} \label{eqn:PractCostBalIo}
-\delta_{io} = 35.30 
+\delta_{io} = 34.61 
 \end{equation}
 \begin{equation} \label{eqn:PractCostBalMem}
 \delta_{mem} = 0.15
@@ -997,7 +994,7 @@ We ran the first two applications described in Table-\ref{tab:AppChar} in all th
                 \caption{WordCount I/O throughput}
                 \label{fig:WordCountIO}
    \end{subfigure}
-   \caption{System Characteristics of TeraSort and WordCount benchmark on different cluster architectures}
+   \caption{Average \#CPU instruction per second (IPS) and average I/O bandwidth per node of different cluster architectures for TeraSort and WordCount benchmark }
   \label{fig:IPS}
 \end{figure}
 \subsubsection{System Characteristics}
