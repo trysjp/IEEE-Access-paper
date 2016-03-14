@@ -1,0 +1,19 @@
+pdf("/home/hadoop/rough/MyGITProjects/PGA_EvaluationArchitecturePaper/Evaluation-architectures-for-big-data/LsuSamsungPaper/Figure/SystemData/Plots/ECCPUSSD.pdf", family="Times")
+
+data <- read.csv(file="EC_1HDD_CPUCopy.csv",head=FALSE,sep=",")
+
+plot(data$V4, type="l", lty=1, ann=FALSE, col="blue", lwd=2)
+lines(data$V5, col="black", lty=2, lwd=2)
+
+#These two lines will allow for color blending at overlap
+#polygon(data$V5, col=rgb(0, 0, 1,0.5), border="black")
+#polygon(data$V4, col=rgb(1, 0, 0,0.5), border="black")
+
+#These two lines will have no color blending at overlap
+#polygon(data$V5, col="grey", border="black")
+#polygon(data$V4, col="black", border="black")
+
+legend("topright", c("IO-Wait", "CPU-Utilization"), fill=c(rgb(0, 0, 1,0.5),rgb(1, 0, 0,0.5)))
+
+box()
+dev.off()

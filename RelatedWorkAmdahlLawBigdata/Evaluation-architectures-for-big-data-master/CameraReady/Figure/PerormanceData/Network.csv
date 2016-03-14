@@ -1,0 +1,3 @@
+GraphConstruction,GraphSimplification,EntirePipeline
+SuperMikeII(40GbpsInfiniBand):15DN[BaseLine],1,1,1
+SwatIII-Basic(10GbpsEthernet):15DN,1.064981,1.03805,1.04657

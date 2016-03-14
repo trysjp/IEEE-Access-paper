@@ -1,0 +1,52 @@
+De novo genome assembly refers to construction of an entire genome sequence from a large amount of short read sequences when no reference genome is available. 
+De Bruijn graph construction  and removal of sequencing errors (tips and bubble) from this graph is central to de novo sequencing. 
+Finally, resolving  repeated regions followed by a scaffolding phase produces long size scaffolds that represents a region in the actual genome.
+
+We classified de novo sequencing in three different phases like other assemblers.
+\begin{inparaenum}[\itshape a\upshape)]
+\item De Bruijn graph construction
+\item Graph simplification and
+\item Scaffolding.
+\end{inparaenum}
+We store short reads in fastq format in hdfs as input to PGA.
+In the first phase, we use Hadoop in order to build de Bruijn graph from these short reads. 
+Once the graph is constructed we use Giraph in the subsequent phases to analyze the graph in order to construct appreciably long contigs and scaffolds.
+In this section we provide a brief overview of each stage of the assembler.
+
+\subsubsection {De Bruijn graph construction}
+This phase is inspired by Contrail, another Hadoop based genome assembler.
+The de Brujin graph is constructed using MapReduce by scanning each read in the mapper.
+In the map phase, each read is divided into several short fragments of length k known as k-mer.
+Each two subsequent k-mers are emitted as key-value pairs where the first one (key) represents a vertex in the graph and the second one (value) represents the outgoing edge from the key.
+Similar process is repeated for the reverse complement of the reads are also considered.
+After the map function completes, the shuffle phase partitions the intermidiate key-value pairs on the basis of key which effectively collects the edges of the graph emitted from the same source k-mer.
+Finally, the reduce function aggregates the edges (value-list) of each source k-mer and saves the graph structure in HDFS.
+
+\subsubsection {Graph Simplification}
+This phase invokes a series of Giraph jobs each of which perform the following and write the output to the HDFS which seves as the input to the next Giraph job.
+The process continues until no linear chains are found in the graph. 
+ 
+\textbf{Compression:} The first step that follows after building the graph is compressing the linear chain of nodes in the graph.
+Giraph reads the graph from HDFS in a predefined adjacency list format where the source k-mer serves both as vertex id and value.
+The non-branching linear paths of vertices are compressed into single vertex without the loss of any information.
+In one superstep each compressible vertex is tagged as either head or tail with equal probability and send a meassage containing the tag to the immidiate predecessor and successor.
+In the next superstep the head-vertices are merged with corresponding tail-vertices.
+The value of the head is updated accordingly. 
+This process continues for $i$ supersteps until there is no compressible vertex remaining in the graph.
+
+\textbf{Tip removal:} Tips are formed because of errors in the end of the short reads.
+Removing the tips from the de Bruijn Graph is a straight forward process.
+After compressing the graph, in a single superstep the vertices with no outgoing edge and the value-length less than a threshold (normally set to $2k$) are deleted from the graph.
+
+\textbf{Bubble removal:} Bubbles are introduced in the DBG because of errors in the middle of the short reads.
+Bubbles are formed when two paths start and end at the same vertices.
+After compressing the linear chain, the objective of bubble removal is to group the vertices by the same predecessor and successor in the entire graph and from each group keep only the node which has the highest frequency support.
+In one superstep every node matching this criteria sends the cumulative frequency to their immidiate successor.
+In the next superstep successor nodes compute difference in frequency and delete all the nodes with lower frequency.
+Remember we calculated the frequency during the compression phase.
+
+\subsubsection {Scaffolding}
+The first step of scaffolding determines which contigs are linked by matepairs, and their relative orientation and separation. By convention, mated reads have the same name except for their suffix (either 1 or 2). 
+PGA therefore finds all mate-linked contigs using a single MapReduce cycle by emitting from the mapper mate messages consisting of the read name without the suffix as the key, and the contig name, read orientation, and read offset as the value.
+
+Next, we developed a graph hop method to find the exact path between the linked nodes

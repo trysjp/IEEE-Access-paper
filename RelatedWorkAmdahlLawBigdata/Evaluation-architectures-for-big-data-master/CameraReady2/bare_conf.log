@@ -1,0 +1,898 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.5)  25 SEP 2015 06:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**bare_conf.tex
+(./bare_conf.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(./IEEEtran.cls
+Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 373.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen104
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen105
+\CLASSINFOnormalsizeunitybaselineskip=\dimen106
+\IEEEnormaljot=\dimen107
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+\IEEEilabelindentA=\dimen108
+\IEEEilabelindentB=\dimen109
+\IEEEilabelindent=\dimen110
+\IEEEelabelindent=\dimen111
+\IEEEdlabelindent=\dimen112
+\IEEElabelindent=\dimen113
+\IEEEiednormlabelsep=\dimen114
+\IEEEiedmathlabelsep=\dimen115
+\IEEEiedtopsep=\skip41
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@IEEEsubequation=\count85
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count86
+\c@table=\count87
+\@IEEEeqnnumcols=\count88
+\@IEEEeqncolcnt=\count89
+\@IEEEtmpitemindent=\dimen116
+\c@IEEEbiography=\count90
+\@IEEEtranrubishbin=\box26
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
+)
+(/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2013/06/09 v2.4 Extended list environments
+\pltopsep=\skip44
+\plpartopsep=\skip45
+\plitemsep=\skip46
+\plparsep=\skip47
+\pl@lab=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@tempdima=\dimen122
+\caption@indent=\dimen123
+\caption@parindent=\dimen124
+\caption@hangindent=\dimen125
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \begin {center}{\normalfont \footnotesize #1}\\{\normal
+font \footnotesize \scshape #2}\end {center}\@IEEEtablecaptionsepspace \else \@
+IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {
+#1.}~~ #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \
+footnotesize {#1.}~~ }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent 
+\unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfon
+t \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont 
+\footnotesize \box \@tempboxa \hfil }\fi \fi \fi .
+\c@ContinuedFloat=\count92
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count93
+\c@subtable=\count94
+)
+(./bare_conf.aux)
+\openout1 = `bare_conf.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count95
+\scratchdimen=\dimen126
+\scratchbox=\box27
+\nofMPsegments=\count96
+\nofMParguments=\count97
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count98
+\MPscratchDim=\dimen127
+\MPnumerator=\count99
+\makeMPintoPDFobject=\count100
+\everyMPtoPDFconversion=\toks18
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 409.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 409.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 409.
+
+Underfull \hbox (badness 1748) in paragraph at lines 441--442
+\OT1/ptm/m/n/10 three com-mu-ni-ties, in-clud-ing HPC-scientists, hardware-
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 483--483
+ \OT1/ptm/m/it/10 B. Is-sues: big data ap-pli-ca-tion over traditional-
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 500.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 500.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 500.
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+[]\OT1/ptm/m/n/8 SuperMikeII
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 (Tra-di-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 Su-per-com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+[]\OT1/ptm/m/n/8 SwatIII-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 Basic-HDD
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 (Reg-u-lar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+[]\OT1/ptm/m/n/8 SwatIII-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 Basic-SSD
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 (Reg-u-lar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+[]\OT1/ptm/m/n/8 SwatIII-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 Memory
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 (Reg-u-lar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+[]\OT1/ptm/m/n/8 SwatIII-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 FullScaleup-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 HDD/SSD
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 (Reg-u-lar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+[]\OT1/ptm/m/n/8 SwatIII-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 Medium-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 HDD/SSD
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 (Reg-u-lar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+[]\OT1/ptm/m/n/8 CeresII
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 (Sam-sung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 Mi-cro-Brick
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--501
+\OT1/ptm/m/n/8 with PCIe-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
+[]\OT1/ptm/m/n/8 Memory
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
+[]\OT1/ptm/m/n/8 Medium-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
+[]\OT1/ptm/m/n/8 40-Gbps
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
+\OT1/ptm/m/n/8 QDR
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
+\OT1/ptm/m/n/8 In-fini-Band
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 512--512
+[]\OT1/ptm/m/n/8 10-Gbps Eth-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--513
+[]\OT1/ptm/m/n/8 SSD:9226,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--513
+[]\OT1/ptm/m/n/8 SSD:5068,
+ []
+
+
+Overfull \hbox (16.90175pt too wide) in paragraph at lines 500--517
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 526--526
+[]\OT1/ptm/m/n/8 SuperMikeII,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--529
+[]\OT1/ptm/m/n/8 SwatIII
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--533
+[]\OT1/ptm/m/n/8 140
+ []
+
+
+Overfull \hbox (8.32985pt too wide) in paragraph at lines 524--535
+[][] 
+ []
+
+[3]
+Underfull \vbox (badness 1048) has occurred while \output is active []
+
+ [4]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 562.
+
+Underfull \hbox (badness 1817) in paragraph at lines 565--566
+ \OT1/ptm/m/it/10 2) Giraph-based Graph Sim-pli-fi-ca-tion (memory- and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--572
+[]\OT1/ptm/m/n/8 Job
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--572
+[]\OT1/ptm/m/n/8 Final
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--572
+\OT1/ptm/m/n/8 out-
+ []
+
+
+Overfull \hbox (6.99498pt too wide) in paragraph at lines 572--572
+[]\OT1/ptm/m/n/8 Shuffled
+ []
+
+
+Overfull \hbox (0.531pt too wide) in paragraph at lines 572--572
+[]\OT1/ptm/m/n/8 HDFS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--573
+[]\OT1/ptm/m/n/8 Graph
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--573
+\OT1/ptm/m/n/8 Con-
+ []
+
+
+Overfull \hbox (5.41109pt too wide) in paragraph at lines 573--573
+[]\OT1/ptm/m/n/8 Hadoop| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--573
+[]\OT1/ptm/m/n/8 90GB
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--573
+\OT1/ptm/m/n/8 (500-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--573
+\OT1/ptm/m/n/8 million
+ []
+
+
+Overfull \hbox (3.19507pt too wide) in paragraph at lines 573--573
+[]\OT1/ptm/m/n/8 136GB| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--574
+[]\OT1/ptm/m/n/8 Graph
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--574
+\OT1/ptm/m/n/8 Sim-pli-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--574
+[]\OT1/ptm/m/n/8 Series
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--574
+\OT1/ptm/m/n/8 raph
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--574
+[]\OT1/ptm/m/n/8 95GB
+ []
+
+
+Overfull \hbox (6.21123pt too wide) in paragraph at lines 574--574
+\OT1/ptm/m/n/8 (71581898
+ []
+
+
+Overfull \hbox (4.53102pt too wide) in paragraph at lines 574--574
+[]\OT1/ptm/m/n/8 640MB
+ []
+
+
+Overfull \hbox (2.74713pt too wide) in paragraph at lines 574--574
+\OT1/ptm/m/n/8 (62158
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--574
+\OT1/ptm/m/n/8 ver-
+ []
+
+
+Overfull \hbox (3.19507pt too wide) in paragraph at lines 574--574
+[]\OT1/ptm/m/n/8 966GB| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--585
+[]\OT1/ptm/m/n/8 Job
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--585
+[]\OT1/ptm/m/n/8 Final
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--585
+\OT1/ptm/m/n/8 out-
+ []
+
+
+Overfull \hbox (6.99498pt too wide) in paragraph at lines 585--585
+[]\OT1/ptm/m/n/8 Shuffled
+ []
+
+
+Overfull \hbox (0.531pt too wide) in paragraph at lines 585--585
+[]\OT1/ptm/m/n/8 HDFS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--586
+[]\OT1/ptm/m/n/8 Graph
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--586
+\OT1/ptm/m/n/8 Con-
+ []
+
+
+Overfull \hbox (5.41109pt too wide) in paragraph at lines 586--586
+[]\OT1/ptm/m/n/8 Hadoop| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--586
+[]\OT1/ptm/m/n/8 452GB
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--586
+\OT1/ptm/m/n/8 (2-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--586
+\OT1/ptm/m/n/8 billion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+[]\OT1/ptm/m/n/8 Graph
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+\OT1/ptm/m/n/8 Sim-pli-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+[]\OT1/ptm/m/n/8 Series
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+\OT1/ptm/m/n/8 raph
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+[]\OT1/ptm/m/n/8 3.2TB
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+\OT1/ptm/m/n/8 (1.5-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+\OT1/ptm/m/n/8 billion
+ []
+
+
+Overfull \hbox (1.19507pt too wide) in paragraph at lines 587--587
+[]\OT1/ptm/m/n/8 3.8GB
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+\OT1/ptm/m/n/8 (3-
+ []
+
+
+Overfull \hbox (3.20277pt too wide) in paragraph at lines 587--587
+\OT1/ptm/m/n/8 million
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--587
+\OT1/ptm/m/n/8 ver-
+ []
+
+[5]
+Underfull \hbox (badness 1735) in paragraph at lines 599--600
+\OT1/ptm/m/n/10 SwatIII-Basic-HDD (1-HDD/DN cases), 8-conainers/DN
+ []
+
+<Figure/PerormanceData/Plots/Network.pdf, id=25, 505.89pt x 505.89pt>
+File: Figure/PerormanceData/Plots/Network.pdf Graphic file (type pdf)
+
+<use Figure/PerormanceData/Plots/Network.pdf>
+Package pdftex.def Info: Figure/PerormanceData/Plots/Network.pdf used on input 
+line 616.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+<Figure/PerormanceData/Plots/StorageMemory.pdf, id=26, 505.89pt x 505.89pt>
+File: Figure/PerormanceData/Plots/StorageMemory.pdf Graphic file (type pdf)
+
+<use Figure/PerormanceData/Plots/StorageMemory.pdf>
+Package pdftex.def Info: Figure/PerormanceData/Plots/StorageMemory.pdf used on 
+input line 621.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+<Figure/SystemData/Plots/BGCPUHDD.pdf, id=27, 505.89pt x 505.89pt>
+File: Figure/SystemData/Plots/BGCPUHDD.pdf Graphic file (type pdf)
+
+<use Figure/SystemData/Plots/BGCPUHDD.pdf>
+Package pdftex.def Info: Figure/SystemData/Plots/BGCPUHDD.pdf used on input lin
+e 632.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--633
+[]\OT1/ptm/m/n/9 (a) |Hadoop-based graph-
+ []
+
+<Figure/SystemData/Plots/ECCPUHDD.pdf, id=28, 505.89pt x 505.89pt>
+File: Figure/SystemData/Plots/ECCPUHDD.pdf Graphic file (type pdf)
+
+<use Figure/SystemData/Plots/ECCPUHDD.pdf>
+Package pdftex.def Info: Figure/SystemData/Plots/ECCPUHDD.pdf used on input lin
+e 637.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 638--638
+[]\OT1/ptm/m/n/9 (b) |Giraph-based graph-
+ []
+
+<Figure/SystemData/Plots/BGCPUSSD.pdf, id=29, 505.89pt x 505.89pt>
+File: Figure/SystemData/Plots/BGCPUSSD.pdf Graphic file (type pdf)
+
+<use Figure/SystemData/Plots/BGCPUSSD.pdf>
+Package pdftex.def Info: Figure/SystemData/Plots/BGCPUSSD.pdf used on input lin
+e 642.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--643
+[]\OT1/ptm/m/n/9 (c) |Hadoop-based graph-
+ []
+
+<Figure/SystemData/Plots/ECCPUSSD.pdf, id=30, 505.89pt x 505.89pt>
+File: Figure/SystemData/Plots/ECCPUSSD.pdf Graphic file (type pdf)
+
+<use Figure/SystemData/Plots/ECCPUSSD.pdf>
+Package pdftex.def Info: Figure/SystemData/Plots/ECCPUSSD.pdf used on input lin
+e 647.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 648--648
+[]\OT1/ptm/m/n/9 (d) |Giraph-based graph-
+ []
+
+<Figure/SystemData/Plots/BGHddSsdWrIops.pdf, id=31, 505.89pt x 505.89pt>
+File: Figure/SystemData/Plots/BGHddSsdWrIops.pdf Graphic file (type pdf)
+
+<use Figure/SystemData/Plots/BGHddSsdWrIops.pdf>
+Package pdftex.def Info: Figure/SystemData/Plots/BGHddSsdWrIops.pdf used on inp
+ut line 657.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+<Figure/SystemData/Plots/ECHddSsdWrIops.pdf, id=32, 505.89pt x 505.89pt>
+File: Figure/SystemData/Plots/ECHddSsdWrIops.pdf Graphic file (type pdf)
+
+<use Figure/SystemData/Plots/ECHddSsdWrIops.pdf>
+Package pdftex.def Info: Figure/SystemData/Plots/ECHddSsdWrIops.pdf used on inp
+ut line 662.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+<Figure/SystemData/Plots/BGHddSsdHdfsWrIops.pdf, id=33, 505.89pt x 505.89pt>
+File: Figure/SystemData/Plots/BGHddSsdHdfsWrIops.pdf Graphic file (type pdf)
+
+<use Figure/SystemData/Plots/BGHddSsdHdfsWrIops.pdf>
+Package pdftex.def Info: Figure/SystemData/Plots/BGHddSsdHdfsWrIops.pdf used on
+ input line 667.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+<Figure/SystemData/Plots/ECHddSsdHdfsWrIops.pdf, id=34, 505.89pt x 505.89pt>
+File: Figure/SystemData/Plots/ECHddSsdHdfsWrIops.pdf Graphic file (type pdf)
+
+<use Figure/SystemData/Plots/ECHddSsdHdfsWrIops.pdf>
+Package pdftex.def Info: Figure/SystemData/Plots/ECHddSsdHdfsWrIops.pdf used on
+ input line 672.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+<Figure/PerormanceData/Plots/PerfDiffArch.pdf, id=35, 505.89pt x 505.89pt>
+File: Figure/PerormanceData/Plots/PerfDiffArch.pdf Graphic file (type pdf)
+
+<use Figure/PerormanceData/Plots/PerfDiffArch.pdf>
+Package pdftex.def Info: Figure/PerormanceData/Plots/PerfDiffArch.pdf used on i
+nput line 681.
+(pdftex.def)             Requested size: 252.94437pt x 174.96451pt.
+
+<Figure/PerormanceData/Plots/PerfPerDollarDiffArch.pdf, id=36, 505.89pt x 505.8
+9pt>
+File: Figure/PerormanceData/Plots/PerfPerDollarDiffArch.pdf Graphic file (type 
+pdf)
+ <use Figure/PerormanceData/Plots/PerfPerDollarDiffArch.pdf>
+Package pdftex.def Info: Figure/PerormanceData/Plots/PerfPerDollarDiffArch.pdf 
+used on input line 686.
+(pdftex.def)             Requested size: 252.94437pt x 174.96451pt.
+
+Overfull \hbox (2.29994pt too wide) in paragraph at lines 680--690
+[][] [] 
+ []
+
+[6 <./Figure/PerormanceData/Plots/Network.pdf> <./Figure/PerormanceData/Plots/S
+torageMemory.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./Figure/SystemData/Plots/BGCPUHDD.pdf> <./Figure/SystemData/Plots/ECCPUHD
+D.pdf> <./Figure/SystemData/Plots/BGCPUSSD.pdf> <./Figure/SystemData/Plots/ECCP
+USSD.pdf> <./Figure/SystemData/Plots/BGHddSsdWrIops.pdf> <./Figure/SystemData/P
+lots/ECHddSsdWrIops.pdf> <./Figure/SystemData/Plots/BGHddSsdHdfsWrIops.pdf> <./
+Figure/SystemData/Plots/ECHddSsdHdfsWrIops.pdf>]
+<Figure/PerormanceData/Plots/PerfDiffArchHum.pdf, id=94, 505.89pt x 505.89pt>
+File: Figure/PerormanceData/Plots/PerfDiffArchHum.pdf Graphic file (type pdf)
+
+<use Figure/PerormanceData/Plots/PerfDiffArchHum.pdf>
+Package pdftex.def Info: Figure/PerormanceData/Plots/PerfDiffArchHum.pdf used o
+n input line 737.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+<Figure/PerormanceData/Plots/PerfPerDollarDiffArchHum.pdf, id=95, 505.89pt x 50
+5.89pt>
+File: Figure/PerormanceData/Plots/PerfPerDollarDiffArchHum.pdf Graphic file (ty
+pe pdf)
+ <use Figure/PerormanceData/Plots/PerfPerDollarDiffArchHum.pdf>
+Package pdftex.def Info: Figure/PerormanceData/Plots/PerfPerDollarDiffArchHum.p
+df used on input line 742.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+ [8 <./Figure/PerormanceData/Plots/PerfDiffArch.pdf> <./Figure/PerormanceData/P
+lots/PerfPerDollarDiffArch.pdf> <./Figure/PerormanceData/Plots/PerfDiffArchHum.
+pdf> <./Figure/PerormanceData/Plots/PerfPerDollarDiffArchHum.pdf>]
+<Figure/PerormanceData/Plots/SSDHDDSameNode.pdf, id=119, 505.89pt x 505.89pt>
+File: Figure/PerormanceData/Plots/SSDHDDSameNode.pdf Graphic file (type pdf)
+
+<use Figure/PerormanceData/Plots/SSDHDDSameNode.pdf>
+Package pdftex.def Info: Figure/PerormanceData/Plots/SSDHDDSameNode.pdf used on
+ input line 762.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+
+<Figure/PerormanceData/Plots/SSDHDDDiffNode.pdf, id=120, 505.89pt x 505.89pt>
+File: Figure/PerormanceData/Plots/SSDHDDDiffNode.pdf Graphic file (type pdf)
+
+<use Figure/PerormanceData/Plots/SSDHDDDiffNode.pdf>
+Package pdftex.def Info: Figure/PerormanceData/Plots/SSDHDDDiffNode.pdf used on
+ input line 767.
+(pdftex.def)             Requested size: 116.35252pt x 116.35225pt.
+ (./bare_conf.bbl [9 <./Figure/PerormanceData/Plots/SSDHDDSameNode.pdf> <./Figu
+re/PerormanceData/Plots/SSDHDDDiffNode.pdf>]
+Underfull \hbox (badness 2418) in paragraph at lines 118--122
+[]\OT1/ptm/m/n/9 M. Michael, J. E. Mor-eira, D. Shiloach, and R. W.
+ []
+
+)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[10] (./bare_conf.aux) ) 
+Here is how much of TeX's memory you used:
+ 3599 strings out of 493304
+ 62087 string characters out of 6139872
+ 138614 words of memory out of 5000000
+ 7019 multiletter control sequences out of 15000+600000
+ 40284 words of font info for 74 fonts, out of 8000000 for 9000
+ 960 hyphenation exceptions out of 8191
+ 38i,9n,38p,1521b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
+enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on bare_conf.pdf (10 pages, 246315 bytes).
+PDF statistics:
+ 163 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+

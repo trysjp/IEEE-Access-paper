@@ -1,0 +1,130 @@
+% no \IEEEPARstart
+%This demo file is intended to serve as a ``starter file''
+%for IEEE conference papers produced under \LaTeX\ using
+%IEEEtran.cls version 1.7 and later.
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+%I wish you the best of success.
+Optimal processing of huge amount of data produced by different scientific experimental facilities entangled with complex scientific computation impose several challenges in terms of efficient provisioning of hardware.
+Most of the existing supercomputers being made for high performance compute intensive applications and being optimally tuned for existing HPC technologies (eg. MPI, grid etc.) failed to address these bigdata challenges.
+Although, these supercomputers provide enormous computation power in terms of tera/peta FLOPS, bigdata analysis is severely constrained by the IO and memory-availability resulting in CPU under utilization.
+However, the existing pay-as-you-go cloud infrastructures (eg. Amazon EC2, Penguin Computing, R-HPC etc.) allevietes some of these problems by providing the HPC users elasticity of resources, the performance of the existing HPC technologies on top of these cloud resources remain suboptimal.
+In the past few years several cloud resources especially Amazon EC2 is evaluated for broad range of HPC problems including several MPI and Grid benchmarks. 
+In most of the cases supercomputers with huge processing power and low latency infiniband interconnect outperformed the cloud in terms of raw performance making the supercomputers the first choice of the scientific community . 
+On the contrary, cloud is proved to be viable not only in terms of price to performance but also in eliminating the cluster setup time and cost.
+%As for example, MPI based technologies (eg. ) has been applied in several large scale data analytics jobs including genome analysis, simulation of complex physical system etc. Globus project \cite{}, Condor \cite{} etc. showed the power of grids and spawned many successful production of computation grids where scientists analyzed varities of data generated from different field of science an engineering.
+
+On the other hand, in the last few years the computation model shifted severely towards data driven analysis especially after the introduction of Hadoop and the rich software eco system that is built surrounding it.
+The simple abstraction provided by these massively parallel state of the art bigdata analytics softwares enable the developers to write petabyte scale applications easily.
+In the last few years we experienced several deployment of large scale Hadoop cluster in industries including Yahoo, Facebook, Samsung etc. to ease the large scale analytics rendering competative advantages.
+
+Not only the industries, in recent years we found a growing interest to leverage the benefit of these massively parallel system in the scientific communtiy also.
+The simple yet powerful programming model offered by these state of the art bigdata analytics softwares and their promising performance-results in different distributed cyberinfrastructucture motivates many HPC aficionados started observing several data intensive HPC challenges as a form of bigdata analytics.
+%In the last few years hadoop and the related projects in its ecosystem became the enterprise de-facto standard for distributed computing especially due to their convenient and flexible programming models that support a broad range of application involving bigdata.
+%On the other hand, their support for varying range of storage (SSD and HDD) and network (infiniband and highspeed-ethernet) architectures and promising performance results creates a growing interest in the research community to apply these state of the art big data softwares for HPC challenges also.
+This growing interest in the HPC community creates new challenges as well as opportunities for the hardware manufaucturers in terms of efficient provisioning for these massively parallel distributed system.
+In order to address these challenges, we evaluate the performance of current state of the art bigdata softwares on different distributed cyber infrastructures with existing benchmarks as well was our parallel bigdata genome assembler based upon Hadoop and Giraph which serves as a real world example of data as well as compute intensive job.
+
+Although, performance of Hadoop on different types of clusters is extensively studied in the last few years [references] unfortunately most of these studies are severely limited to enterprise analytics jobs only, thereby missing the HPC aspect of bigdata entirely. 
+Furthermore, these studies are restricted in comparing any single component of a distributed system, either storage or network interconnect and unfortunately failed to address the growing demand for developing comprehensive next generation distributed cyberinfrastructure in support of bigdata high-performance scientific and engineering applications.   
+We summarize the limitations in these studies as follows,
+\begin{inparaenum}[\itshape a\upshape)]
+\item Most of the experimental work load handle no more than 100GB of input \cite{scaleupscaleout:appuswamy}\cite{scaleupscaleout:chen},
+%It is motivated by the observation, 90\% of the real world enterprise analytics jobs handle less than 100GB of input data[Microsoft][chenfb]. 
+whereas, bigdata HPC problems like genome assembly frequently deal with of data in terabytes scale. 
+%As for example, the assembly of human genome involves initial analysis of 450 GB of raw short read sequence followed by almost 4TB of de bruijn graph analysis.
+\item Most of the experiments are performed on top of the existing benchmarks (eg. \cite{bm:hibench}) which are not well tested for data intensive supercomputing workload which has different computation and communication characteristics than current state of deployments of the available bigdata analytics softwares. 
+%This is especially needed because of the fundamental differences in computation and communication characteristics involved in HPC and the current state of deployments of the available bigdata analytics softwares.
+\item Graphs are a core part of many of the HPC as well as enterprise analytics workloads. 
+%Large scale graph analysis involves multiple iteration along with enormous number of random reads/writes which is traditionally addressed using shared memory approach. 
+Although Apache Giraph addressed many of the large scale graph challenges successfully, unfortunately, it's performance is hardly studied in any of the recent works.
+\item Most of the studies analyze any single component of distributed computing, either storage or network and did not see the performance as a function of the entire cluster architecture. 
+%They either compare the performance of Hadoop on different kinds of storage (SSD or HDD)[ssdFlashKorea] or studied it on different types of network architecture [IBROCEComp], thereby ignored their cumulative effect on the application. 
+%Whereas, the performance and efficiency of Hadoop depends on the technology choices in both the components. 
+%It is particularly true when the cluster is based on new generation processors and SSD storage.
+\item The metrices related to price to performance (eg. performance/\$, performance/watt etc.) are not well analyzed which leads to different conclusions regarding scaledup and scaledout deployment of Hadoop clusters. 
+%As for example, [microsoft] and [michael] in their corresponding work reached entirely different conclusion on scaledup and scaledout deployment of hadoop especially because of the data size that they used in their work. 
+%This limitation needs to be addressed not only for deploying bigdata HPC cluster but also corporate datacenter where analysis is growing from GB to Tb to PB in order to get better insight which leads to competative advantage.
+Furthermore, very few of these studies consider the performance metrices for a long term deployment.
+\end{inparaenum}
+%However, these analytics software makes it easy to develop and run highly scalable application, efficient provisioning in terms of storage, memory or network still remain a major challenge.
+%On the otherhand, with the recent advances in scientific instruments many of the HPC problems recently made their way to the forefront of bigdata challenges.
+%One such example is de novo genome assembly which maps the assembly of short read sequences as a graph (de bruijn Graph [pevzner]) analysis problem and conventionally addressed by HPC only. 
+%Recent advances in massively parallel high throughput DNA sequencer like Illumina Genome Analyzer etc. produce vast amount of high quality short read sequences which generate good quality contigs with high coverage when assembled de novo.
+
+%This creates a growing interest in the HPC community to apply these state of the art bigdata analytics softwares for HPC challenges.
+%The new computation model provided by Hadoop and other bigdata analytics software is hardly explored for this type of scientific applications, although, they have enough potential to address these challenges efficiently, not only due to their flexible programming model, but also due to their support for varying range of cyberinfrastructure including different types of storage (SSD and HDD) and networks (IB and ethernet).
+%Despite of this growing interest, the research is severely hindered by the existing studies that analyze the performance of Hadoop on different cyberinfrastructure.
+
+%Although, Hadoop and its performance on different cyberinfrastructure is well studied in the last few years, unfortunately, most of these studies are limited to the enterprise data analytics jobs only (eg. log processing, sorting etc.),  thereby ignored the hpc aspect of bigdata entirely both in terms of complex computation as well as huge data processing in memory. 
+%These studies [Microsoft][IBROCEcomp][HiTune][SSDFlashKorea] being limited to the enterprise data analytics job only, ignores the hpc aspect of bigdata entirely.
+In order to address these limitations, in our work, we compare the performance of available disributed computing resources with our parallel Hadoop and Giraph based genome assembler called PGA that serves as a real world HPC problem that made its way to the forefront of bigdata challenges. 
+De novo genome assembly pipeline involves analysis of huge amount (hundreds of GB) of shortread sequences produced by high throughput genome sequencers followed by a large scale graph analysis (de Bruijn graph [pevzner]) thereby making the entire assembly problem a very good representative of Data intensive supercomputing applications workload.  
+PGA successfully assembled large scale mammalian genome including human genome of size 450GB that produces an intermidiate de Bruijn garph of size almost 4TB in sevaral distributed cyber computing infrastructure. 
+In this paper, we present the performance result of PGA on different types of cluster including LSU supercomputer QueenBee as well as two different types of clusters located in Samsung, Korea.
+[1/2 lines on Differences of the clusters in terms of storage/network]
+%In order to answer this, first we identified three major bottlenecks in today's supercomputers in terms of efficient hardware provisioning.
+%1) Today's supercomputers with limited amount of memory and/or storage cannot address the bigdata challenges efficiently. 
+%2) However, Hadoop targetted normal HDD, several recent studies pointed out Hadoop performs better atop SSD which is several magnitudes faster than normal HDD. Whereas, all the existing supercomputers being dadicated for compute intensive jobs are provided with normal HDD. 
+%3) Hadoop and the related softwares in its ecosystem, initially being targetted for commodity hardware is not optimized for infiniband, which is default in all the supercomputers. The performance and efficiency of these softwares can be severely constrained with the network architecture and technology choices especially when the cluster is based on new generation processors and SSD storage.
+%In our work we took a system approach to address these challenges in efficient provisioning. 
+%We performed a series of experiment with our parallel de bruijn genome assembler based on Hadoop and Giraph in order to compare the performance of LSU supercomputer as well as two different types of clusters that are located Samsung, Korea.
+%<We found (this particular) cluster performs better than other.....>
+%Our contribution can be stated as follows:
+%1) We developed a parallel de novo genome assembler (PGA) as a benchmark that represents an hpc problem involving bigdata. We use Hadoop (in particular, Hadoop2.3.0 which is yarn enabled and comes as opensource with Cloudera Manager 5.0.0) and Giraph (Apache Giraph-1.1.0) to develop PGA that assembles vast amount of short reads produced by the highthroughput DNA sequencing machines (eg. Illumina Genome Analyzer).
+%2) Unlike previous works that targetted enterprise level data intensive analytics job (eg. log processing, indexing etc.), we juxtapose the current state of the art big data analytics software and available distributed computing resources with our assembler that serves as a very good example of both data as well as computation intensive job. 
+%3) Besides Hadoop, we also analyzed the behavior of Giraph, the graph processing framework that we used for huge de Bruijn graph analysis, thereby address a major area of performance analysis that is overlooked in most of the studies
+%4) Unlike other works, we focus on both storage and network architecture of the cluster in order to evaluate the performance of Hadoop and Giraph with respect to our parallel genome assembler.
+%5) We tuned several hadoop storage, memory and network related parameters (eg. blocksize, java heap space, number of parallel threads for reducer copy etc.) and studied their impact on the performance of our assembler on different types of infrastructure.
+%1) However, Hadoop targetted normal HDD, several recent studies pointed out Hadoop performs better atop SSD which is several magnitudes faster than normal HDD.
+%2) Hadoop and the related softwares in its ecosystem, initially being targetted for commodity hardware is not optimized for infiniband, which is default in all the supercomputers. Their performance and efficiency can be severely constrained with the network architecture and technology choices. It is particularly true when the cluster is based on new generation processors and SSD storage.
+
+We present the performance result of [n] different types of Hadoop or Giraph jobs from the entire human genome assembly pipeline that handles most of the input size, there by acts as a dominating factor in deciding the amount of resources.
+We observed [any highlights/general statement on observation that we are found/interested to show],
+[eg. 
+impact of storage on network (if any)
+impact of storage on CPU.
+impact of network on CPU.]
+Our perfromance analysis shows that [any highlights on highlevel performance metrics].
+[eg.
+perfromance/\$
+performance/watt
+longterm profit]
+ 
+%Our detailed result and in depth analysis of cumulative effect of storage and network architecture on the performance of bigdata application (genome assembly) help addressing challenges involved in developing comprehensive, balanced and flexible next generation distributed cyberinfrastructure (DCI) in support of science and engineering applications entangled with bigdata, thereby help deciding on 'how does a next generation high performance computation cluster should look like'.
+
+The rest of the paper is organized as follows. 
+Section 2 dicusses the related work. 
+Section 3 describes Hadoop and Giraph. 
+In section 4 we discuss the overview of our genome assembler and how much data it handles. 
+Section 4 describes the available resources. 
+Finally, an Section 5 we present and discuss our result.
+
+%Although, conventional wisdom directs us towards a scaled out cluster of commodity hardware to cheaply process large amount of data, Hadoop has enough potential for improved performance atop SSD which is a magnitude faster than normal HDD.
+%Also, it supports infiniband  which is considered as a basic requirement for HPC.
+%Furthermore, the flexible programming model offered by these softwares not only solves enterprise level data intensive problems including log processing, analytic queries etc. but also fits a broad range of compute intensive problems that is conventionally addressed by high performance computing (HPC) only.
+%On the other hand, recent advances in both storage and networking and the corresponding drop in price, made the way for cloud computing as a promising alternative to supercomputing. 
+%So, the fundamental question that is becoming increasingly important, is how optimally can we exploit the capability of the current state of the art bigdata software not only in terms of performance and cost on different types of cyber infrastructure but also in terms of type of application as well.
+%Unfortunately, due to lack of proper benchmarks or examplary software on Hadoop, none of the existing studies addressed this question propely. Hence, there is a need for a comprehensive study to help deciding on next generation distributed cyberinfrastructure in support of science and engineering applications that handles large amount of data. 
+
+%In order to find the answer to this, In this paper, we discuss about experimenting PGA, a Parallel Genome Assembler based on Hadoop and Giraph that we developed to address the challenges involved in large scale genome assembly which recently made its way to the forefront of big data challenges.
+%We juxtapose the performance result of current state of the art bigdata software in different types of HPC and Cloud resources (both scaled out and scaled up) with our assembler that serves as a very good example of both data as well as compute intensive job.
+%We believe our in-depth analysis provides a guideline on how much benefit an end user can expect from different types of clusters and most importantly helps both the HPC and Cloud community in deciding how a next generation cluster should look like.
+
+%In the last decade with the introduction of Hadoop big data analytics became synonymous with deploying cheap commodity clusters.
+%Although, this scaleout thinking worked well for plethora of real world enterprise problems including log processing, analytic query etc, it hinders the research on exploring the full cpability of Hadoop and the rich ecosystem that is built around it, which if used properly can address a broad set of scientific and engineering problems especially due to their flexible progeamming model.
+%Furthermore, recent studies showed that the majority of real world analytic jobs process less than 100GB of input (ref-Microsoft-paper) whereas Hadoop and the related software in its ecosystem is developed to address the data in the scale of terabytes or petabytes.
+%This suboptimal use motivates many HPC aficionados to observe big data analysis as a form of HPC despite of several fundamental differences in computation and communication characteristics involved in HPC and the current state of the art bigdata analytics softwares.
+%On the other hand, the need for comprehensive, balanced and flexible distributed cyberinfrastructure (DCI) in support of science and engineering applications (ref-SCREAM) entangled with bigdata drove the related research community in the last few years like never seen before. 
+%With the growing interest on this next generation DCI, it is etremely important to address the challenges involved in supporting broad range of application usage scenarios on a range of platforms with varying performance.
+
+%\hfill mds
+ 
+%\hfill January 11, 2007
+
+%\subsection{Subsection Heading Here}
+%Subsection text here.
+
+
+%\subsubsection{Subsubsection Heading Here}
+%Subsubsection text here.

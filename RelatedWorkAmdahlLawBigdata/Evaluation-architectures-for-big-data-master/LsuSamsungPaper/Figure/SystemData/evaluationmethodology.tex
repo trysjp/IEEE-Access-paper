@@ -1,0 +1,14 @@
+%Although, Hadoop and the related softwares in its ecosystem were initially developed to support the cheap data storage and enterprise level analytics workloads, a convergence with HPC at many different levels has been found especially in terms of programming model.
+%%Earlier studies[][][][] as well as our experience show that the programming model offered by these softwares can support many different HPC workloads.  
+%As a consequence, the traditional approach to deploy Hadoop atop scaled out cluster of commodity hardwares has been changed at least in the context of HPC.
+
+%On the other hand, unlike traditional HPC technologies like MPI, Grid etc Hadoop colocates data and computation in order to support flat scalability.
+%Furthermore, lack of POSIX support, depency on Java, etc. make the Hadoop workloads fundamentally different from the traditional high performance technologies.
+%Complicating the scenario, the cumulative effect of io, network and memory bandwidth on the overall performance of the data intensive workload make the process of providing cost-effective and efficient hardware extremely difficult. 
+%There is very little understanding of the performance tradeoffs of different storage or network interconnects when Hadoop and Giraph is applied for data intensive high performance scientific applications like large scale genome assembly. 
+%In this section we provide the overview of our evaluation methodology.
+
+%In this section we describe the input data size follwed by the descripion of experimental testbeds that we used for our prallel genome assembly application.
+%Then we compare the CPU and network characteristics of Intel hiBench, an existing benchmark suite developed to evaluate Hadoop performance and the first mapreduce phase of PGA that is the de Bruijn graph construction from shortreads.
+%Then, we present the cluster characteristics in terms of CPU, network and storage for both the Hadoop and Giraph phase of PGA separately.
+%Finally, we analyze the performance result of PGA and show that [one of the clusters] yields better execution time whereas, [the other] yields better price to performance.

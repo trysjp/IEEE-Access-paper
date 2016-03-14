@@ -1,0 +1,4 @@
+GraphConstruction,GraphSimplification,EntirePipeline
+SuperMikeII(32GBMem+1HDD):15DN[BaseLine],1,1,1
+SwatIII-Storage(32GBMem+1SSD):15DN,0.512021,0.962646,0.796466
+SwatIII-Memory(256GBMem+1SSD):15DN,0.326829,0.652824,0.532605

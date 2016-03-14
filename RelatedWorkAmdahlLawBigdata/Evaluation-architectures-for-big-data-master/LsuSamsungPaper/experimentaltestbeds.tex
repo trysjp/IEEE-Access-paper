@@ -1,0 +1,32 @@
+We compare the result of three different clusters with varying architecture.
+In this section we prvide the details of the clusters.
+The first one is SuperMikeII, the LSU HPC resource that represents the domain of traditional supercomputer.
+This LSU supercomputer offers total 382 computing nodes, however, maximum of 128 can be allocated at a time. 
+Each node has two 2.6GHz 8-core Sandy Bridge Xeon 64-bit processors, 32GB RAM, thus offering maximum 2GB of memory per core. 
+Each node has 500GB local storage (normal Hard Disk Drive) available as filesystem data storage for Hadoop.
+All nodes are connected through 40Gb/s infiniband network with 2:1 blocking ratio.
+
+On the other hand, we built a prototype of the current state of the art bigdata analytics cluster, SwatIII in Samsung, Korea with HDD and SSD variant to observe the impact of different storage media on Hadoop and Giraph job.
+Each node of SwatIII is equipped with sixteen 2-core Intel Xeon 64bit processors, 256GB RAM, thus yielding maximum 8GB memory per core.
+Each node in this cluster has 1 TB of local storage in either variant.
+Observe, each node in SwatIII offers almost double processing power than each node in SuperMikeII in terms of number of cores. 
+However, in all the experiments discussed in this paper we use the same number of total cores in both the clusters in order to eliminate the impact of procesing power and do a fair comparison in terms of the effect of io-bandwidth, network-bandwith and memory-bandwidth/core which is the main focus of this paper.
+
+\begin{center}
+\begin{table}
+    \begin{tabular}{ |p{1.3cm} | p{1.3cm} | p{1.3cm} | p{1.3cm} | p{1.3cm} |} \hline
+    & Super MikeII @LSU & Big CRON @LSU & SwatIII @Samsung & CeresII @Samsung \\ \hline
+    Number of nodes & 128 & 128 & 15 & 33 \\ \hline
+    Processor & 2*2.6GHz 8-Core Sandy Bridge Xeon 64-bit & 2*2.4GHz 4-Core Intel Xeon 64-Bit & 16*2.6GHz 2-core Xeon 64-bit & 2.3GHz 2-core Xeon 64-bit \\ \hline \hline 
+    Number of cores per node & 16 & 8 & 32 & 2 \\ \hline
+    Total number of cores & 2048 & 1024 & 512 & 66 \\ \hline \hline
+    RAM per node (GB) & 32 & 32 & 256 & 16 \\ \hline
+    Total memory & 4TB & 4TB & 4TB & 528GB \\ \hline \hline
+    Storage per node & 500GB HDD & 1TB HDD & 1TB HDD/ SSD & 256GB HDD \\ \hline
+    Total Storage & 64TB HDD & 64TB HDD & 16TB HDD/ SSD & 7TB HDD \\ \hline \hline
+    Network & 40Gb/s Inifiniband 2:1 bloking & 40Gb/s Infiniand no blocking & 10Gb/s Ethernet & 10Gb/s virtualized Ethernet\\ \hline
+    \end{tabular}
+    \caption{Tetbeds}
+	\label{table:testbeds}
+\end{table}
+\end{center}

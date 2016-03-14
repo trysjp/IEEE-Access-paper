@@ -1,0 +1,102 @@
+Earlier studies showed that Hadoop can be useful for data intensive scientific workloads \cite{schadoop:fadika}.
+Consequently, a growing number of codes in several scientific areas such as bioinformatics, geoscience are currently being written using open source state of the art bigdata analytics software like Hadoop, Giraph etc. \cite{fw:myhadoop}.
+Many of the traditional supercomputers also started using myHadoop \cite{fw:myhadoop} to provide the scientists an easy interface to configure Hadoop on-demand. 
+However, there is very limited prior work that evaluated different distributed cyber infrastructures for these softwares when applied for data intensive scientific workload.
+This leaves a fundamental question yet to be answered: \textit{how does a next generation  high performance computation cluster should look like to handle data intensive scientific workload}.
+In this section we provide the related works for our study.
+
+\textbf{BigData analytics softwares:}
+Hadoop \cite{fw:hadoop} offers a simple, easily scalable disk-based map-reduce abstraction.
+HBase \cite{fw:hbase} is a NoSQL-based distributed linearly scalable key-value store targetted the applications that need random, realtime read or write access to tera/peta byte scale data residing in disk.
+Similarly, Hive \cite{fw:hive}, Impala \cite{fw:impala} etc. are some of the popular disk-based NoSQL Database which provide the users with an SQl like query interface.
+On the other hand, Piccolo \cite{fw:piccolo} and Redis \cite{fw:redis} are two in-memory distributed key-value store, aimed at applications that need low-latency finegrained random access. 
+Giraph \cite{fw:giraph} is a synchronous, vertex centric, in-memory graph processing framework originated as the open-source counterpart to Google's Pregel \cite{fw:pregel} that we analyzed in our work.
+GraphLab \cite{fw:graphlab} is a faster asynchronous graph processing framework mainly motivated to provide the users a framework to write correct machine learning algorithms.
+Resilient Distributed Datasets (RDDs) \cite{fw:rdd} in the Spark system, offers a unified in-memory solution for all batch processing, Stream prcessing \cite{fw:sparkstreaming}, SQL query \cite{fw:sparksql} and graph processing \cite{fw:graphx}.
+Although, the computation model has evolved enough in the last few years to handle data intensive complex scientific workload, the choice of underlying hardware infrastructure still remains a major challenge.
+
+\textbf{Evaluation of Hadoop for scientific workload on existing superComputers:}
+With growing number of scientific applications written in Hadoop, many different groups studied the performance of Hadoop on different existing supercomputers that they have access to.
+Jha \cite{schadoop:jha} observed the convergence between traditional HPC and current state of the art bigdata analytics softwares and evaluated both of them in different supercomputing environment with k-means clustering as an example.
+Fadika \cite{schadoop:fadika} studied the performance of Hadoop for common HPC workload namely filter, merge and append.
+Guo \cite{scgraph:guo} analyzed different graph processing framework with graph500 \cite{bm:graph500} BFS workload.
+Although, thse studies provide excellent insights on performance of current state of the art bigdata analytics softwares for different scientific applications, their analysis is confined into the domain of existing supercomputers, thereby, unable to address whether or not we can get better performance in other cyber infrastructure.
+
+\textbf{Evaluation of Hadoop for enterprise workload on different cyber infrastructure:}
+Several performance analysis studies have been made with Hadoop atop different types of storages (SSD and HDD) and highspeed network interconnects (Infiniband and Ethernet etc).
+Moon \cite{ssdhdd:moon} showed significant cost benefit by storing intermediate Hadoop data in SSD, leaving the HDDs to store Hadoop Distributed File System (HDFS \cite{fw:hdfs}) source data.
+Wu \cite{ssdhdd:wu} found that Hadoop performance can be increased almost linearly with the increasing fraction of SSDs in the storage system.
+Ahn \cite{ssdhdd:ahn} identified in a virtual environment overhead of virtualization is minimized with SSDs.
+Tan \cite{ssdhdd:tan} analyzed the performance of SSD and HDD of different type of workloads involving different IO patterns and found better performance in using SSD.
+Vienne \cite{ethib:vienne} evaluated the performance of Hadoop on different high speed interconnects such as 40GigE RoCE and Inifiniband FDR and found InfiniBand FDR yields the best performance for HPC as well as cloud computing applications.
+Similarly, Yu \cite{ethib:yu} found improvedperformance of Hadoop in traditional supercomputers due to high speed networks.
+From the perspective of a cost effective deployment, Appuswamy \cite{scaleupscaleout:appuswamy} studied the scale-out and scale-up performance for different enterprise level Hadoop job and found better perfromance price to performance in scaled up system.
+On the contrary, Michael \cite{scaleupscaleout:michael} reached entirely different conclusion for interactive query.
+All of the above studies have been performed either with existing benchmarks like HiBench[] or for enterprise level analytics workloads such as log processing etc, thus, unable to address the HPC aspect of Hadoop in terms of efficient hardware provisioning.
+Furthermore, very limited studies consider the in-memory graph processing frameworks like Giraph, although, graph analysis is a core part of many analytics workloads.     
+
+From the above survey, we found a gap in the existing studies in terms of evaluating different distributed cyber infrastructure for current state of the art bigdata analytics software for a real world data intensive scientific workloads.
+On the other hand, millions of dollars are being invested in programs like NSFcloud with the goal "to provide an experimental platform enabling the academic research community to drive research on a new generation of innovative applications of cloud computing and cloud computing architectures" \cite{nsfcloud} . 
+Hence, we found it extremely important to find out the limitations in traditional supercomputers in terms of underlying hardware infratructure and present a study addressing how to alleviate those limitations in an efficient yet cost-effective manner.
+%Our study is motivated to answer the fundamental question that is being increasingly important: \textit{How does  a next generation high performance compute cluster should look like to address data intensive scientific workloads}.
+
+
+
+
+%We are flooded with data today.
+%Efficient processing of these data is important for modern analytics that led the development of sevaral large scale analytics frame work in last few years especially after the introduction of Hadoop, the opensource map-reduce  framework \cite{fw:mapreduce} that became the defacto standard of distributed computing.
+%These massively parallel distributed computing frameworks can be broadly classified into two domains, 
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item disk-based and  
+%\item in-memory.
+%\end{inparaenum}
+%High volume of data and the availability of more disk space than memory in commodity hardware led the development of several disk based processing framework. 
+%Whereas, with businesses and scienfic researches demanding faster access to information and requiring high performance, in-memory processing is getting more attention recently. 
+%The bigdata analytics frameworks in both of these domains offer mainly three different types of programming abstractions, 
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item Map-Reduce 
+%\item NoSQL (distributed key-value store),
+%\item Graph Processing.
+%\end{inparaenum}
+
+%Hadoop \cite{fw:hadoop} offers a simple, easily scalable disk-based map-reduce abstraction.
+%HBase \cite{fw:hbase} is a NoSQL-based distributed linearly scalable key-value store targetted the applications that need  random, realtime read or write access to tera/peta byte scale data residing in disk.
+%Similarly, Hive \cite{fw:hive}, Impala \cite{fw:impala} etc. are some of the popular disk-based NoSQL Database which provide the users with an SQl like query interface.
+%Surfer \cite{fw:surfer} is a disk based map-reduce enabled graph processing framework that focused on reducing network traffic in graph processing.
+%Pegasus \cite{fw:pegasus} and GBase \cite{fw:gbase} are two disk-based graph mining framework which are developed on top of Hadoop and are capable to process billion-scale graph .
+%While the disk-based technologies concentrates mainly on handling large petabyte scale data, the growing need for faster computation drives the development of several in-memory data processing frameworks. 
+%From that end, 'Piccolo \cite{fw:piccolo} and Redis \cite{fw:redis} are two in-memory distributed key-value store, aimed at applications that need low-latency finegrained random access to state. 
+%Giraph \cite{fw:giraph} is a popular iterative, message passing based, vertex centric, scalable graph processing framework originated as the open-source counterpart to Google's Pregel \cite{fw:pregel} that we analyzed in our work.
+%Giraph++ \cite{fw:giraphpp} is an improvement to giraph that reduces the number of messages.
+%GraphLab \cite{fw:graphlab} is a faster asynchronous graph processing framework allowing the users a tabular as well as vertex centric view of the graph motivated to provide the users a framework to write correct machine learning algorithms.
+%Resilient Distributed Datasets (RDDs) \cite{fw:rdd} in the Spark system, offers a unified in-memory solution for batch processing, SQL query and graph processing.
+%X-Stream \cite{fw:xstream} and GraphChi \cite{fw:graphchi} are two disk-based, memory efficient standalone graph processing framework that enables the users to process large scale graph in a single machine. 
+%However, these massively parallel distributed frameworks made the computation easier, efficient provisioning in terms of cost-effective hardwares and high performance still remain a major challenge which works as one of the motivations of our work.
+
+%In order to show the current research trend in bigdata distributed computing and to identify the gap, we classified the ongoing researches in three major components serving as three axes in fig[].
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item disk-based,
+%\item shared-memory and
+%\item Network.
+%\end{inparaenum}
+%All the popular diskbased petascale analytics softwares (eg. Hadoop, HBase, Surfer etc) serves the foundation of plane1. 
+%Their performance depends on not only any single axes but both on storage and network architecture.
+%Whereas, the performance of all the in-memory bigdata processing frameworks that lie in plane2 of fig[] (eg. GridGain, Giraph, Redis etc) depends mainly on network given enough amount of memory that can hold the data.
+%We found very less research in this arena and compare performance of Giraph on different clusters with varying network architecture.
+%Finally, the single-node analytics framework (eg. X-Stream, Graph Chi etc) as well as the scaledup deployment of Hadoop falls in plane3 in fig[] which rely mainly on storage architecture given enough memory that can hold the data. 
+
+%In the last few years several performance analysis studies have been made with Hadoop atop different types of storages (SSD and HDD) and highspeed network interconnects (Infiniband and 40GigE etc).
+%Moon \cite{ssdhdd:moon} showed significant cost benefit by storing intermediate Hadoop data in SSD, leaving the HDDs to store Hadoop Distributed File System (HDFS \cite{fw:hdfs}) source data.
+%Wu \cite{ssdhdd:wu} found that Hadoop performance can be increased almost linearly with the increasing fraction of SSDs in the storage system.
+%Ahn \cite{ssdhdd:ahn} identified in a virtual environment overhead of virtualization is minimized with SSDs.
+%Tan \cite{ssdhdd:tan} analyzed the performance of SSD and HDD of different type of workloads involving different IO patterns and found better performance in using SSD.
+%Vienne \cite{ethib:vienne} evaluated the performance of Hadoop on different high speed interconnects such as 40GigE RoCE and Inifiniband FDR and found InfiniBand FDR yields the best performance for HPC as well as cloud computing applications.
+%Similarly, Yu \cite{ethib:yu} found improvedperformance of Hadoop in traditional supercomputers due to high speed networks
+%Although, these studies unanimously showed the benefit of SSD over HDD, their experiments were performed on existing benchmarks (eg. intel hibench \cite{bm:hibench}) which are not well tested for real world data intensive high performance computing workload. We address this challenge using our Hadoop and Giraph based bigdata genome assembler that serves as a very good example of both data as well as compute intensive jobs.
+%Also, these studies being restricted in comparing only a single component of the cluster failed to provide an overview of next generation clusters. 
+
+%From the perspective of a cost effective deployment, Appuswamy \cite{scaleupscaleout:appuswamy} studied the scale-out and scale-up performance for different enterprise level Hadoop job and found better perfromance price to performance in scaled up system.
+%On the contrary, Michael \cite{scaleupscaleout:michael} reached entirely different conclusion for interactive query.
+%These contradictory results in two different workloads in two different types of cluster deployment drive us to rethink about the existing analysis procedure of different price to performance metrices in the context of longterm HPC cluster deployment.
+%Furthermore, most of these scaledup and scaledout comparison is driven by the observation that 90\% of the enterprise level jobs handle no more than 100GB of data \cite{scaleupscaleout:chen}, thus can be accomodated in a single server with high memory and disk space. 
+%This assumption hardly holds for a BigData HPC cluster deployment.

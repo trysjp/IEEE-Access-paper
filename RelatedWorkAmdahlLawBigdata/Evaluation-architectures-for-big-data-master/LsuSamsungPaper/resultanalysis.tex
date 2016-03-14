@@ -1,0 +1,41 @@
+In this section we present the performance result of different clusters to understand the impact of different storage and network architechitecture.
+All experiments are performed as many times until 95\% confidence level is reached.
+
+\subsection {Understanding the workload}
+Figure-\ref{figResourceUsage} shows the average disk and memory utilization of PGA for assemblying bumble bee and human genome for three different phases of PGA.
+The first phase, building de Bruijn graph is a shuffle intensive mapreduce job which writes almost xGB intermidiate data for bumble bee and almost xGB for human genome however the final output of the reducer that is written to HDFS is 85GB and 3.8TB respectively for bumble bee and human genome.
+In the second phase, the entire graph is taken in the memory and analyzed using Giraph making it severely memory intensive.
+At the same time, the output of each giraph job is written to HDFS which serves as the input to the next job making the perfromance of this phase disk-bound also.
+
+\subsection {Measurement baseline}
+In order to do both a fair comparison as well as pinpointing the limitations we changed SwatIII environent according to SuperMikeII specifications.
+The parameters that we changed are listed in table-\ref{table}.
+Figure-\ref{figBaseline} shows performance of assemblying bumble bee genome in using 256 cores, 16 disks and an aggregated 1TB of RAM space.
+Then in the subsequent sections we turn on each feature one by one and compare its benefit in order to provide a guideline which needs to be taken care of. 
+
+\subsection {Effect of number of disk per node}.
+In this experiment we added more(??) number of storage drive in the SWATIII cluster and distributed the intermidiate output of Hadoop according to that.
+Since the total IOPS increases in the cluster Hadoop was expected to yield better performance.
+Figure-\ref{figIops} shows the result of adding more number of storage drive in the cluster.
+Also it is important to notice that, adding each SSD to the cluster shows almost ??\% benefit over adding HDD.
+
+\subsection {Effect of Hyper threading}
+Figure-\ref{figHyperthread} shows the execution time of each phase of PGA when we enable hyperthreading in SWATIII.
+In each variant of SWATIII we noticed almost ?? speedup simply enabling the hyperthreading.
+On the other hand, we observed almost ?? speedup when normalized the performance with SuperMikeII.
+
+\subsection {Effect of Java Heap Space and Virtual Memory}
+The impact of java heap space and virtual memory is a long standing issue.
+Although, the performance is found to vary according to the java heap space allocated to each worker the proper explanation is still unknown.
+In this section we tweak the java heap space and the Linux virtual memory configuration to notice the effect of swapping on different types of storage media.
+Figure-\ref{figJvm} shows that SSD with more IO throughput performs better than the HDD in SWATIII with lower amount of Virtual H.
+Also, 
+
+\subsection {Effect of adding more memory per node}
+
+\subsubsection {Discussion}
+
+
+
+
+\subsection {Performance to price comparison}

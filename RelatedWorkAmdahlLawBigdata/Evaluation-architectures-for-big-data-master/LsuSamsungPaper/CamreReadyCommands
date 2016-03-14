@@ -1,0 +1,3 @@
+pdflatex yourfile.tex
+pdftops yourfile.pdf
+ps2pdf14 -dPDFSETTINGS=/prepress yourfile.pdf yourfile-output.pdf

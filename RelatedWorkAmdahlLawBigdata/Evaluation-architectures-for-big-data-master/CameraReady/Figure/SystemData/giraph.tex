@@ -1,0 +1,22 @@
+Large scale graph analysis is a core part of many supercomputing workload.
+%Graph processing inherently involves many iteration and random access to the data and trditionally addressed with in-memory technologies.
+Apache Giraph is an iterative in-memory grpah processing framework that is implemented on top of Hadoop's map-reduce implementation.
+It is originated as the open-source counterpart to Google's Pregel \cite{fw:pregel}.
+Giraph is inspired by Bulk Synchronous Parallel model \cite{fw:bsp} where computation proceeds in supersteps.
+In each superstep all vertices of the graph excutes different istances of the same progam called vetrex-program simultaneosly without ineracting with other verties which is similar to map tasks of Hadoop
+After each superstep all the vertices send messages to other vertices normally cotaining the output of its vertex-progam-instance.
+Once all the messages are recieved by the intended vertices, the next supesrtep starts and the pocess iterates until all the vertices vote to halt simultaeously.
+
+
+%Large scale graph analysis is a core part of many data intensive supercomputing workload which involves many iteration and random access to the data.
+%On the other hand, the performance of Hadoop is severely constrained by its iterative limitation and HDFS in its native form is optimized for sequential access only, which make Hadoop extremely inefficient for large scale graph processing.
+%Giraph, the open surce implmentation of Googles Pregel is a popular graph processing framework that is developed on top of Hadoop and finds its base in Bulk Synchronus processing. 
+%Giraph provides its users a shared-memory based vertex centric, synchronous grah processing model which relies on mesage passing communicaton.
+%The computation in Giraph is divided into a series of supersteps.
+%In each superstep all vertices of the graph excutes different istances of the same progam called vetrex-program simultaneosly without ineracting with other verties which is similar to map tasks of Hadoop
+%After each superstep all the vertices send message normally cotaining the output of its vertex-progam-instance to others.
+%Once all the messages are recieved by the intended vertices, the next supesrtep starts and the pocess iterates until all the vertices vote to halt simultaeously.
+%Like Hadoop map phase, Giraph can also be classified as SIMD due to its vertex centric prallelism, however, there is a message passing enabled between map tasks.
+%This in-memory data parllelism with messge passing makes Giraph a good choice for many HPC problem.
+
+%Unforunately, the performance characterstics of this model either in terms of memory, CPU or network for large volume of data is hardly studied which crates a gap in studies addessing the growing demand for developing comprehensive next generation distributed cyberinfrastructure in support of bigdata high-performance scientific and engineering applications. 

@@ -1,0 +1,103 @@
+In this section we present the performance result of different clusters to understand the impact of different storage and network architecture.
+All experiments are performed as many times until 95\% confidence level is reached.
+
+\subsection {Understanding the workload}
+Figure-\ref{figResourceUsage} shows the average disk and memory utilization of PGA for assembling bumble bee and human genome for three different phases of PGA.
+The first phase, building de Bruijn graph is a shuffle intensive map-reduce job which writes almost xGB intermediate data for bumble bee and almost xGB for human genome however the final output of the reducer that is written to HDFS is 85GB and 3.8TB respectively for bumble bee and human genome.
+In the second phase, the entire graph is taken in the memory and analyzed using Giraph making it severely memory intensive.
+At the same time, the output of each Giraph job is written to HDFS which serves as the input to the next job making the performance of this phase disk-bound also.
+
+\subsection {Measurement baseline on SuperMikeII and SwatIII}
+%\begin{figure}[h!]
+%\label {fig:BaseLine}
+%\centering
+%  \begin{subfigure}
+%    \label {fig:Baseline8M}
+%    \includegraphics[width=.3\textwidth]{Figure/SupermikeSwat8M.png}
+%    \caption{A gull}
+%  \end{subfigure}
+%  \begin{subfigure}
+%    \label {fig:Baseline15M}
+%    \includegraphics[width=.3\textwidth]{Figure/SupermikeSwat15M.png}
+%    \caption{A tiger}
+%  \end{subfigure}
+%\end{figure}
+\begin{figure}[h!]
+\label {fig:Baseline8M}
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figure/SupermikeSwat8M.png}
+  \caption{Execution time in SuperMikeII and SwatIII using same configuration in each node}
+\end{figure}
+In order to evaluate the relative merits of different hardware architecture for the entire genome assembly pipeline, first we tuned and optimize different Hadoop parameters to the baseline, that is a traditional supercomputing environment, SuperMikeII.
+It is worthy to mention here, since our goal is to evaluate the underlying hardware architecture, we avoid any unnecessary change in the source code of Hadoop or Giraph.
+Furthermore, in order to do a fair comparison between a traditional supercomputer, SuperMikeII with our prototype bigdata analytics cluster, SwatIII we made several changes in the SwatIII environment according to the SuperMikeII specifications.
+Table-\ref{tab:baselinechanges} shows the changes that we made in each node of SwatIII in order to match its performance to the baseline.
+We then further optimize the underlying hardware in SwatIII and shows the impact of each component in the subsequent sections.
+All the performance results are normalized to the baseline, that is, the most optimum performance that we observed in SupermikeII always has the value 1. 
+
+\subsection {Anatomy of the Build Graph Phase (Hadoop)}
+\begin{figure}[h!]
+\label {fig:EffectHadoop}
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figure/HadoopNumDiskNumMapper.png}
+  \caption{Execution time of BuildGraph Hadoop job with increasing number of disks}
+\end{figure}
+
+\subsection {Effect of Storage}
+Hadoop is beleived to perform better in a scaled out cluster setup.
+That is, Hadoop yields better performance while adding more machines to the cluster but it cannot take the advantage of total processing power available per machine due to the io-bound nature of the job.
+This is especially true in a traditional supercomputing environment where each machine in the cluster leverage huge amount of processing power but lagging in terms of storage.
+However, in this section we argue that if the underlying storage infrastructure is changed Hadoop can take the advantage of tera to peta flop scale processing power in a high performance computing environment. 
+
+In order to substantiate our claim, we evaluate different storage architecture by assembling the 85GB of bumble-bee genome dataset.
+We ran our assembler for two different Hadoop configurations each time we make any change in the underlying storage in our prototype bigdata analytics cluster, SwatIII.
+First, with fewer number of mappers running concurrently, when we launch only 8 mappers (i.e. half the number of available cores) per machine. 
+In the second experiment we use 15 mappers per machine running simultaneously.
+Figure-\ref{fig:effectHadoop} shows how change in the storage architecture helps in utilizing the processing power.
+In SuperMikeII as well as in SwatIII with one HDD the 8 concurrent mappers performs almost 20\% better than the corresponding 15 concurrent mappers scenario.
+When SwatIII is equipped with 2 HDDs the performance difference is reduced to 10\%.
+Finally, with 4 HDD, the 15 concurrent mappers outperformed 8 concurrent mappers by almost 20\%.
+We observed the similar performance trend as with 4 HDD by replacing them with only one single SSD.
+Furthermore, a single SSD outperformed 4HDDs by almost 25\%.
+
+\begin{figure}[h!]
+\label {fig:EffectNumDiskAndMapperOnGiraph}
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figure/GiraphNumDiskNumMapper.png}
+  \caption{Execution time of Error Correction Giraph job with increasing number of disks}
+\end{figure}
+Since, Giraph is an in-memory graph processing framework, we did not expect any difference in its performance by changing the underlying storage architecture.
+Figure-\ref{fig:EffectNumDiskAndMapperOnGiraph} shows the performance of our entire error correction pipeline which is a series of Giraph jobs. 
+It can be clearly observed that for change in number of disks the performance of Giraph shows hardly any variation.
+However, there is a minor performance gain in SSD because of the read and writes to the HDFS involved during the setup and the teardown of each Giraph job in the workflow. 
+
+\subsection {Effect of Memory}
+We did not find any significant improvement by adding more memory in the Hadoop phase once the cluster is equipped with SSDs. Hence, in this section we discuss about the error correction phase which is series of Giraph jobs.
+
+Figure-\ref{fig:giraphMem} shows the impact of providing more memory per node.
+In the error correction phase we found almost 25\% performance improvement when increase the physical memory from 32GB to 256GB.
+Figure-\ref{giraphCache} shows the memory caching ......
+
+On the other hand, when we increase the number of Giraph workers from 8 to 15 we observed almost 10\% performance degrade in error correction phase.
+We found a significant increase in the number of TCP connections when the number of workers are increased.
+After each superstep in Giraph huge number of messages are passed over the network.
+With increase in the number of workers the amount of messages are also increased
+
+\subsection {Effect of Hyper threading}
+Figure-\ref{figHyperthread} shows the execution time of each phase of PGA when we enable hyperthreading in SWATIII.
+In each variant of SWATIII we noticed almost ?? speedup simply enabling the hyperthreading.
+On the other hand, we observed almost ?? speedup when normalized the performance with SuperMikeII.
+
+\subsection {Effect of Java Heap Space and Virtual Memory}
+The impact of java heap space and virtual memory is a long standing issue.
+Although, the performance is found to vary according to the java heap space allocated to each worker the proper explanation is still unknown.
+In this section we tweak the java heap space and the Linux virtual memory configuration to notice the effect of swapping on different types of storage media.
+Figure-\ref{figJvm} shows that SSD with more IO throughput performs better than the HDD in SWATIII with lower amount of Virtual H.
+Also, 
+
+\subsubsection {Discussion}
+
+
+
+
+\subsection {Performance to price comparison}

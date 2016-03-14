@@ -1,0 +1,26 @@
+Earlier studies \cite{schadoop:fadika}, \cite{schadoop:matsunaga} as well as our experience show that Hadoop and other softwares in its eco system like Giraph can be useful for data-intensive scientific applications, however, the underlying storage, memory as well as the computation model differs severely from other parallel processing frameworks like MPI. 
+The challenges involved in optimal processing of these data-intensive workload needs to be addressed possibly by changing the underlying hardware infrastructure.
+In this section we provide a brief overview on the limitations in existing supercomputers.
+
+\textbf{Storage:} 
+In order to provide high io-bandwidth, Hadoop colocates data and computation. 
+Unlike other parallel file system like Lustre which stores data in dedicated io-servers, HDFS relies on local file system.
+It stores the data in the same nodes where the computation takes place requiring high storage space in the compute nodes. 
+Furthermore, the intermidiate output of each mapper is temporarily stored in the local filesystem of the corresponding node, which may be a magnitude higher than the final output especially in the case of a shuffle intensive job.
+On the other hand, in a traditional supercomputing environment each compute node is provided with less amount of storage typically provided with one disk ranging from 250gb to 500gb.
+This small amount of storage not only limits data size to be handled but also slow down the process because of lower IOPS.
+Although, scaling out in terms of compute nodes may alleviate both of these issues, it does in the cost of lower CPU utilization.
+In the subsequent sections, we show how number of disk per node, as well as the type of the storage media (SSD/HDD) impact the performance and price of a Hadoop workload in the context of large scale genome assembly. 
+
+\textbf{Memory:}
+Graph processing typically involves many iteration and random access to the data which is conventionally addressed with in-memory solutions. 
+%Consequently their performance is severely limited by the lower memory-speed (compare to higher CPU-speed) commonly known as memory-wall.
+Memory system that is used in most of the supercomputers shows lower capacity per core and fewer independent channels \cite{bm:graph500}.
+Complicating the scenario, the performance is again hindered by high message passing over network for Giraph, which is designed to facilitate BSP model.
+In our study, we show the impact of provisioning more memory per core in a Giraph workload.
+
+\textbf{Swapping/Paging:}
+Programs handling huge amount of data frequently perform swap in and out between memory and swap-space of the disk especially when the memory per core is small.
+Traditional supercomputers with small amount of memory per core and small amount of storage per compute node frequently run out of memory as well as swap-space, consequently failing the entire job.
+Furthermore, normal HDD with less throughput (than SSD) spends lots of time for io in case of swapping which adversely affects the performance of the application.
+In our analysis, we tweak the in-memory java-heap-space and the swap-space (both both SSD and HDD) in our prototype bigdata analytics cluster to understatnd its impact on the performance as well as the price.

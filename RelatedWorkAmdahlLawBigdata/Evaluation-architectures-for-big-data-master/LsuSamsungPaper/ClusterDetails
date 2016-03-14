@@ -1,0 +1,10 @@
+Following are the informations:
+1. Network Topology- Fat Tree (12 Leaf Switches, 6 Spine Switches, non-blocking)
+2. Infiniband Switch information:
+    2.1: Name of the switch: TopSpin 120
+    2.2: Bandwidth: 10 Gbps
+    2.3: No. of ports: 24
+3. No. of cores in each node=4*2 , CPU clock rate for each node= 2000 Mhz
+4. RAM Speed- 667 MHz
+5. Disk Space- 1 Tb per node
+6. Disk speed- 7200 rpm

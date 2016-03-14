@@ -1,0 +1,3 @@
+AverageMapTime: 5min
+AverageShuffleTime:6Min
+AverageReduceTime:28Min

@@ -1,0 +1,24 @@
+Hadoop was originated as the opensource counter part of Google's Map-Reduce \cite{fw:mapreduce}.
+Hadoop has two different components: Hadoop Distributed File System (HDFS) and a mapreduce programming abstarction.
+HDFS splits huge volume of data into small disjoint sets called blocks (typically of size 64mb to 128mb) and distributes those accross the cluster.
+A user defined map function is applied to each blocks parallely in order to extract information from each records in the form of key-value pair.
+These intermidiate key-value pairs are then partitioned on the basis of keys where each key gets a list of values.
+Finally, a user defined reduce function is applied to the value-list of each key independently and the final output is wrtten to HDFS.
+
+%In the last decade the introcuction of Hadoop, the open-source implementation of Google's map-reduce revolutionized our ability to find signals in noise.
+%Hadoop-mapreduce coupled with Hadoop Distributed File System (HDFS) provides solution for a storage and computation of large scale data.
+%Hadoop-mapreduce consists of three different phases. 
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item Map
+%\item shuffle
+%\item reduce
+%\end{inparaenum}
+%In the first phase the input data kept in HDFS is splitted into several disjoint sets of records called blocks and a user defined map function is applied to each split independently without interacting each other in order to extract information from each record in the form of key, value pair.
+%In the second phase these intermidiate key, value pairs are partitioned on the basis of the keys where each key gets a list of values and then it is transferred to the reducers.
+%Finally, a user defined reduce function is applied to the value-list of each key independently and the final output is wrtten to HDFS.
+%The shared nothing architecture in both map and reduce phase classifies Hadoop as Single Instruction Multiple data (SIMD) in Flynn's taxonomy and enable it to exploit data level parallelism with no side effect.
+%Besides this, the computation in Hadoop is tuned to exploit the data locality.  These characteristics of Hadoop fit a broad range of existing high performance scientific computation workflow and gain enough popularity as a potential alternative to the decade old HPC technologies like MPI or Grid.
+
+%Despite of this potential, the bigdata in tera or peta byte scale and limitation of memory in traditional supercomputers make both the map and reduce process of Hadoop disk-io bound limiting the HPC users and developers to exploit the power of CPU.
+%Furthermore, the shuffle phase involves huge amount of data flow over network which makes the reduce process network bound also.
+%These limitations create challenges as well as opportunities for the hardware manufacturers both in the domains of storage and networking in terms of efficient hardware provisioning which yield not only raw performance benefit but also better performance to price.
